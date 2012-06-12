@@ -1,0 +1,7 @@
+2012-05-09
+- Diese Datei erstellt
+- Ticket-System erstellt (tickets, tickettypes, ticketstatuses,
+ticketcomments, tickets_ticketstatuses), Bug-Report-Link
+- Ticket-Kommentare per AJAX einfügen in tickets.view
+- AuthComponent::startup: Bei unauthorisierter Ajax-Anfrage wird 304 zurückgegeben
+(Zeile 343)

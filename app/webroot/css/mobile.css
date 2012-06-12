@@ -1,0 +1,225 @@
+div.sample {
+	display:inline-block;
+	padding:4px;
+	border:1px solid lightgrey;
+	box-shadow:0px 0px 2px grey;
+	border-radius:4px;
+}
+
+.actions h3 {
+	display:none;
+}
+
+.answers div.answer span.ui-btn-text {
+	font-size:10pt;
+	font-weight:normal;
+}
+
+/* Korrekt und ausgewählt */
+.answers div.answer.correct label.ui-radio-on,
+ul.ui-listview li.correct,
+div.sample.correct_selected {
+	background-image:-webkit-linear-gradient(#61A161,green);
+	background-image:-moz-linear-gradient(#61A161,green);
+	background-image:linear-gradient(#61A161,green);
+	background-image:-webkit-gradient(linear,left top,left bottom,from(#61A161),to(green));
+}
+
+/* Korrekt, aber nicht ausgewählt */
+.answers div.answer.correct label,
+div.sample.correct {
+	background-image:-webkit-linear-gradient(#A1C1A1,lightgreen);
+	background-image:-moz-linear-gradient(#A1C1A1,lightgreen);
+	background-image:linear-gradient(#A1C1A1,lightgreen);
+	background-image:-webkit-gradient(linear,left top,left bottom,from(#A1C1A1),to(lightgreen));
+}
+
+.answers div.answer.correct label.ui-radio-on span.ui-btn-inner span,
+.answers div.answer.wrong label span.ui-btn-inner span,
+ul.ui-listview li.correct div.ui-btn-text *,
+ul.ui-listview li.wrong div.ui-btn-text *,
+ul.ui-listview li.correct,
+ul.ui-listview li.wrong,
+div.sample.correct_selected,
+div.sample.wrong {
+	color:white;
+	text-shadow:none;
+}
+
+.answers div.answer.wrong label,
+ul.ui-listview li.wrong,
+div.sample.wrong {
+	background-image:-webkit-linear-gradient(#C17171,red);
+	background-image:-moz-linear-gradient(#C17171,red);
+	background-image:linear-gradient(#C17171,red);
+	background-image:-webkit-gradient(linear,left top,left bottom,from(#C17171),to(red));
+}
+
+.answer {
+	counter-increment:Answers;
+}
+
+.answer span.ui-icon {
+	padding:2px;
+}
+
+.answer .comments {
+	font-style:italic;
+	font-weight:normal;
+	display:none;
+}
+
+.answer .comments .comment {
+	padding:1em;
+}
+
+.answer span.ui-icon {
+	visibility:hidden;
+}
+
+.answer span.ui-icon:before {
+	content:counter(Answers,lower-alpha) ") ";
+	font-weight:normal;
+	font-size:10pt;
+	visibility:visible;
+}
+
+.answer label.ui-radio-on {
+	font-weight:bold;
+	background-color:lightblue;
+	background-image:-webkit-linear-gradient(lightblue,#B1B1D1);
+	background-image:-moz-linear-gradient(lightblue,#B1B1D1);
+	background-image:linear-gradient(lightblue,#B1B1D1);
+	background-image:-webkit-gradient(linear,left top,left bottom,from(lightblue),to(#B1B1D1));
+}
+
+form#exam {
+	counter-reset:Questions;
+}
+
+form#exam .question {
+	counter-increment:Questions;
+	counter-reset:Answers;
+	display:none;
+}
+
+p.question-text {
+	font-size:12pt;
+	font-weight:bold;
+}
+
+form#exam div.attachment img {
+	text-align:center;
+}
+
+/*p.question-text:before {
+	content:counter(Questions)". ";
+}*/
+
+form#exam .question.current {
+	display:block;
+}
+
+/*.question.current {
+	background-color:#DDD;
+	border-radius:1em;
+}
+
+.question.current p.question-text {
+	padding:.5em 1em 0em 1em;
+}*/
+
+.question .materials {
+	display:none;
+}
+
+#statistics dt {
+	float:left;
+	width:100px;
+	font-weight:bold;
+}
+
+#statistics dd {
+	display:block;
+}
+
+/*
+ * Messages
+ */
+
+div.message {
+	padding:.5em;
+	font-size:12pt;
+	border-top:		2px solid blue;
+	border-bottom:	2px solid blue;
+	background-color: lightblue;
+}
+
+#btn-printversion,
+div#print_info {
+	display:none;
+}
+
+/*
+ * Form Fields
+ */
+
+form fieldset legend {
+	font-size:12pt;
+	display:block;
+	border-bottom:1px solid lightgrey;
+}
+
+form label.ui-input-text {
+	font-size:11pt;
+}
+
+form div.error-message {
+	font-weight:bold;
+	color:red;
+}
+
+form#UserLoginForm {
+	max-width:300px;
+	margin:auto;
+}
+
+/*
+ * Definition lists
+ */
+
+dl dt {
+	font-weight:bold;
+}
+
+dl dd {
+	margin:0;
+	padding:0;
+	padding-bottom:1em;
+}
+
+div.definition {
+	
+}
+
+.definition .term {
+	font-weight:bold;
+	margin-bottom:0;
+}
+
+.definition .description {
+	margin-top:0;
+}
+
+span.keyboard{
+	padding:4px;
+	border:2px solid #669;
+	background-color:#CCF;
+	border-radius:4px;
+	display:inline-block;
+}
+
+div.materials.view img {
+	max-width:100%;
+}
+

@@ -1,0 +1,147 @@
+#header h1 {
+	font-size:14pt;
+	text-align:center;
+}
+
+body {
+	counter-reset:Questions;
+}
+
+.question {
+	clear:both;
+	counter-increment:Questions;
+	counter-reset:Answers;
+	position:relative;
+	page-break-inside:avoid;
+}
+
+.question p.question-text {
+	font-size:12pt;
+	font-weight:bold;
+	width:95%;
+}
+
+.question p.question-text:before {
+	content:counter(Questions) ". ";
+}
+
+
+.answer label {
+	width:100%;
+	display:block;
+	vertical-align:top;
+}
+
+.answer span.answer-text,
+.answer div.comments {
+	display:inline-block;
+}
+
+
+.answer div.comments {
+	display:none;
+	padding-left:1em;
+	width:30%;
+}
+
+.answer div.comments .comment {
+	border-top:1px dashed grey;
+	display:block;
+}
+
+.answer div.comments:first-child .comment{
+	border-top:none;
+}
+
+.answer {
+	counter-increment:Answers;
+	position:relative;
+	clear:both;
+}
+.answer input {
+	display:none;
+}
+
+.answer label span.answer-text {
+	padding-right:1em;
+	width:100%;
+}
+
+.answer label span.answer-text:before {
+	content: counter(Answers,lower-alpha) ") ";
+}
+
+.answer[data-correct=true] label span.answer-text {
+	border-right:.5em solid black;
+	padding-right:.5em;
+}
+
+.question.split .answer label div.comments {
+	display:table-cell !important;
+	width:40% !important;
+	overflow:hidden;
+}
+
+.question.split .answer label span.answer-text {
+	display:table-cell !important;
+	width:60% !important;
+}
+
+.question.split .answer label {
+	display:table-row;
+}
+
+.question.split .answer {
+	display:table;
+	width:90%;
+}
+
+.question.split p.question-text {
+	width:50%;
+}
+
+
+fieldset {
+	border:none;
+}
+
+a.button,
+div.actions {
+	display:none;
+}
+
+ul.materials {
+	display:none;
+	float:right;
+	list-style:none;
+}
+
+ul.materials li:before {
+	content:"→";
+}
+
+ul.materials li a {
+	text-decoration:none;
+	font-weight:bold;
+	color:black;
+}
+
+#print_info {
+	padding:1em;
+	border: 1px dashed black;
+}
+
+#print_info a.button {
+	display:inline;
+	text-decoration:none;
+	border:1px solid grey;
+	font-weight:bold;
+	color:black;
+	background-color:lightgrey;
+	padding:4px;
+	border-radius:4px;
+}
+
+#print_info a.button:hover {
+	background-color:#CCC;
+}

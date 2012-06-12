@@ -1,0 +1,2067 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Fragenkatalog 0.1\n"
+"POT-Creation-Date: 2012-06-02 14:37+0200\n"
+"PO-Revision-Date: 2012-06-02 14:42+0100\n"
+"Last-Translator: Johannes Schulze <johannesschulze@gmx.net>\n"
+"Language-Team: Johannes <colchizin@gmx.net>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: Germany\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/AnswersCommentsController.php:30;61;87
+msgid "Invalid answers comment"
+msgstr "Ungültiger Antwort-Kommentar"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/AnswersCommentsController.php:44;65
+msgid "The answers comment has been saved"
+msgstr "Der Antwort-Kommentar wurde gespeichert"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/AnswersCommentsController.php:47;68
+msgid "The answers comment could not be saved. Please, try again."
+msgstr "Der Antwort-Kommentar konnte nicht gespeichert werden. Bitte versuche es noch einmal."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/AnswersCommentsController.php:90
+msgid "Answers comment deleted"
+msgstr "Antwortkommentar gelöscht."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/AnswersCommentsController.php:93
+msgid "Answers comment was not deleted"
+msgstr "Antwortkommentar konnte nicht gelöscht werden."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/AnswersController.php:30;64;93
+msgid "Invalid answer"
+msgstr "Ungültige Antwort"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/AnswersController.php:44;68
+msgid "The answer has been saved"
+msgstr "Die Antwort wurde gespeichert."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/AnswersController.php:47;71
+msgid "The answer could not be saved. Please, try again."
+msgstr "Die Antwort konnte nicht gespeicher werden. Bitte versuche es erneut."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/AnswersController.php:96
+msgid "Answer deleted"
+msgstr "Antwort gelöscht."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/AnswersController.php:99
+msgid "Answer was not deleted"
+msgstr "Antwort konnte nicht gelöscht werden."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/CommentsController.php:30;65;95
+msgid "Invalid comment"
+msgstr "Ungültiger Kommentar."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/CommentsController.php:44;69
+msgid "The comment has been saved"
+msgstr "Der Kommentar wurde gespeichert."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/CommentsController.php:47;72
+msgid "The comment could not be saved. Please, try again."
+msgstr "Der Kommentar konnte nicht gespeicher werden. Bitte versuche es noch ein Mal!"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/CommentsController.php:98
+msgid "Comment deleted"
+msgstr "Kommentar gelöscht"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/CommentsController.php:101
+msgid "Comment was not deleted"
+msgstr "Kommentar konnte nicht gelöscht werden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:50;85;132;151
+msgid "Invalid exam"
+msgstr "Ungültige Prüfung"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:66;99
+msgid "The exam has been saved"
+msgstr "Die Prüfung wurde gespeichert"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:69;102
+msgid "The exam could not be saved. Please, try again."
+msgstr "Die Prüfung konnte nicht gespeichert werden. Bitte versuche es noch einmal."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:137
+msgid "Exam deleted"
+msgstr "Prüfung gelöscht"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:144
+msgid "Exam was not deleted"
+msgstr "Prüfung konnte nicht gelöscht werden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:158
+msgid "Questions added"
+msgstr "Fragen hinzugefügt"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:161
+msgid "Quesitons could not be added"
+msgstr "Fragen konnten nicht hinzugefügt werden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:188
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:79
+msgid "Import Exam"
+msgstr "Prüfung importieren"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:191;214
+msgid "Invalid Subject"
+msgstr "Ungültiges Fachgebiet"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:197;220
+msgid "Exam has been saved"
+msgstr "Prüfung wurde gespeichert"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:203;227
+msgid "Exam could not be saved. Please try again"
+msgstr "Prüfung konnte nicht gespeichert werden. Bitte, versuche es noch einmal."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/GroupsController.php:33;64;90
+msgid "Invalid group"
+msgstr "Ungültige Gruppe"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/GroupsController.php:47;68
+msgid "The group has been saved"
+msgstr "Die Gruppe wurde gespeichert."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/GroupsController.php:50;71
+msgid "The group could not be saved. Please, try again."
+msgstr "Die Gruppe konnte nicht gespeichert werden. Bitte versuche es noch einmal."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/GroupsController.php:93
+msgid "Group deleted"
+msgstr "Gruppe gelöscht"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/GroupsController.php:96
+msgid "Group was not deleted"
+msgstr "Gruppe konnte nicht gelöscht werden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/InvitationsController.php:31;79;107
+msgid "Invalid invitation"
+msgstr "Ungültige Einladung"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/InvitationsController.php:47
+msgid "The invitation has been submitted"
+msgstr "Die Einladung wurde verschickt."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/InvitationsController.php:54
+msgid "You habe been invited to %s"
+msgstr "Du wurdest zu \"%s\" eingeladen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/InvitationsController.php:62;86
+msgid "The invitation could not be saved. Please, try again."
+msgstr "Die Einladung konnte nicht gespeichert werden. Bitte versuche es noch einmal."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/InvitationsController.php:67
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:123
+msgid "Invite someone"
+msgstr "Lade jemanden ein"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/InvitationsController.php:83
+msgid "The invitation has been saved"
+msgstr "Die Einladung wurde gespeichert"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/InvitationsController.php:110
+msgid "Invitation deleted"
+msgstr "Einladung gelöscht"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/InvitationsController.php:113
+msgid "Invitation was not deleted"
+msgstr "Einladung konnte nicht gelöscht werden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/MaterialsController.php:30;72;101
+msgid "Invalid material"
+msgstr "Ungültiges Material"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/MaterialsController.php:52;76
+msgid "The material has been saved"
+msgstr "Das Material wurde gespeichert"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/MaterialsController.php:55;79
+msgid "The material could not be saved. Please, try again."
+msgstr "Das Material konnte nicht gespeichert werden. Bitte versuche es noch einmal."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/MaterialsController.php:104
+msgid "Material deleted"
+msgstr "Material gelöscht"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/MaterialsController.php:107
+msgid "Material was not deleted"
+msgstr "Material konnte nicht gelöscht werden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ProgrammesController.php:30;69;97
+msgid "Invalid programme"
+msgstr "Ungültiger Studiengang"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ProgrammesController.php:50;73
+msgid "The programme has been saved"
+msgstr "Der Studiengang wurde gespeichert"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ProgrammesController.php:53;76
+msgid "The programme could not be saved. Please, try again."
+msgstr "Der Studiengang konnte nicht gespeichert werden. Bitte versuche es noch einmal."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ProgrammesController.php:100
+msgid "Programme deleted"
+msgstr "Studiengang gelöscht"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ProgrammesController.php:103
+msgid "Programme was not deleted"
+msgstr "Studiengang konnte nicht gelöscht werden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsCommentsController.php:30;61;87
+msgid "Invalid questions comment"
+msgstr "Ungültiger Fragen-Kommentar"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsCommentsController.php:44;65
+msgid "The questions comment has been saved"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsCommentsController.php:47;68
+msgid "The questions comment could not be saved. Please, try again."
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsCommentsController.php:90
+msgid "Questions comment deleted"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsCommentsController.php:93
+msgid "Questions comment was not deleted"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsController.php:40;75;116
+msgid "Invalid question"
+msgstr "Ungültige Frage"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsController.php:54;80
+msgid "The question has been saved"
+msgstr "Die Frage wurde gespeichert"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsController.php:57;83
+msgid "The question could not be saved. Please, try again."
+msgstr "Die Frage konnte nicht gespeichert werden. Bitte versuche es noch einmal."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsController.php:101
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:141
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:59
+msgid "Edit Question"
+msgstr "Frage bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsController.php:120
+msgid "Question deleted"
+msgstr "Frage gelöscht"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsController.php:127
+msgid "Question was not deleted"
+msgstr "Frage konnte nicht gelöscht werden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsController.php:159
+msgid "Questions successfully merged"
+msgstr "Fragen wurden erfolgreich zusammengeführt"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsController.php:165
+msgid "Questions could not be merged"
+msgstr "Fragen konnten nicht zusammengefügt werden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsController.php:169
+msgid "Please Confirm."
+msgstr "Bitte Bestätigen."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsMaterialsController.php:30;61;87
+msgid "Invalid questions material"
+msgstr "Ungültiges Fragenmaterial"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsMaterialsController.php:44;65
+msgid "The questions material has been saved"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsMaterialsController.php:47;68
+msgid "The questions material could not be saved. Please, try again."
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsMaterialsController.php:90
+msgid "Questions material deleted"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsMaterialsController.php:93
+msgid "Questions material was not deleted"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/SubjectsController.php:30;65;93
+msgid "Invalid subject"
+msgstr "Ungültiges Fachgebiet"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/SubjectsController.php:46;69
+msgid "The subject has been saved"
+msgstr "Das Fachgebiet wurde gespeichert"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/SubjectsController.php:49;72
+msgid "The subject could not be saved. Please, try again."
+msgstr "Das Fachgebiet konnte nicht gespeichert werden. Bitte versuche es noch einmal."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/SubjectsController.php:96
+msgid "Subject deleted"
+msgstr "Fachgebiet gelöscht"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/SubjectsController.php:99
+msgid "Subject was not deleted"
+msgstr "Fachgebiet konnte nicht gelöscht werden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketcommentsController.php:31;83;129;161;195;224
+msgid "Invalid ticketcomment"
+msgstr "Ungültiger Kommentar."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketcommentsController.php:48;87;175;199
+msgid "The ticketcomment has been saved"
+msgstr "Der Kommentar wurde gespeichert."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketcommentsController.php:50;90;178;202
+msgid "The ticketcomment could not be saved. Please, try again."
+msgstr "Der Kommentar konnte nicht gespeichert werden. Bitte versuche es noch ein Mal!"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketcommentsController.php:135;227
+msgid "Ticketcomment deleted"
+msgstr "Kommentar gelöscht"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketcommentsController.php:139;230
+msgid "Ticketcomment was not deleted"
+msgstr "Kommentar konnte nicht gelöscht werden."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketsController.php:52;130;184;217
+msgid "Invalid ticket"
+msgstr "Ungültige Support-Anfrage."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketsController.php:91;134
+msgid "The ticket has been saved"
+msgstr "Die Support-Anfrage wurde gespeichert."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketsController.php:104
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/admin_index.ctp:64
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/index.ctp:48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:83
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/add.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/edit.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/index.ctp:44
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:29;67
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/edit.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/index.ctp:44
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:29;67
+msgid "New Ticket"
+msgstr "Neue Support-Anfrage"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketsController.php:111
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketstatusesController.php:47;70
+#, fuzzy
+msgid "The ticketstatus could not be saved. Please, try again."
+msgstr "Die Prüfung konnte nicht gespeichert werden. Bitte versuche es noch einmal."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketsController.php:114;137
+msgid "The ticket could not be saved. Please, try again."
+msgstr "Die Supportanfrage konnte nicht gespeicher werden. Bitte versuche es noch ein Mal!"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketsController.php:161
+msgid "Tickets deleted"
+msgstr "Supportanfragen gelöscht"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketsController.php:163
+msgid "Error deleting tickets"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketsController.php:187
+msgid "Ticket deleted"
+msgstr "Supportanfrage gelöscht"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketsController.php:190
+msgid "Ticket was not deleted"
+msgstr "Supportanfrage konnte nicht gelöscht werden."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketsController.php:213
+msgid "Alter Ticket-Status"
+msgstr "Status ändern"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketsController.php:224
+msgid "Ticket-Status altered"
+msgstr "Status geändert."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketsController.php:231
+msgid "[Status changed: %s]"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketsController.php:242
+msgid "Ticket-Status could not be altered. Please, try again"
+msgstr "Der Status konnte nicht gespeichert werden. Bitte versuche es noch einmal."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketstatusesController.php:30;63;91
+msgid "Invalid ticketstatus"
+msgstr "Ungültiger Anfragen-Status"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketstatusesController.php:44;67
+#, fuzzy
+msgid "The ticketstatus has been saved"
+msgstr "Die Prüfung wurde gespeichert"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketstatusesController.php:94
+#, fuzzy
+msgid "Ticketstatus deleted"
+msgstr "Einladung gelöscht"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TicketstatusesController.php:97
+#, fuzzy
+msgid "Ticketstatus was not deleted"
+msgstr "Einladung konnte nicht gelöscht werden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TickettypesController.php:30;61;87
+#, fuzzy
+msgid "Invalid tickettype"
+msgstr "Ungültiger Kommentar."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TickettypesController.php:44;65
+#, fuzzy
+msgid "The tickettype has been saved"
+msgstr "Der Kommentar wurde gespeichert."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TickettypesController.php:47;68
+#, fuzzy
+msgid "The tickettype could not be saved. Please, try again."
+msgstr "Der Kommentar konnte nicht gespeicher werden. Bitte versuche es noch ein Mal!"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TickettypesController.php:90
+msgid "Tickettype deleted"
+msgstr "Anfragen-Typ gelöscht"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/TickettypesController.php:93
+#, fuzzy
+msgid "Tickettype was not deleted"
+msgstr "Universität könnte nicht gelöscht werden."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UniversitiesController.php:30;61;87
+msgid "Invalid university"
+msgstr "Ungültige Universität"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UniversitiesController.php:44;65
+msgid "The university has been saved"
+msgstr "Die Universität wurde gespeichert."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UniversitiesController.php:47;68
+msgid "The university could not be saved. Please, try again."
+msgstr "Die Universität konnte nicht gespeichert werden. Bitte versuche es noch einmal."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UniversitiesController.php:90
+msgid "University deleted"
+msgstr "Universität gelöscht."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UniversitiesController.php:93
+msgid "University was not deleted"
+msgstr "Universität könnte nicht gelöscht werden."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:87;125;155
+msgid "Invalid user"
+msgstr "Ungültiger Benutzer."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:102;129
+msgid "The user has been saved"
+msgstr "Der Benutzer wurde gespeichert."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:105;132
+msgid "The user could not be saved. Please, try again."
+msgstr "Benutzer_In konnte nicht gespeichert werden. Bitte versuche es noch einmal."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:158
+msgid "User deleted"
+msgstr "Benutzer_In gelöscht"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:161
+msgid "User was not deleted"
+msgstr "Benutzer_In konnte nicht gelöscht werden."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:176
+msgid "Invalid Login-Data"
+msgstr "Ungültige Anmelde-Daten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:182
+msgid "Good Bye!"
+msgstr "Auf Wiedersehen!"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:191
+msgid "Invalud Programme"
+msgstr "Ungültiger Studiengang"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:204
+msgid "Default Programme could not be\tsaved. Please, try again"
+msgstr "Standard-Sudiengang konnte nicht gespeichert werden. Bitte versuche es noch einmal."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:206
+msgid "Default Programme changed to %s"
+msgstr "Standard-Studiengang zu \"%s\" geändert."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:231
+msgid "Invalid Invitation code"
+msgstr "Ungültiger Anmelde-Code"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:237
+msgid "Invitation code does not match your email-address"
+msgstr "Der Einladungs-Code passt leider nicht zu deiner E-Mail-Adresse"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:243
+msgid "A user with that e-mail address already exists"
+msgstr "Ein_e Benutzer_In mit diesem Namen existiert bereits."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:249
+msgid "A user with that name already exists"
+msgstr "Ein_e Benutzer_In mit diesem Namen existiert bereits."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Model/University.php:52
+msgid "This Field must not be empty"
+msgstr "Dieses Feld darf nicht leer bleiben."
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Plugin/AclExtras/Console/Command/AclExtrasShell.php:111
+msgid "<success>Aco Update Complete</success>"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Plugin/AclExtras/Console/Command/AclExtrasShell.php:156
+msgid "Deleted %s and all children"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Plugin/AclExtras/Console/Command/AclExtrasShell.php:197
+msgid "Created Aco node: %s"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Plugin/AclExtras/Console/Command/AclExtrasShell.php:232
+#, fuzzy
+msgid "Deleted Aco node %s"
+msgstr "Antwort löschen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Plugin/AclExtras/Console/Command/AclExtrasShell.php:242
+msgid "Better manage, and easily synchronize you application's ACO tree"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Plugin/AclExtras/Console/Command/AclExtrasShell.php:244
+msgid "Add new ACOs for new controllers and actions. Does not remove nodes from the ACO table."
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Plugin/AclExtras/Console/Command/AclExtrasShell.php:246
+msgid "Perform a full sync on the ACO table.Will create new ACOs or missing controllers and actions.Will also remove orphaned entries that no longer have a matching controller/action"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Plugin/AclExtras/Console/Command/AclExtrasShell.php:250
+msgid "Verify the tree structure of either your Aco or Aro Trees"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Plugin/AclExtras/Console/Command/AclExtrasShell.php:255
+msgid "The type of tree to verify"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Plugin/AclExtras/Console/Command/AclExtrasShell.php:261
+msgid "Recover a corrupted Tree"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Plugin/AclExtras/Console/Command/AclExtrasShell.php:266
+msgid "The type of tree to recover"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Plugin/AclExtras/Console/Command/AclExtrasShell.php:285
+msgid "Tree is valid and strong"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Plugin/AclExtras/Console/Command/AclExtrasShell.php:302
+msgid "Tree has been recovered, or tree did not need recovery."
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Plugin/AclExtras/Console/Command/AclExtrasShell.php:304
+msgid "<error>Tree recovery failed.</error>"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/add.ctp:4
+msgid "Add Answer"
+msgstr "Antwort hinzufügen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/add.ctp:12
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/edit.ctp:13
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/add.ctp:10
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/edit.ctp:11
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/add.ctp:12
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:13
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:30
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/parse.ctp:53
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/add.ctp:10
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/edit.ctp:11
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/add.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/edit.ctp:13
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:12
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/add.ctp:11
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:12
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:26
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/edit.ctp:30
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/add.ctp:10
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/edit.ctp:11
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/add.ctp:10
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/edit.ctp:11
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:11
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:12
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/add.ctp:12
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/edit.ctp:15
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/add.ctp:11
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/edit.ctp:12
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/add.ctp:10
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/edit.ctp:11
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/add.ctp:9
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/edit.ctp:10
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/add.ctp:12
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_edit.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/edit.ctp:21
+msgid "Submit"
+msgstr "Abschicken"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/add.ctp:15
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/edit.ctp:16
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/index.ctp:9;44
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:27;49
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/add.ctp:13
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/edit.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:8;44
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/add.ctp:15
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:16
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:10;46
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:32;55;89
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add.ctp:30
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:33
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:10;46
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/view.ctp:36
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/add.ctp:13
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/edit.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:8;40
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:22;42
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/edit.ctp:16
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:11;48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:15
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:11;48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/view.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/add.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:15
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:9;44
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:45
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:29
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/edit.ctp:33
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:8;42
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:57
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/add.ctp:13
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/edit.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/index.ctp:8;44
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/add.ctp:13
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/edit.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/index.ctp:8;44
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/view.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:15
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:9;44
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:73
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/admin_index.ctp:21;62
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/edit.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/index.ctp:46
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:77
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/add.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/edit.ctp:15
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/index.ctp:8;40
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:22;43
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/add.ctp:13
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/edit.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/index.ctp:8;40
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:22;43
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/add.ctp:12
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/admin_index.ctp:7;38
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/edit.ctp:13
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/index.ctp:31
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/view.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/add.ctp:15
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_edit.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:22;44
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/index.ctp:9;44
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/view.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/view_myprofile.ctp:17
+msgid "Actions"
+msgstr "Aktionen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/edit.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:31
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/add.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:47
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:28
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/add.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:51
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:40
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:35
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:47
+msgid "List Answers"
+msgstr "Antworten auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/add.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/edit.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/index.ctp:47
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:33
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/add.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:53
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:42
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:53
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:32
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/add.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/index.ctp:47
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:28
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/add.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/index.ctp:47
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/view.ctp:28
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:26
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:53
+msgid "List Questions"
+msgstr "Fragen auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/add.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/edit.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/index.ctp:48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:34
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/add.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:26
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:54
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:43;110
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:54
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:44
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:61
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/edit.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/index.ctp:48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:29
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/edit.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/index.ctp:48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/view.ctp:29
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:54
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:88
+msgid "New Question"
+msgstr "Neue Frage"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/add.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/edit.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/index.ctp:49
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:35
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/add.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/edit.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:49
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:30
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:36
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:49
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/add.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/edit.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/index.ctp:49
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:30
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/add.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_edit.ctp:31
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:30
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/index.ctp:49
+msgid "List Comments"
+msgstr "Kommentare auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/add.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/edit.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/index.ctp:50
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:36;72
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/add.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/edit.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:50
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:31
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:38
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:50
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/add.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/edit.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/index.ctp:50
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:31
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/add.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_edit.ctp:32
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:31;67
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/index.ctp:50
+msgid "New Comment"
+msgstr "Neuer Kommentar"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:29
+msgid "Edit Answer"
+msgstr "Antwort bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/index.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:63
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/edit.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:68;101
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:36
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/edit.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:56
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/edit.ctp:36
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/edit.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/index.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/edit.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/index.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/edit.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/edit.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/index.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:58
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/edit.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/index.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:58
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/admin_index.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/edit.ctp:16
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_edit.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:58
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/index.ctp:23
+msgid "Delete"
+msgstr "Löschen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/index.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:30;63
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/edit.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:35;68;101
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:36
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/view.ctp:55
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/edit.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:25;56
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:40
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/view.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/edit.ctp:36
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:60
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/edit.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/index.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/edit.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/index.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/view.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/edit.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:81
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/edit.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/index.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:25;58
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/edit.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/index.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:25;58
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/admin_index.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/edit.ctp:16
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_edit.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:25;58
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/index.ctp:23
+msgid "Are you sure you want to delete # %s?"
+msgstr "Bist du dir sicher, dass du Nr. %s löschen möchtest?"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/index.ctp:2
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:12
+msgid "Answers"
+msgstr "Antworten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/index.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:61
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:66;99
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:54
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/index.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/index.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/admin_index.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/index.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:56
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/index.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:56
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/admin_index.ctp:15
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:56
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/index.ctp:21
+msgid "View"
+msgstr "Anzeigen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/index.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:62
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:67;100
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:55
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:26
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:26
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/index.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/index.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/admin_index.ctp:40
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/index.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:57
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/index.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:57
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/admin_index.ctp:16
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:57
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/index.ctp:22
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/index.ctp:31
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:31
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:33
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:33
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:35
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:35
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:31
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:29
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/index.ctp:31
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/index.ctp:31
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:31
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/admin_index.ctp:49
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/index.ctp:33
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/index.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/index.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/admin_index.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/index.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/index.ctp:31
+msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
+msgstr "Seite {:page} von {:pages}, zeige {:current} Einträge von insgesamt {:count}, Anfang: Eintrag {:start}, Ende: {:end}"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/index.ctp:37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:33
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:41
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:41
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:35
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/index.ctp:37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/index.ctp:37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/admin_index.ctp:55
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/index.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/index.ctp:33
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/index.ctp:33
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/admin_index.ctp:31
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/index.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/index.ctp:37
+msgid "previous"
+msgstr "vorheriger"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/index.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:41
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:41
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:35
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:43
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:43
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/index.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/index.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/admin_index.ctp:57
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/index.ctp:41
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/index.ctp:35
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/index.ctp:35
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/admin_index.ctp:33
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/index.ctp:26
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/index.ctp:39
+msgid "next"
+msgstr "nächster"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/index.ctp:46
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:32
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/edit.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:29
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/add.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:52
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:41;77
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:36
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:48
+msgid "New Answer"
+msgstr "Neue Antwort"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:2;9
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:9
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:52
+msgid "Answer"
+msgstr "Antwort"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:4;44
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:4;51;86
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:4;37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/view.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:4;37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:4;37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:39
+msgid "Id"
+msgstr "ID"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:53
+msgid "Correct"
+msgstr "Korrekt"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:87
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:9
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/view.ctp:9
+msgid "Question"
+msgstr "Frage"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:30
+msgid "Delete Answer"
+msgstr "Antwort löschen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:40
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:85
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:35
+msgid "Related Comments"
+msgstr "Zugehörige Kommentare"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:45
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:2;9
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:40
+msgid "Comment"
+msgstr "Kommentar"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:46
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:42
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:42
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:41
+msgid "User Id"
+msgstr "Benutzer_In-ID"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:47
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:60
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:42
+msgid "Created"
+msgstr "Erstellt"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:43
+msgid "Modified"
+msgstr "Geändert"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/add.ctp:4
+msgid "Add Answers Comment"
+msgstr "Antwortkommentar hinzufügen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/add.ctp:16
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/edit.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:26
+msgid "List Answers Comments"
+msgstr "Antwortkommentare auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:24
+msgid "Edit Answers Comment"
+msgstr "Antwortkommentar bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:2
+msgid "Answers Comments"
+msgstr "Antwortkommentare"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:46
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:27
+msgid "New Answers Comment"
+msgstr "Neuer Anwortkommentar"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:2
+msgid "Answers Comment"
+msgstr "Antwortkommentar"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:25
+msgid "Delete Answers Comment"
+msgstr "Antwortkommentar löschen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/add.ctp:4
+msgid "Add Comment"
+msgstr "Kommentar hinzufügen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/add.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:49
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:38
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/add.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:43
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:28
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/edit.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:51
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:43
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/edit.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_edit.ctp:28
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:26
+msgid "List Users"
+msgstr "Benutzer_Innen auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/add.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:50
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/edit.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:44
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:29;65
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/edit.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:52
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:44
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/edit.ctp:26
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/index.ctp:46
+msgid "New User"
+msgstr "Neue_r Benutzer_In"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:34
+msgid "Edit Comment"
+msgstr "Kommentar bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:2
+msgid "Comments"
+msgstr "Kommentare"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:29
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:2
+msgid "User"
+msgstr "Benutzer_In"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:35
+msgid "Delete Comment"
+msgstr "Kommentar löschen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:47
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:11
+msgid "Related Answers"
+msgstr "Zugehörige Antworten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:54
+msgid "Question Id"
+msgstr "Frage-ID"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:82
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/view.ctp:28
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:38
+msgid "Related Questions"
+msgstr "Zugehörige Fragen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:88
+msgid "Subject Id"
+msgstr "Thema-ID"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add.ctp:4
+msgid "Add Exam"
+msgstr "Prüfung hinzufügen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add.ctp:6
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/create.ctp:7
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/parse.ctp:42
+msgid "Exam"
+msgstr "Prüfung"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/create.ctp:11
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/parse.ctp:47
+msgid "Summer"
+msgstr "Sommer"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/create.ctp:12
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:15
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/parse.ctp:48
+msgid "Winter"
+msgstr "Winter"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:17
+msgid "No Specific Semester"
+msgstr "Kein spezifisches Semester"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add.ctp:33
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:49
+msgid "List Exams"
+msgstr "Prüfungen auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add.ctp:34
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:38
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:49
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:51
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/add.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:49
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:33
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:45
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:19
+msgid "List Subjects"
+msgstr "Fachgebiete auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add.ctp:35
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:50
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:52
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/add.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:50
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:49
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:34
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:46
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:46
+msgid "New Subject"
+msgstr "Neues Fachgebiet"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/addExistingQuestions.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add_existing_questions.ctp:15
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/create.ctp:38
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:188
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/edit.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/edit.ctp:37
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/addExistingQuestions.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add_existing_questions.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/edit.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/alter_status.ctp:9
+msgid "Save"
+msgstr "Speichern"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/create.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/parse.ctp:50
+msgid "No Specific Term"
+msgstr "Kein Spezifisches Semester"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/create.ctp:31
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:5
+msgid "Add Question"
+msgstr "Frage hinzufügen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/create.ctp:33
+msgid "save"
+msgstr "Speichern"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/view.ctp:39
+msgid "Edit Exam"
+msgstr "Prüfung bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:6
+msgid "Printversion"
+msgstr "Druckversion"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:22
+msgid "Keyboard shortcuts"
+msgstr "Tastaturbefehle"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:53
+msgid "Show"
+msgstr "Anzeigen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:58
+msgid "Hide"
+msgstr "Verstecken"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:66
+msgid "Close"
+msgstr "Schließen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:126
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:38
+msgid "Show Solution"
+msgstr "Lösung anzeigen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:128
+msgid "Solution"
+msgstr "Lösung"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:174
+msgid "Legend"
+msgstr "Legend"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:183
+msgid "Show Solutions"
+msgstr "Zeige die Lösung"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:2
+msgid "Exams"
+msgstr "Prüfungen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:50
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:76
+msgid "New Exam"
+msgstr "Neue Prüfung"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/parse.ctp:14;28
+msgid "Go"
+msgstr "Los"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/view.ctp:2;38
+msgid "Start Exam"
+msgstr "Prüfung starten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/view.ctp:5
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/view.ctp:5
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:44
+msgid "Subject"
+msgstr "Fachgebiet"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/view.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:2
+msgid "Questions"
+msgstr "Fragen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/view.ctp:41
+msgid "Add New Question"
+msgstr "Neue Frage hinzufügen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/view.ctp:48
+msgid "Add Existing Question"
+msgstr "Bestehende Frage hinzufügen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/view.ctp:55
+msgid "Delete Exam"
+msgstr "Prüfung löschen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/add.ctp:4
+msgid "Add Group"
+msgstr "Gruppe hinzufügen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/add.ctp:16
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/edit.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:26
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/add.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_edit.ctp:29
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:28
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/index.ctp:47
+msgid "List Groups"
+msgstr "Gruppen auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:24
+msgid "Edit Group"
+msgstr "Gruppe bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:2
+msgid "Groups"
+msgstr "Gruppen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:42
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/add.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_edit.ctp:30
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:29
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/index.ctp:48
+msgid "New Group"
+msgstr "Neue Gruppe"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:2
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/view.ctp:9
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/view_myprofile.ctp:9
+msgid "Group"
+msgstr "Gruppe"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:9;38
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:4
+msgid "Name"
+msgstr "Name"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:14;39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:14;39
+msgid "Description"
+msgstr "Beschreibung"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:25
+msgid "Delete Group"
+msgstr "Gruppe löschen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:33
+msgid "Related Users"
+msgstr "Zugehörige Benutzer"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:29
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:9
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/view.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/view_myprofile.ctp:4
+msgid "Email"
+msgstr "E-Mail"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:40
+msgid "Passwort"
+msgstr "Passwort"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:41
+msgid "Group Id"
+msgstr "Gruppen-ID"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/add.ctp:6
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:182
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/mobile.ctp:77
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/register.ctp:19
+msgid "Privacy"
+msgstr "Datenschutz"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:39
+msgid "Edit Invitation"
+msgstr "Einladung bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/edit.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:41
+msgid "List Invitations"
+msgstr "Einladungen auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:2
+msgid "Invitations"
+msgstr "Einladungen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:50
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:42
+msgid "New Invitation"
+msgstr "Neue Einladung"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:2
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Pages/home.ctp:38
+msgid "Invitation"
+msgstr "Einladung"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:9
+msgid "Token"
+msgstr "Token"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:19
+msgid "Used"
+msgstr "Benutzt"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:40
+msgid "Delete Invitation"
+msgstr "Einladung löschen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:67
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/mobile.ctp:73
+msgid "logout"
+msgstr "Abmelden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:75
+msgid "Guest"
+msgstr "Gast"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:78
+msgid "Login"
+msgstr "Anmelden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:97
+msgid "Hide sidebar"
+msgstr "Seitenleiste ausblenden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:100
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/mobile.ctp:49
+msgid "Home"
+msgstr "Startseite"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:105
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/admin_index.ctp:2
+msgid "Universities"
+msgstr "Universitäten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:112
+msgid "My Programme"
+msgstr "Mein Studiengang"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:119
+msgid "My User Profile"
+msgstr "Mein Benutzerprofil"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:128
+msgid "Report an error"
+msgstr "Einen Fehler melden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:132
+msgid "Errors and Requests"
+msgstr "Fehler und Supportanfragen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:146
+msgid "Show sidebar"
+msgstr "Seitenleiste einblenden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:174
+msgid "Donate"
+msgstr "Spenden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:185
+msgid "Mobile Version"
+msgstr "Mobile Version"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/mobile.ctp:89
+msgid "Desktopversion"
+msgstr "Desktop-Version"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:4
+msgid "Add Material"
+msgstr "Material hinzufügen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:51
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/add.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/edit.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/index.ctp:49
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/view.ctp:30
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:51
+msgid "List Materials"
+msgstr "Materialien auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/edit.ctp:11
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/view.ctp:22
+msgid "Edit Material"
+msgstr "Material bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:2
+msgid "Materials"
+msgstr "Materialien"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:50
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/view.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:40
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:52
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:62
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/add.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/edit.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/index.ctp:50
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/view.ctp:31
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:52
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:87
+msgid "New Material"
+msgstr "Neues Material"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/merge.ctp:23
+msgid "Length"
+msgstr "Länge"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/merge.ctp:32
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/duplicates.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/merge.ctp:57
+msgid "Merge"
+msgstr "Zusammenführen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/view.ctp:23
+msgid "Delete Material"
+msgstr "Material löschen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/view.ctp:45
+msgid "Other Materials on this Subject"
+msgstr "Weitere Materialien zu diesem Fachgebiet"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Pages/home.ctp:5
+msgid "Report an Error"
+msgstr "Einen Fehler melden"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Pages/home.ctp:26
+msgid "Universitites"
+msgstr "Universitäten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/add.ctp:4
+msgid "Add Programme"
+msgstr "Studiengang hinzufügen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/add.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:47
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/add.ctp:16
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/admin_index.ctp:41
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/edit.ctp:18
+msgid "List Programmes"
+msgstr "Studiengänge auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:47
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/add.ctp:15
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/edit.ctp:17
+msgid "List Universities"
+msgstr "Universitäten auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/add.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/admin_index.ctp:40
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/index.ctp:33
+msgid "New University"
+msgstr "Neue Universität"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:47
+msgid "Edit Programme"
+msgstr "Studiengang bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:2
+msgid "Programmes"
+msgstr "Studiengänge"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:46
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/add.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/admin_index.ctp:42
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/view.ctp:20
+msgid "New Programme"
+msgstr "Neuer Studiengang"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:2
+msgid "Related Subjects"
+msgstr "Zugehörige Fachgebiete"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:27
+msgid "University"
+msgstr "Universität"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:56
+msgid "Set Programme %s as your default?"
+msgstr "Studiengang \"%s\" als deinen Standard-Studiengang festlegen?"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/merge.ctp:50
+msgid "Confirm Merging"
+msgstr "Zusammenführen bestätigen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:60
+msgid "Delete Question"
+msgstr "Frage Löschen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:67
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:3
+msgid "Related Exams"
+msgstr "Zugehörige Prüfungen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:100
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:24
+msgid "Related Materials"
+msgstr "Zugehörige Materialien"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/add.ctp:4
+msgid "Add Questions Comment"
+msgstr "Fragekommentar hinzufügen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/add.ctp:16
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/edit.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:26
+msgid "List Questions Comments"
+msgstr "Fragekommentare auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:24
+msgid "Edit Questions Comment"
+msgstr "Fragekommentar bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/index.ctp:2
+msgid "Questions Comments"
+msgstr "Fragekommentare"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/index.ctp:46
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:27
+msgid "New Questions Comment"
+msgstr "Neuer Fragekommentar"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:2
+msgid "Questions Comment"
+msgstr "Fragekommentare"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:25
+msgid "Delete Questions Comment"
+msgstr "Fragekommentar löschen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/add.ctp:4
+msgid "Add Questions Material"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/add.ctp:16
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/edit.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/view.ctp:26
+msgid "List Questions Materials"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/view.ctp:24
+msgid "Edit Questions Material"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/index.ctp:2
+msgid "Questions Materials"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/index.ctp:46
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/view.ctp:27
+msgid "New Questions Material"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/view.ctp:2
+msgid "Questions Material"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/view.ctp:14
+msgid "Material"
+msgstr "Material"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/view.ctp:25
+msgid "Delete Questions Material"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:4
+msgid "Add Subject"
+msgstr "Fachgebiet hinzufügen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:75
+msgid "Edit Subject"
+msgstr "Fachgebiet bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:2
+msgid "Subjects"
+msgstr "Fachgebiete"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:54
+msgid "Programme"
+msgstr "Studiengang"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:89
+msgid "Merge Duplicate Questions"
+msgstr "Mehrfach vorhandene  Fragen zusammenführen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/add.ctp:4
+msgid "Add Ticket"
+msgstr "Neue Anfrage"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/admin_index.ctp:7
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/index.ctp:2
+msgid "Tickets"
+msgstr "Support-Anfragen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/admin_index.ctp:10
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/index.ctp:5
+msgid "Status"
+msgstr "Status"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/admin_index.ctp:31
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/index.ctp:19
+msgid "Link"
+msgstr "Link"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:80
+msgid "Edit Ticket"
+msgstr "Supportanfrage bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/edit.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:82
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/edit.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/index.ctp:43
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:28
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/add.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/index.ctp:43
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:28
+msgid "List Tickets"
+msgstr "Supportanfragen auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/edit.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/add.ctp:16
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/edit.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:26
+#, fuzzy
+msgid "List Tickettypes"
+msgstr "Universitäten auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/edit.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/index.ctp:42
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:27
+msgid "New Tickettype"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/edit.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/add.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:26
+#, fuzzy
+msgid "List Ticketstatuses"
+msgstr "Universitäten auflisten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/edit.ctp:28
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/index.ctp:42
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:27
+msgid "New Ticketstatus"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/index.ctp:10
+msgid "Last Edit"
+msgstr "Letzte Bearbeitung"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:7
+msgid "Ticket"
+msgstr "Support-Anfrage"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:9;61
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:9;38
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:9;38
+msgid "Title"
+msgstr "Titel"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:40
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:40
+msgid "Url"
+msgstr "URL"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:2
+msgid "Tickettype"
+msgstr "Anfragen-Typ"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:51
+msgid "comment"
+msgstr "kommentieren"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:56
+#, fuzzy
+msgid "Related Ticketstatuses"
+msgstr "Zugehörige Benutzer"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:79
+msgid "Alter Status"
+msgstr "Status ändern"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:81
+msgid "Delete Ticket"
+msgstr "Supportanfrage löschen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/add.ctp:4
+msgid "Add Ticketstatus"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:24
+msgid "Edit Ticketstatus"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/index.ctp:2
+msgid "Ticketstatuses"
+msgstr "Statũs"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:2
+msgid "Ticketstatus"
+msgstr "Status"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:25
+#, fuzzy
+msgid "Delete Ticketstatus"
+msgstr "Einladung löschen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:33
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:33
+msgid "Related Tickets"
+msgstr "Zugehörige Supportanfragen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:41
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:41
+msgid "Tickettype Id"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/add.ctp:4
+msgid "Add Tickettype"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:24
+#, fuzzy
+msgid "Edit Tickettype"
+msgstr "Universität bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/index.ctp:2
+msgid "Tickettypes"
+msgstr "Arten von Supportanfragen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:25
+#, fuzzy
+msgid "Delete Tickettype"
+msgstr "Universität löschen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/add.ctp:4
+msgid "Add University"
+msgstr "Universität hinzufügen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/view.ctp:19
+msgid "Edit University"
+msgstr "Universität bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/view.ctp:3
+msgid "Related Programmes"
+msgstr "Zugehörige Studiengänge"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/add.ctp:4
+msgid "Add User"
+msgstr "Benutzer_In hinzufügen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_edit.ctp:5
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/edit.ctp:5
+msgid "Edit User"
+msgstr "Benutzer_In bearbeiten"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_edit.ctp:12
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/edit.ctp:12
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/register.ctp:9
+msgid "Password (confirm)"
+msgstr "Passwort (Bestätigung)"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_edit.ctp:16
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/edit.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/register.ctp:14
+msgid "Passwords are not the same"
+msgstr "Passwörter stimmen nicht überein"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:25
+msgid "Delete User"
+msgstr "Benutzer löschen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/edit.ctp:15
+msgid "No Default Programme"
+msgstr "Kein Standard-Studiengang"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/index.ctp:2
+msgid "Users"
+msgstr "Benutzer_Innen"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/login.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/register.ctp:30
+msgid "Register"
+msgstr "Registrieren"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/register.ctp:17
+msgid "Invitation code"
+msgstr "Einladungs-Code"
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/view.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/view_myprofile.ctp:19
+msgid "Edit Profile"
+msgstr "Profil bearbeiten"
+
+#~ msgid "The invitation has been saved, The\tToken is: "
+#~ msgstr "Die Einladung wurde gespeichert. Der Einladungs-Code lautet:"
+
+#~ msgid "Add Invitation"
+#~ msgstr "Einladung hinzufügen"
+
+#~ msgid "Delete Subject"
+#~ msgstr "Fachgebiet löschen"
+
+#~ msgid "Password"
+#~ msgstr "Passwort"
+
+#~ msgid "Error"
+#~ msgstr "Fehler"
+
+#~ msgid "The requested address %s was not found on this server."
+#~ msgstr ""
+#~ "Die angeforderte Adresse %s konnte auf diesen Server nicht gefunden "
+#~ "werden."
+
+#~ msgid "An Internal Error Has Occurred."
+#~ msgstr "Ein interner Fehler ist aufgetreten."
+
+#~ msgid "Debug setting does not allow access to this url."
+#~ msgstr "Die Debug-Einstellungen untersagen den Zugriff auf diese URL"

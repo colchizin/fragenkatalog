@@ -1,0 +1,5 @@
+2012-05-09
+- Diese Datei erstellt
+- Ticket-System erstellt (tickets, tickettypes, ticketstatuses,
+ticketcomments, tickets_ticketstatuses), Bug-Report-Link
+- 
