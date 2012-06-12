@@ -86,7 +86,7 @@ echo $this->Js->writeBuffer();
 		);
 			
 ?>
-			<a href='<?php echo $this->here;?>/mobile:false' rel='external'><?php echo __('Desktopversion');?></a>
+			<a href='<?php echo $this->here;?>/layout:default' rel='external'><?php echo __('Desktopversion');?></a>
 	
 		</div>
 	</div>

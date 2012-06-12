@@ -7,7 +7,7 @@
 		array(
 			'controller'=>'exams',
 			'action'=>'exam',
-			'print'=>'true',
+			'layout'=>'print',
 			$exam['Exam']['id']
 		),
 		array(

@@ -182,7 +182,7 @@ echo $this->Js->writeBuffer();
 				__('Privacy'),
 				array('controller'=>'pages','action'=>'display','datenschutz')
 			);?>
-			<a href='<?php echo $this->here;?>/mobile:true'><?php echo __('Mobile Version');?></a>
+			<a href='<?php echo $this->here;?>/layout:mobile'><?php echo __('Mobile Version');?></a>
 			<?php echo $this->Html->link(
 					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
 					'http://www.cakephp.org/',

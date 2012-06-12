@@ -43,32 +43,25 @@ class AppController extends Controller {
 			'loginRedirect' => array('controller'=>'pages','action'=>'display','home'),
 
 		),
-		// 'RequestHandler',
+		'RequestHandler' => array('enabled' => false),
 		'Session');
 	var $helpers = array('Html','Form','Session','Js');
 
 	public function beforeFilter() {
-		if (isset($this->request->named['mobile'])) {
-			$mobile = $this->request->named['mobile'];
-			if (is_array($mobile))
-				$this->Session->write('Client.Mobile', $mobile[count($mobile)-1]);
-			else
-				$this->Session->write('Client.Mobile', $mobile);
+		if (isset($this->request->named['layout'])) {
+			$layout = $this->request->named['layout'];
+			if (is_array($layout))
+				$layout = $layout[count($layout)-1];
+			
+			$this->Session->write('Client.Layout', $layout);
+		} else {
+			if ($this->Session->read('Client.Layout') != 'default' && $this->request->isMobile()) {
+				$this->Session->write('Client.Layout', 'mobile');
+			}
 		}
 
-		if (
-			(
-				$this->request->is('mobile') &&
-				$this->Session->read('Client.Mobile') !== "false"
-			) ||
-				$this->Session->read('Client.Mobile') === "true"
-		) {
-			$this->layout = "mobile";
-		}
-
-		if (isset($this->request->named['print']) && $this->request->named['print']==true)
-		{
-			$this->layout = 'print';
+		if ($layout = $this->Session->read('Client.Layout')) {
+			$this->layout = $layout;
 		}
 	}
 
