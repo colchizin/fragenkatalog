@@ -122,8 +122,8 @@ class Subject extends AppModel {
 					Subject.name,
 					Subject.id,
 					COUNT( semester ) AS exam_count
-				FROM exams as Exam
-				JOIN subjects AS Subject ON Exam.subject_id = Subject.id
+				FROM subjects AS Subject
+				LEFT JOIN exams AS Exam ON Exam.subject_id = Subject.id
 				GROUP BY Exam.semester, Subject.id";
 
 		$data = $db->query($query);

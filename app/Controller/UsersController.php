@@ -56,6 +56,13 @@ class UsersController extends AppController {
 		$this->Acl->allow($group, 'controllers/Ticketcomments/add');
 		$this->Acl->allow($group, 'controllers/Ticketcomments/delete_mine');
 		$this->Acl->allow($group, 'controllers/Ticketcomments/edit_mine');
+		$this->Acl->allow($group, 'controllers/Examsessions/my_sessions');
+		$this->Acl->allow($group, 'controllers/Examsessions/result');
+		$this->Acl->allow($group, 'controllers/Examsessions/finish');
+		$this->Acl->allow($group, 'controllers/Examsessions/new_session');
+		$this->Acl->allow($group, 'controllers/Examsessions/confirm_session');
+		$this->Acl->allow($group, 'controllers/Examsessions/continue_session');
+		$this->Acl->allow($group, 'controllers/Examsessions/continue_current_session');
 		echo "all done";
 		exit;
 	}

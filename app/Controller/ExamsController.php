@@ -230,12 +230,13 @@ class ExamsController extends AppController {
 		}
 		if ($this->request->is('post')) {
 			// var_dump($this->request->data['Question'][0]);
+			var_dump($this->request->data['Question'][11]);
 			if ($exam = $this->Exam->saveEntirelyNew($this->request->data)) {
 				$this->Session->setFlash(__('Exam has been saved'));
-				$this->redirect(array(
+				/*$this->redirect(array(
 					'action'=>'view',
 					$exam['Exam']['id']
-				));
+				));*/
 			} else {
 				$this->Session->setFlash(__('Exam could not be saved. Please try again'));
 			}

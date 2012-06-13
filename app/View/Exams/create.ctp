@@ -1,5 +1,5 @@
 <?php
-	echo $this->Html->script('exam');
+	echo $this->Html->script('edit_exam');
 	echo $this->Form->create('Exam');
 
 	echo $this->Form->input('id');

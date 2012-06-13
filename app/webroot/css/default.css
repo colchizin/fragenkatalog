@@ -441,12 +441,15 @@ ul[data-role=listview] li span.ui-li-count {
 }
 
 .question .comment {
-	font-style:italic;
 }
 
-.comment {
-	position:relative;
+.question .comment .comment-author{
+	color:grey;
 }
+
+/*.comment {
+	position:relative;
+}*/
 
 .question.current {
 	background-color:#F0EBE2;
@@ -457,7 +460,8 @@ ul[data-role=listview] li span.ui-li-count {
 }
 
 .question .btn-show-solution,
-.question .btn-edit-question {
+.question .btn-edit-question,
+.question .btn-comment {
 	position:absolute;
 	float:right;
 	right:2px;
@@ -472,7 +476,8 @@ ul[data-role=listview] li span.ui-li-count {
 }
 
 .question .btn-show-solution:hover,
-.question .btn-edit-question:hover {
+.question .btn-edit-question:hover,
+.question .btn-comment:hover {
 	opacity:1;
 }
 

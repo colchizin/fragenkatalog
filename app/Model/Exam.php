@@ -159,7 +159,7 @@ class Exam extends AppModel {
 
 		$this->create($data);
 		if (!$this->save()) {
-			"Speichern des Exams fehlgeschlagen";
+			var_dump("Speichern des Exams fehlgeschlagen");
 			var_dump($data['Exam']);
 			return false;
 		}
@@ -168,7 +168,17 @@ class Exam extends AppModel {
 
 	public function findByIdMergeExamsession($id, $session_id) {
 		$this->contain(array(
-			'Question'=>array('id','question','attachment','Answer'),
+			'Question'=>array(
+				'id','question','attachment',
+				'Answer'=>array(
+					'answer',
+					'id',
+					'correct',
+					'Comment'=>array('comment', 'User'=>array('username','id'))
+				),
+				'Comment'=>array('comment', 'User'=>array('username','id')),
+				'Material'
+			),
 			'Subject'
 		));
 		$this->Examsession->contain(array(

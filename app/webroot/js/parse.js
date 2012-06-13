@@ -91,6 +91,7 @@ function parse(c) {
 				var material = {};
 				material.title = $(a).text();
 				material.text = 'Mindmap: ' + 'http://www.myencephalon.de' + $(a).attr('href');
+				material.type = "mindmap";
 				question.materials.push(material);
 				console.log('Mindmap gefunden: ' + a.attr('href'));
 				a.closest('table').remove();
@@ -104,6 +105,7 @@ function parse(c) {
 			table = $(table);
 			material.title = $.trim(table.find('th').text());
 			material.text = "<table>" + table.html() + "</table>";
+			material.type= "table";
 			question.materials.push(material);
 			console.log('Tabelle gefunden: ' + material.title);
 		});
@@ -116,7 +118,8 @@ function parse(c) {
 			if (material.title == "") {
 				material.title = img.attr('src');
 			}
-			material.text = '<img src="'+img.attr('src')+'" alt="' + img.attr('alt') + '"></img>';
+			material.type = "image";
+			material.text = img.attr('src');
 			question.materials.push(material);
 			console.log('Bild gefunden: ' + material.title);
 		});
@@ -199,7 +202,9 @@ function parse(c) {
 			}
 
 			label.append(checkbox);
-			label.append($('<input type="text" name="'+namebase2+'[answer]" value="' + answer.text + '" /></li>'));
+			label.append($('<input type="text" name="'+namebase2+'[answer]" /></li>')
+				.val(answer.text)
+			);
 
 			li.append(label);
 			li.append($('<a>Löschen</a>')
@@ -220,9 +225,12 @@ function parse(c) {
 			var mat = $('<div class="material"></div>');
 			mat.append($('<input type="hidden" name="'+namebase2+'[id]" value="0" />'));
 			mat.append($('<h4>' + material.title + '<h4>'));
-			mat.append($('<input type="hidden" name="'+namebase2+'[title]" value="'+material.title+'" />'));
+			mat.append($('<input type="hidden" name="'+namebase2+'[title]" />')
+				.val(material.title)
+			);
+			mat.append($('<input type="text" name="' + namebase2+'[type]" value="'+material.type+'" />'));
 	//		mat.append($(material.text));
-			mat.append($('<textarea rows=4 name="'+namebase2+'[text]">'+material.text+'</textarea>'));
+			mat.append($('<textarea rows=4 name="'+namebase2+'[text]"></textarea>').text(material.text);
 
 			mats.append(mat);
 		}

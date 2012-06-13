@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-06-02 14:37+0200\n"
+"POT-Creation-Date: 2012-06-13 15:19+0200\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -74,49 +74,99 @@ msgstr ""
 msgid "Comment was not deleted"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:50;85;132;151
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:86;122;169;188
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsessionsController.php:178
 msgid "Invalid exam"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:66;99
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:103;136
 msgid "The exam has been saved"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:69;102
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:106;139
 msgid "The exam could not be saved. Please, try again."
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:137
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:174
 msgid "Exam deleted"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:144
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:181
 msgid "Exam was not deleted"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:158
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:195
 msgid "Questions added"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:161
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:198
 msgid "Quesitons could not be added"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:188
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:79
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:225
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:73
 msgid "Import Exam"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:191;214
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:228;251
 msgid "Invalid Subject"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:197;220
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:234;257
 msgid "Exam has been saved"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:203;227
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsController.php:240;264
 msgid "Exam could not be saved. Please try again"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsessionsController.php:32
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:120
+msgid "My Exams"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsessionsController.php:68;111;141
+msgid "Invalid examsession"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsessionsController.php:90;115
+msgid "The examsession has been saved"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsessionsController.php:93;118
+msgid "The examsession could not be saved. Please, try again."
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsessionsController.php:144
+msgid "Examsession deleted"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsessionsController.php:147
+msgid "Examsession was not deleted"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsessionsController.php:159
+msgid "This session does not belong to you"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsessionsQuestionsController.php:30;93;123
+msgid "Invalid examsessions question"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsessionsQuestionsController.php:44;97
+msgid "The examsessions question has been saved"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsessionsQuestionsController.php:47;100
+msgid "The examsessions question could not be saved. Please, try again."
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsessionsQuestionsController.php:126
+msgid "Examsessions question deleted"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ExamsessionsQuestionsController.php:129
+msgid "Examsessions question was not deleted"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/Controller/GroupsController.php:33;64;90
@@ -156,7 +206,7 @@ msgid "The invitation could not be saved. Please, try again."
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/Controller/InvitationsController.php:67
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:123
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:139
 msgid "Invite someone"
 msgstr ""
 
@@ -192,23 +242,23 @@ msgstr ""
 msgid "Material was not deleted"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ProgrammesController.php:30;69;97
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ProgrammesController.php:30;75;103
 msgid "Invalid programme"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ProgrammesController.php:50;73
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ProgrammesController.php:56;79
 msgid "The programme has been saved"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ProgrammesController.php:53;76
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ProgrammesController.php:59;82
 msgid "The programme could not be saved. Please, try again."
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ProgrammesController.php:100
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ProgrammesController.php:106
 msgid "Programme deleted"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ProgrammesController.php:103
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/ProgrammesController.php:109
 msgid "Programme was not deleted"
 msgstr ""
 
@@ -245,7 +295,8 @@ msgid "The question could not be saved. Please, try again."
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/Controller/QuestionsController.php:101
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:141
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:131
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/print/exam.ctp:146
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:59
 msgid "Edit Question"
 msgstr ""
@@ -290,23 +341,23 @@ msgstr ""
 msgid "Questions material was not deleted"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/SubjectsController.php:30;65;93
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/SubjectsController.php:30;66;94
 msgid "Invalid subject"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/SubjectsController.php:46;69
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/SubjectsController.php:47;70
 msgid "The subject has been saved"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/SubjectsController.php:49;72
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/SubjectsController.php:50;73
 msgid "The subject could not be saved. Please, try again."
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/SubjectsController.php:96
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/SubjectsController.php:97
 msgid "Subject deleted"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/SubjectsController.php:99
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/SubjectsController.php:100
 msgid "Subject was not deleted"
 msgstr ""
 
@@ -450,59 +501,59 @@ msgstr ""
 msgid "University was not deleted"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:87;125;155
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:103;141;171
 msgid "Invalid user"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:102;129
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:118;145
 msgid "The user has been saved"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:105;132
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:121;148
 msgid "The user could not be saved. Please, try again."
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:158
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:174
 msgid "User deleted"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:161
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:177
 msgid "User was not deleted"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:176
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:192
 msgid "Invalid Login-Data"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:182
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:198
 msgid "Good Bye!"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:191
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:207
 msgid "Invalud Programme"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:204
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:220
 msgid "Default Programme could not be\tsaved. Please, try again"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:206
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:222
 msgid "Default Programme changed to %s"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:231
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:247
 msgid "Invalid Invitation code"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:237
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:253
 msgid "Invitation code does not match your email-address"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:243
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:259
 msgid "A user with that e-mail address already exists"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:249
+#: /home/johannes/Programmierung/fragenkatalog/app/Controller/UsersController.php:265
 msgid "A user with that name already exists"
 msgstr ""
 
@@ -579,11 +630,15 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add.ctp:27
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:30
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/parse.ctp:53
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/add.ctp:12
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/edit.ctp:13
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/add.ctp:11
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/edit.ctp:12
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/add.ctp:10
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/edit.ctp:11
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/add.ctp:19
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/edit.ctp:13
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:12
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:13
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/add.ctp:11
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:12
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:26
@@ -624,6 +679,15 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:33
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:10;46
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/view.ctp:36
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/mobile/view.ctp:37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/add.ctp:15
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/edit.ctp:16
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:10;48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:32;57
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/add.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/edit.ctp:15
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:10;50
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:32
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/add.ctp:13
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/edit.ctp:14
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:8;40
@@ -631,13 +695,13 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/edit.ctp:16
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:11;48
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:37
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:15
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:16
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:11;48
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/view.ctp:20
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/add.ctp:14
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:15
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:9;44
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:45
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:60
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:29
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/edit.ctp:33
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:8;42
@@ -653,7 +717,7 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:14
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:15
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:9;44
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:73
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:67
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/admin_index.ctp:21;62
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/edit.ctp:18
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/index.ctp:46
@@ -675,7 +739,7 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_edit.ctp:24
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:22;44
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Users/index.ctp:9;44
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/view.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/view.ctp:23
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Users/view_myprofile.ctp:17
 msgid "Actions"
 msgstr ""
@@ -691,6 +755,10 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:23
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:51
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:40
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/add.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/edit.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:57
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:42
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:35
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:47
 msgid "List Answers"
@@ -704,7 +772,15 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:25
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:53
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:42
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/add.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/edit.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:55
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:42
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/add.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/edit.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:55
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:40
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:22
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:53
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:32
 #: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/add.ctp:17
@@ -729,7 +805,15 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:26
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:54
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:43;110
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/add.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/edit.ctp:26
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:56
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:43;81
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/add.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/edit.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:56
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:41
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:23
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:54
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:44
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:61
@@ -744,7 +828,7 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:25
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:27
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:54
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:88
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:82
 msgid "New Question"
 msgstr ""
 
@@ -810,6 +894,11 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:68;101
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:36
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:72
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/edit.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:29
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/edit.ctp:17
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:19
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:56
@@ -853,6 +942,12 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:36
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:25
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/view.ctp:55
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:35;72
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/edit.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:29
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:35
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/edit.ctp:17
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:19
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:25;56
@@ -901,6 +996,9 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:23
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:66;99
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:70
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:27
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:17
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:54
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:25
@@ -927,6 +1025,9 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:24
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:67;100
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:26
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:71
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:28
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:18
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:55
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:26
@@ -951,6 +1052,8 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:31
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:33
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:33
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:35
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:37
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:27
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:35
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:35
@@ -973,6 +1076,9 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:37
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:39
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/mobile/index.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:41
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:43
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:33
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:41
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:41
@@ -995,6 +1101,9 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/index.ctp:39
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:41
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:41
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/mobile/index.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:43
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:45
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:35
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/index.ctp:43
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:43
@@ -1023,6 +1132,10 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:24
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:52
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:41;77
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/add.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/edit.ctp:25
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:58
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:43
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:36
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:48
 msgid "New Answer"
@@ -1031,12 +1144,15 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:2;9
 #: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:9
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:52
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:19
 msgid "Answer"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:4;44
 #: /home/johannes/Programmierung/fragenkatalog/app/View/AnswersComments/view.ctp:4
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:4;51;86
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:4;51
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:4
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:4;37
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:4
 #: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:4
@@ -1054,6 +1170,8 @@ msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:19
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:87
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:52
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:14
 #: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsComments/view.ctp:9
 #: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/view.ctp:9
 msgid "Question"
@@ -1087,9 +1205,12 @@ msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Answers/view.ctp:47
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:24
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:14
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:60
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:42
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/view.ctp:15
 msgid "Created"
 msgstr ""
 
@@ -1139,6 +1260,10 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:21
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:49
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:38
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/add.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/edit.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:51
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:38
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/add.ctp:17
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/edit.ctp:19
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:43
@@ -1157,6 +1282,10 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/edit.ctp:22
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/index.ctp:50
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/add.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/edit.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:52
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:39
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/add.ctp:18
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/edit.ctp:20
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/index.ctp:44
@@ -1180,6 +1309,7 @@ msgid "Comments"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:14
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:9
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/view.ctp:24
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:29
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:2
@@ -1200,12 +1330,15 @@ msgid "Question Id"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:82
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:47
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/view.ctp:28
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:38
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:32
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/mobile/view.ctp:38
 msgid "Related Questions"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Comments/view.ctp:88
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:55
 msgid "Subject Id"
 msgstr ""
 
@@ -1216,6 +1349,8 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add.ctp:6
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/create.ctp:7
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/parse.ctp:42
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/my_sessions.ctp:6;37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:14
 msgid "Exam"
 msgstr ""
 
@@ -1240,6 +1375,10 @@ msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add.ctp:33
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/add.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/edit.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:53
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:40
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:20
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:22
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:49
@@ -1249,7 +1388,7 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add.ctp:34
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:38
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:49
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:20
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:51
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/add.ctp:20
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:22
@@ -1264,12 +1403,12 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add.ctp:35
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/edit.ctp:39
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:50
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:21
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/index.ctp:52
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/add.ctp:21
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:23
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:50
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:49
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:64
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:34
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:46
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:46
@@ -1279,7 +1418,8 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/addExistingQuestions.ctp:18
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/add_existing_questions.ctp:15
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/create.ctp:38
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:188
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:178
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/print/exam.ctp:193
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/edit.ctp:23
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/edit.ctp:37
 msgid "Cancel"
@@ -1312,51 +1452,53 @@ msgid "Edit Exam"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:6
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/print/exam.ctp:6
 msgid "Printversion"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/print/exam.ctp:22
 msgid "Keyboard shortcuts"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:53
-msgid "Show"
-msgstr ""
-
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:58
-msgid "Hide"
-msgstr ""
-
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:66
-msgid "Close"
-msgstr ""
-
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:126
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:116
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/mobile/exam.ctp:96
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/print/exam.ctp:131
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:38
 msgid "Show Solution"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:128
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:118
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/mobile/exam.ctp:98
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/print/exam.ctp:133
 msgid "Solution"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:174
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:164
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/mobile/exam.ctp:136
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/print/exam.ctp:179
 msgid "Legend"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:183
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/exam.ctp:173
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/print/exam.ctp:188
 msgid "Show Solutions"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:2
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/mobile/index.ctp:1
 msgid "Exams"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/index.ctp:48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/add.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/edit.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:54
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:41
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:21
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:23
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:50
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:76
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:70
 msgid "New Exam"
 msgstr ""
 
@@ -1365,16 +1507,20 @@ msgid "Go"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/view.ctp:2;38
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/mobile/view.ctp:2;39
 msgid "Start Exam"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/view.ctp:5
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/mobile/view.ctp:23
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/my_sessions.ctp:5;36
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/view.ctp:5
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:44
 msgid "Subject"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/view.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/mobile/view.ctp:5
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:2
 msgid "Questions"
 msgstr ""
@@ -1389,6 +1535,158 @@ msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/view.ctp:55
 msgid "Delete Exam"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/mobile/exam.ctp:90
+msgid "Previous"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/mobile/exam.ctp:105
+msgid "Next"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/mobile/exam.ctp:145
+msgid "Show All Solutions"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/mobile/exam.ctp:150
+msgid "Back"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/print/exam.ctp:58
+msgid "Show"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/print/exam.ctp:63
+msgid "Hide"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Exams/print/exam.ctp:71
+msgid "Close"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/add.ctp:4
+msgid "Add Examsession"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/edit.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:36
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/edit.ctp:20
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:53
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:38
+msgid "List Examsessions"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/confirm_session.ctp:16
+msgid "Continue previous session"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/confirm_session.ctp:22
+msgid "Start new exam"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:34
+msgid "Edit Examsession"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:2
+msgid "Examsessions"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/index.ctp:50
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:37
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/add.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/edit.ctp:21
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:54
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:39
+msgid "New Examsession"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/my_sessions.ctp:2
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/mobile/my_sessions.ctp:2
+msgid "Unfinished Exams"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/my_sessions.ctp:7;38
+msgid "Started"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/my_sessions.ctp:8
+msgid "Continue"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/my_sessions.ctp:18
+msgid "Continue exam"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/my_sessions.ctp:33
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/mobile/my_sessions.ctp:13
+msgid "Finished Exams"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/my_sessions.ctp:39
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:24
+msgid "Finished"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/my_sessions.ctp:40;50
+msgid "Results"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:2
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:9
+msgid "Examsession"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:35
+msgid "Delete Examsession"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:53
+msgid "Attachment"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:54
+msgid "Questiontype Id"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Examsessions/view.ctp:56
+msgid "Parent Id"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/add.ctp:4
+msgid "Add Examsessions Question"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/add.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/edit.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:36
+msgid "List Examsessions Questions"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/edit.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:34
+msgid "Edit Examsessions Question"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:2
+msgid "Examsessions Questions"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/index.ctp:52
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:37
+msgid "New Examsessions Question"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:2
+msgid "Examsessions Question"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/ExamsessionsQuestions/view.ctp:35
+msgid "Delete Examsessions Question"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/add.ctp:4
@@ -1431,13 +1729,15 @@ msgid "Group"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:9;38
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:17
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:30
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/mobile/view.ctp:48
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Users/admin_view.ctp:4
 msgid "Name"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Groups/view.ctp:14
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:22
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:35
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/mobile/view.ctp:53
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Tickets/view.ctp:14
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Ticketstatuses/view.ctp:14;39
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Tickettypes/view.ctp:14;39
@@ -1469,8 +1769,8 @@ msgid "Group Id"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Invitations/add.ctp:6
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:182
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/mobile.ctp:77
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:201
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/mobile.ctp:91
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Users/register.ctp:19
 msgid "Privacy"
 msgstr ""
@@ -1512,7 +1812,7 @@ msgid "Delete Invitation"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:67
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/mobile.ctp:73
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/mobile.ctp:82
 msgid "logout"
 msgstr ""
 
@@ -1529,7 +1829,7 @@ msgid "Hide sidebar"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:100
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/mobile.ctp:49
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/mobile.ctp:48
 msgid "Home"
 msgstr ""
 
@@ -1538,35 +1838,43 @@ msgstr ""
 msgid "Universities"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:112
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:113
+msgid "Continue Exam"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:126
 msgid "My Programme"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:119
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:134
 msgid "My User Profile"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:128
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:143
 msgid "Report an error"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:132
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:147
 msgid "Errors and Requests"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:146
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:165
 msgid "Show sidebar"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:174
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:193
 msgid "Donate"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:185
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/default.ctp:204
 msgid "Mobile Version"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/mobile.ctp:89
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/mobile.ctp:63;77
+msgid "Settings"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Layouts/mobile.ctp:88
 msgid "Desktopversion"
 msgstr ""
 
@@ -1574,7 +1882,7 @@ msgstr ""
 msgid "Add Material"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Materials/add.ctp:19
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/add.ctp:39
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/index.ctp:51
 #: /home/johannes/Programmierung/fragenkatalog/app/View/QuestionsMaterials/add.ctp:19
@@ -1608,7 +1916,7 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/add.ctp:23
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:25
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:52
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:87
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:81
 msgid "New Material"
 msgstr ""
 
@@ -1656,7 +1964,7 @@ msgstr ""
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/add.ctp:18
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:20
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/index.ctp:47
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:63
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/add.ctp:15
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Universities/edit.ctp:17
 msgid "List Universities"
@@ -1671,7 +1979,7 @@ msgid "New University"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/edit.ctp:4
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:47
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:62
 msgid "Edit Programme"
 msgstr ""
 
@@ -1690,16 +1998,26 @@ msgstr ""
 msgid "New Programme"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:2
-msgid "Related Subjects"
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:6
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/mobile/view.ctp:8
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:4
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/mobile/view.ctp:8
+msgid "%sth semester"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:27
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:40
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/mobile/view.ctp:58
 msgid "University"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:56
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/view.ctp:71
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/mobile/view.ctp:81
 msgid "Set Programme %s as your default?"
+msgstr ""
+
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Programmes/mobile/view.ctp:32
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:2
+msgid "Subjects"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/merge.ctp:50
@@ -1711,12 +2029,12 @@ msgid "Delete Question"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:67
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:3
 msgid "Related Exams"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Questions/view.ctp:100
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:24
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:18
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/mobile/view.ctp:24
 msgid "Related Materials"
 msgstr ""
 
@@ -1793,19 +2111,16 @@ msgid "Add Subject"
 msgstr ""
 
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/edit.ctp:4
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:75
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:69
 msgid "Edit Subject"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/index.ctp:2
-msgid "Subjects"
-msgstr ""
-
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:54
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:48
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/mobile/view.ctp:54
 msgid "Programme"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:89
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Subjects/view.ctp:83
 msgid "Merge Duplicate Questions"
 msgstr ""
 
@@ -2017,7 +2332,7 @@ msgstr ""
 msgid "Invitation code"
 msgstr ""
 
-#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/view.ctp:19
+#: /home/johannes/Programmierung/fragenkatalog/app/View/Users/view.ctp:25
 #: /home/johannes/Programmierung/fragenkatalog/app/View/Users/view_myprofile.ctp:19
 msgid "Edit Profile"
 msgstr ""

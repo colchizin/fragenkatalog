@@ -26,7 +26,8 @@ echo $this->Html->script("jquery.mobile-1.1.0.min.js", array('inline'=>false));
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css');
-//		echo $this->Html->css('jquery.mobile-1.1.0.min');
+		//echo $this->Html->css('jquery.mobile-1.1.0.min.css');
+		// echo $this->Html->css('jquery.mobile-1.1.0.min');
 		echo $this->Html->css('mobile');
 
 		echo $this->fetch('meta');
@@ -87,6 +88,7 @@ echo $this->Js->writeBuffer();
 			<li>
 				<a href='<?php echo $this->here;?>/layout:default' rel='external'><?php echo __('Desktopversion');?></a>
 			</li>
+			<li><a href='#dialog-comment' >Kommentar</a></li>
 			<li>
 			<?php echo $this->Html->link(__('Privacy'),
 				array(
@@ -100,6 +102,15 @@ echo $this->Js->writeBuffer();
 			);?>
 			</li>
 		</ul>
+	</div>
+</div>
+
+<div data-role='page' id='dialog-comment'>
+	<div data-role='header'>
+		<h1>Kommentieren</h1>
+	</div>
+	<div data-role='content'>
+		<input type='text'></input>
 	</div>
 </div>
 </body>

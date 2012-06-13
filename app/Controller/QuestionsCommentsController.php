@@ -7,6 +7,7 @@ App::uses('AppController', 'Controller');
  */
 class QuestionsCommentsController extends AppController {
 
+	public $components = array('RequestHandler');
 
 /**
  * index method
@@ -38,15 +39,24 @@ class QuestionsCommentsController extends AppController {
  * @return void
  */
 	public function add() {
+		$questionscomment = null;
 		if ($this->request->is('post')) {
+			if (empty($this->request->data['Comment']['user_id'])) {
+				$this->request->data['Comment']['user_id'] = $this->Auth->user('id');
+			}
 			$this->QuestionsComment->create();
-			if ($this->QuestionsComment->save($this->request->data)) {
-				$this->Session->setFlash(__('The questions comment has been saved'));
-				$this->redirect(array('action' => 'index'));
+			if ($this->QuestionsComment->saveAssociated($this->request->data, array('validate'=>'true'))) {
+				$this->QuestionsComment->contain(array(
+					'Comment'=> array('comment', 'User'=>array('username','id'))
+				));
+				$questionscomment = $this->QuestionsComment->findById($this->QuestionsComment->getInsertId());
 			} else {
 				$this->Session->setFlash(__('The questions comment could not be saved. Please, try again.'));
 			}
 		}
+
+		$this->set('questionscomment', $questionscomment);
+		$this->set('_serialize','questionscomment');
 	}
 
 /**

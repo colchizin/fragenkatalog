@@ -92,7 +92,7 @@ class Question extends AppModel {
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
-			'order' => '',
+			'order' => 'created',
 			'limit' => '',
 			'offset' => '',
 			'finderQuery' => '',
@@ -178,6 +178,7 @@ class Question extends AppModel {
 			foreach ($data['Answer'] as $answer) {
 				// when saving a single entry, CakePHP expexts Data in the Form
 				// array('Model'=>data, 'Model2'=>data);
+				$oldanswer = $answer;
 				$answer = array(
 					'Answer'=>$answer,
 					'Comment'=>(isset($answer['Comment']))?$answer['Comment']:null

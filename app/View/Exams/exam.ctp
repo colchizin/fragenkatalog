@@ -2,6 +2,8 @@
 	echo $this->Html->script('exam');
 	echo $this->Html->script('shortcuts');
 	echo $this->Html->script('timer');
+	$this->Html->script('jquery.wysiwyg', array('inline'=>false));
+	$this->Js->buffer('$("textarea[data-role=richtext]").wysiwyg();');
 	echo $this->Html->link(
 		__('Printversion'),
 		array(
@@ -81,6 +83,7 @@
 							echo 'data-correct="true"';
 						}
 ?>
+						data-id="<?php echo $answer['id'];?>"
 					>
 						<input
 							type='radio'
@@ -99,11 +102,15 @@
 						<div class='comments' >
 		<?php 			if (isset($answer['Comment']) && count($answer['Comment'])> 0) : ?>
 		<?php				foreach ($answer['Comment'] as $comment): ?>
-								<span class='comment'>
+								<p class='comment'>
 									<?php echo $comment['comment'];?>
-								</span>
+									<span class='comment-author'>
+										<?php echo (isset($comment['User']['username'])) ? $comment['User']['username'] : "unbekannt";?>
+									</span>
+								</p>
 		<?php				endforeach;?>
 		<?php			endif; ?>
+						<button onclick='showCommentField($("#answer_<?php echo $answer['id'];?>").next());return false;'><?php echo __('comment');?></button>
 						</div> <!-- End Comments !-->
 						</label> <!-- End Label Answer !-->
 					</div> <!-- End Answer !-->
@@ -135,6 +142,25 @@
 				?>
 			</fieldset> <!-- End Answers !-->
 
+			<div class='comments'>
+				<?php foreach ($question['Comment'] as $comment):?>
+					<p class='comment'>
+						<?php echo h($comment['comment']);?>
+						<span class='comment-author'>
+							<?php echo (isset($comment['User']['username'])) ? $comment['User']['username'] : "unbekannt";?>
+						</span>
+					</p>
+				<?php endforeach;?>
+				<a
+					href='javascript:showCommentField($("#question<?php echo $question['id'];?>"));'
+					data-role='button'
+					data-mini='true'
+					title='<?php __('comment');?>'
+				>
+					<?php echo __('comment');?>
+				</a>
+			</div>
+
 			<ul data-role='listview' data-inset='true' class='materials'>
 		<?php	foreach ($question['Material'] as $material): ?>
 				<li><?php echo $this->Html->link(
@@ -159,6 +185,12 @@
 
 <dl id='statistics'>
 </dl>
+
+<div id='comment-field' style='display:none'>
+	<textarea id='textarea-comment'></textarea>
+	<button onclick="submitComment();return false;"><?php echo __('comment');?></button>
+	<button onclick='hideCommentField(); return false;'><?php echo __('Cancel');?></button>
+</div>
 
 <div data-role='collapsible' id='exam-legend'>
 	<legend><?php echo __('Legend');?></legend>

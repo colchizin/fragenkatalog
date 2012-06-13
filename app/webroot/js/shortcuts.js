@@ -28,6 +28,9 @@ $(document).ready(function() {
 	});
 
 	$(document).keypress(function (eventObject) {
+		if (eventObject.target.nodeName.toLowerCase() == "textarea") {
+			return;
+		}
 		switch(eventObject.charCode) {
 			case 32:	// Leertaste
 				nextQuestion(); return false;

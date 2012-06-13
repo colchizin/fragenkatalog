@@ -14,7 +14,7 @@ beginnen?</p>
 <p>
 	<?php echo $this->Html->link(
 		__('Continue previous session'),
-		array('action'=>'continue_last_session'),
+		array('action'=>'continue_current_session'),
 		array('data-role'=>'button')
 	);?>
 
