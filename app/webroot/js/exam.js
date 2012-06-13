@@ -341,7 +341,7 @@ function submitAnswer(question_id, answer_id) {
 			'question_id' : question_id
 		}},
 		complete: function(jqXHR, textStatus) {
-			//alert(jqXHR.responseText);
+			alert(jqXHR.responseText);
 		}
 	});
 }

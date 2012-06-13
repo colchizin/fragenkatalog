@@ -33,7 +33,7 @@ class ExamsController extends AppController {
 		if ($sessionid) {
 			// ja, eine Examsession ist schon geöffnet
 			if ($id != null)	// es wurde aber auch eine Klausur übergeben, was nun?
-				$this->redirect(array('controller'=>'exams', 'action' => 'confirm_session', $id));
+				$this->redirect(array('controller'=>'examsessions', 'action' => 'confirm_session', $id));
 			else { // keine Klausur übergeben, also Session fortführen
 				$id = $sessionid;
 				$session = $this->Exam->Examsession->findById($sessionid);

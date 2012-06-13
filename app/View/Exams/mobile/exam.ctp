@@ -5,8 +5,19 @@
 ?>
 <script language='javascript'>
 	$(document).ready(function() {
-		nextQuestion();
-		addTimer(document.getElementById('navigation'));
+		<?php if (isset($session_finished) && $session_finished):?>
+			finished = true;
+		<?php endif;?>
+
+		<?php if (!empty($current_question)):?>
+			setCurrentQuestion($('#question<?php echo $current_question;?>'));
+			scrollToQuestion($('#question<?php echo $current_question;?>'));
+		<?php else:?>
+			nextQuestion();
+		<?php endif;?>
+		// addQuestionCounter(document.getElementById('info-area'), 'info-area-element');
+		// addTimer(document.getElementById('info-area'), 'info-area-element');
+		// updateQuestionCounter();
 	});
 </script>
 
@@ -44,6 +55,10 @@
 							type='radio'
 							id='answer_<?php echo $answer['id']?>'
 							name='question_<?php echo $question['id']?>'
+							<?php if (isset($answer['checked']) && $answer['checked']):?>
+								checked="checked"
+							<?php endif;?>
+							onclick="submitAnswer(<?php echo $question['id'];?>,<?php echo $answer['id'];?>);"
 						/>
 						<label
 							for='answer_<?php echo $answer['id'];?>'

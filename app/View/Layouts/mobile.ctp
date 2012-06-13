@@ -44,7 +44,6 @@ echo $this->Js->writeBuffer();
 <body>
 <div data-role="page">
 	<div id='header' data-role="header">
-		<a data-rel='back' data-icon='back' data-iconpos='notext'>Zurück</a>
 		<h1><?php echo $title_for_layout;?></h1>
 		<?php echo $this->Html->link(__('Home'),
 			array(
@@ -56,6 +55,12 @@ echo $this->Js->writeBuffer();
 				'data-iconpos'=>'notext'
 			)
 		);?>
+		<a
+			data-icon='arrow-d'
+			data-iconpos='notext'
+			data-rel='dialog'
+			href='#dialog-settings'
+		><?php __('Settings');?></a>
 	</div>
 
 	<div id='content' data-role="content">
@@ -65,30 +70,36 @@ echo $this->Js->writeBuffer();
 			// echo $this->element('sql_dump');
 		?>
 	</div>
+</div>
 
-	<div id="footer" data-role="footer" class='ui-bar'>
-		<div data-role="controlgroup" data-type='horizontal'>
-<?php
-		
-		echo $this->Html->link(__('logout'), array(
-			'controller'=>'users',
-			'action'=>'logout'
-		));
-		echo $this->Html->link(__('Privacy'),
-			array(
-				'controller'=>'pages',
-				'action'=>'display',
-				'datenschutz'
-			),
-			array(
-				'data-rel'=>'dialog'
-			)
-		);
-			
-?>
-			<a href='<?php echo $this->here;?>/layout:default' rel='external'><?php echo __('Desktopversion');?></a>
-	
-		</div>
+<div data-role='page' id='dialog-settings'>
+	<div data-role='header'>
+		<h1><?php echo __('Settings');?></h1>
+	</div>
+	<div data-role='content'>
+		<ul data-role='listview'>
+			<li>
+			<?php echo $this->Html->link(__('logout'), array(
+				'controller'=>'users',
+				'action'=>'logout'
+			));?>
+			</li>
+			<li>
+				<a href='<?php echo $this->here;?>/layout:default' rel='external'><?php echo __('Desktopversion');?></a>
+			</li>
+			<li>
+			<?php echo $this->Html->link(__('Privacy'),
+				array(
+					'controller'=>'pages',
+					'action'=>'display',
+					'datenschutz'
+				),
+				array(
+					'data-rel'=>'dialog'
+				)
+			);?>
+			</li>
+		</ul>
 	</div>
 </div>
 </body>

@@ -29,10 +29,12 @@ class ExamsessionsController extends AppController {
 	}
 
 	public function my_sessions() {
+		$this->set('title_for_layout', __('My Exams'));
 		$userid = $this->Auth->user('id');
 		$contain = array(
-			'Exam'=>array('id','fullname','Subject'),
-			'User'
+			'Exam'=>array('id','fullname','shortname','Subject'),
+			'User',
+			'ExamsessionsQuestion'
 		);
 		
 		$this->Examsession->contain($contain);
@@ -181,7 +183,7 @@ class ExamsessionsController extends AppController {
 
 	public function new_session($id = null) {
 		$this->Session->write('Examsession',null);
-		$this->redirect(array('action'=>'exam', $id));
+		$this->redirect(array('controller'=>'exams','action'=>'exam', $id));
 	}
 
 	
