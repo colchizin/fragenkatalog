@@ -6,7 +6,7 @@ App::uses('AppController', 'Controller');
  * @property ExamsessionsQuestion $ExamsessionsQuestion
  */
 class ExamsessionsQuestionsController extends AppController {
-
+	public $components = array('RequestHandler');
 
 /**
  * index method
@@ -51,6 +51,34 @@ class ExamsessionsQuestionsController extends AppController {
 		$questions = $this->ExamsessionsQuestion->Question->find('list');
 		$answers = $this->ExamsessionsQuestion->Answer->find('list');
 		$this->set(compact('examsessions', 'questions', 'answers'));
+	}
+
+	/*
+	 * This is only for ajax use
+	 */
+	public function add_or_save() {
+		if ($this->request->is('post')) {
+			if ($session_id = $this->Session->read('Examsession')) {
+				$data = $this->request->data['ExamsessionsQuestion'];
+				$eq = $this->ExamsessionsQuestion->findByExamsessionIdAndQuestionId(
+					$session_id,
+					$data['question_id']
+				);
+				if ($eq) {
+					$eq['ExamsessionsQuestion']['answer_id'] = $this->request->data['ExamsessionsQuestion']['answer_id'];
+				} else {
+					$eq = array('ExamsessionsQuestion' => array(
+						'question_id' => $data['question_id'],
+						'answer_id' => $data['answer_id'],
+						'examsession_id' => $session_id
+					));
+					$this->ExamsessionsQuestion->create();
+				}
+				$eq = $this->ExamsessionsQuestion->save($eq);
+				$this->set('examsessionsQuestion', $eq);
+				$this->set('_serialize','examsessionsQuestion');
+			}	
+		}
 	}
 
 /**

@@ -105,6 +105,10 @@ class Exam extends AppModel {
  *
  * @var array
  */
+	public $hasMany = array(
+		'Examsession'
+	);
+
 	public $belongsTo = array(
 		'Subject' => array(
 			'className' => 'Subject',
@@ -160,5 +164,30 @@ class Exam extends AppModel {
 			return false;
 		}
 		return $this->read();
+	}
+
+	public function findByIdMergeExamsession($id, $session_id) {
+		$this->contain(array(
+			'Question'=>array('id','question','attachment','Answer'),
+			'Subject'
+		));
+		$this->Examsession->contain(array(
+			'ExamsessionsQuestion'
+		));
+
+		$exam = $this->findById($id);
+		$session = $this->Examsession->findById($session_id);
+		if (!empty($session['ExamsessionsQuestion'])) {
+			foreach ($exam['Question'] as &$question) {
+				foreach ($question['Answer'] as &$answer) {
+					foreach ($session['ExamsessionsQuestion']as &$esquestion) {
+						if ($esquestion['answer_id'] == $answer['id']) {
+							$answer['checked'] = true;
+						}
+					}
+				}
+			}
+		}
+		return $exam;
 	}
 }

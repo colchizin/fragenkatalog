@@ -108,6 +108,20 @@ echo $this->Js->writeBuffer();
 				));?></li>
 
 				<li class='separator'></li>
+<?php			if ($this->Session->read('Examsession')):?>
+				<li>
+					<?php echo $this->Html->link(__('Continue Exam'), array(
+						'controller'=>'examsessions',
+						'action'=>'continue_current_session')
+					);?>
+				</li>
+<?php			endif;?>
+				
+				<li><?php echo $this->Html->link(__('My Exams'), array(
+					'controller'=>'examsessions',
+					'action'=>'my_sessions'
+				));?></li>
+
 <?php			if (AuthComponent::user('programme_id')):?>
 					<li><?php echo $this->Html->link(__('My Programme'), array(
 						'controller'=>'programmes',
@@ -116,15 +130,16 @@ echo $this->Js->writeBuffer();
 					));?></li>	
 <?php			endif;?>
 
+
 				<li><?php echo $this->Html->link(__('My User Profile'), array(
 					'controller'=>'users',
 					'action'=>'view_myprofile'
 				));?></li>
+				<li class='separator'></li>
 				<li><?php echo $this->Html->link(__('Invite someone'), array(
 					'controller'=>'invitations',
 					'action'=>'add'
 				));?></li>
-				<li class='separator'></li>
 				<li><?php echo $this->Html->link(__('Report an error'), array(
 					'controller'=>'tickets',
 					'action'=>'add'
@@ -134,6 +149,10 @@ echo $this->Js->writeBuffer();
 					'action'=>'index'
 				));?></li>
 			</ul>
+
+			<div id='info-area'>
+
+			</div>
 		</div>
 		<div id="content">
 			<a

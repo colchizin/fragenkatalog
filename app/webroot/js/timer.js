@@ -1,5 +1,5 @@
-function addTimer(par) {
-	var timer = $('<div></div>')
+function addTimer(par, className) {
+	var timer = $('<div class="' + className + '"></div>')
 		.addClass('timer')
 		.append($('<span class="timer-hours">00</span>'))
 		.append($('<span class="separator">:</span>'))

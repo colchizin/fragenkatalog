@@ -83,4 +83,8 @@ class Examsession extends AppModel {
 		)
 	);
 
+	public $hasMany = array(
+		'ExamsessionsQuestion'
+	);
+
 }

@@ -25,12 +25,48 @@ class ExamsController extends AppController {
 				'Material'
 			)
 		));
+
+		$sessionid = $this->Session->read("Examsession");
+		$question = false;
+
+		// Prüfen, ob eine Examsession schon geöffnet ist
+		if ($sessionid) {
+			// ja, eine Examsession ist schon geöffnet
+			if ($id != null)	// es wurde aber auch eine Klausur übergeben, was nun?
+				$this->redirect(array('controller'=>'exams', 'action' => 'confirm_session', $id));
+			else { // keine Klausur übergeben, also Session fortführen
+				$id = $sessionid;
+				$session = $this->Exam->Examsession->findById($sessionid);
+				$id = $session['Examsession']['exam_id'];
+
+				// Wenn mindestens eine Frage beantwortet wurde, dann zu dieser Frage springen
+				if (!empty($session['Question']))
+					$question = $session['Question'][count($session['Question'])-1]['id'];
+				if (!empty($session['Examsession']['finished']))
+					$this->set('session_finished', true);
+
+			}
+		} else if ($id != null) {
+			// noch keine Examsession geöffnet
+			$this->Exam->Examsession->create(array(
+				'Examsession'=>array(
+					'user_id'=>$this->Auth->user('id'),
+					'exam_id'=>$id
+				)
+			));
+			$this->Exam->Examsession->save();
+			$sessionid = $this->Exam->Examsession->getInsertId();
+			$this->Session->write('Examsession', $sessionid);
+		}
+
+		$this->set('current_question',$question);
+
 		$this->view($id);
 	}
 
+
 /**
- * index method
- *
+ * index methsession*
  * @return void
  */
 	public function index() {
@@ -49,7 +85,8 @@ class ExamsController extends AppController {
 		if (!$this->Exam->exists()) {
 			throw new NotFoundException(__('Invalid exam'));
 		}
-		$exam = $this->Exam->read(null,$id);
+
+		$exam = $this->Exam->findByIdMergeExamsession($id, $this->Session->read('Examsession'));
 		$this->set('title_for_layout',$exam['Exam']['shortname']);
 		$this->set('exam', $exam);
 	}

@@ -63,6 +63,10 @@ class AppController extends Controller {
 		if ($layout = $this->Session->read('Client.Layout')) {
 			$this->layout = $layout;
 		}
+
+		if (isset($this->request->named['useRH']) && $this->request->named['useRH']) {
+			$this->RequestHandler->enabled = true;
+		}
 	}
 
 	public function beforeRender() {

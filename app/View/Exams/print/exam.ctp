@@ -35,21 +35,41 @@
 ?>
 <script language='javascript'>
 	$(document).ready(function() {
-		<?php if (isset($session_finished) && $session_finished):?>
-			finished = true;
-		<?php endif;?>
-
-		<?php if (!empty($current_question)):?>
-			setCurrentQuestion($('#question<?php echo $current_question;?>'));
-			scrollToQuestion($('#question<?php echo $current_question;?>'));
+		<?php if ($question != null):?>
+			setCurrentQuestion(<?php echo $current_question;?>);
+			scrollToQuestion(<?php echo $current_question;?>);
 		<?php else:?>
 			nextQuestion();
 		<?php endif;?>
-		addQuestionCounter(document.getElementById('info-area'), 'info-area-element');
-		addTimer(document.getElementById('info-area'), 'info-area-element');
-		updateQuestionCounter();
+		addTimer(document.getElementById('navigation'));
 	});
 </script>
+<div id='print_info'>
+	<p>In dieser Ansicht kannst du dir die Klausur einfach ausdrucken. Dir
+	richtige Lösung ist am rechten Rand durch einen scwarzen Balken
+	gekennzeichnet, den du beim Kreuzen einfach durch ein Blatt Papier zudecken
+	kannst.</p>
+	<p>Wenn du die Kommentare mit ausdrucken möchtest, dann mach das über die
+	folgende Schaltfläche: Kommentare
+		<a
+			class='button'
+			href='#'
+			onclick='$(".question").addClass("split");'
+		><?php echo __('Show');?></a>
+		<a
+			class='button'
+			href='#'
+			onclick='$(".question").removeClass("split");'
+		><?php echo __('Hide');?></a>
+	</p>
+	<p>Das verbraucht zwar mehr Platz (und Papier), dafür kannst du dir aber
+	auch gleich Notizen dazuschreiben. <em>Hinweis:</em> Einige Kommentare
+	enthalten sehr lange URLs, die nicht umgebrochen werden. An diesen Stellen
+	ist das Layout ein bisschen verschoben, bitte hab Verständnis dafür!</p>
+	<p>Schließe vor dem Drucken diesen Info-Bereich, damit er nicht auf dem
+	Ausdruck erscheint</p>
+	<a class='button' href="#" onclick="javascript:$('#print_info').hide();"><?php echo __('Close');?></a>
+</div>
 
 	<form id='exam' name='examform'>
 <?php
@@ -59,7 +79,6 @@
 		<div
 			class='question'
 			id='question<?php echo $question['id'];?>'
-			data-id='<?php echo $question['id'];?>'
 			onclick="if (true) {
 				setCurrentQuestion($(document.getElementById('question<?php echo $question['id'];?>')));
 			}"
@@ -86,10 +105,6 @@
 							type='radio'
 							id='answer_<?php echo $answer['id']?>'
 							name='question_<?php echo $question['id']?>'
-							<?php if (isset($answer['checked']) && $answer['checked']):?>
-								checked="checked"
-							<?php endif;?>
-							onclick="submitAnswer(<?php echo $question['id'];?>,<?php echo $answer['id'];?>);"
 						/>
 						<label
 							for='answer_<?php echo $answer['id'];?>'

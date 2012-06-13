@@ -234,7 +234,7 @@ ul.menu li a:hover {
 }
 
 ul.menu li.separator,
-.timer {
+.info-area-element {
 	border-top:1px solid lightgrey;
 }
 
@@ -340,6 +340,7 @@ ul[data-role=listview] li span.ui-li-count {
 .answers .answer.wrong label{
 	background-color:red !important;
 }
+
 
 .answer.wrong label,
 .answer.correct label{
@@ -715,6 +716,12 @@ div#print_info {
 	color:black;
 }
 
+div.info {
+	background-color:#F0EBE2;
+	padding:1em;
+	border: 1px dashed lightGrey;
+}
+
 /*
  * Keyboard
  */
@@ -766,13 +773,16 @@ span.keyboard {
 	text-align:right;
 }
 
-.timer {
+#info-area {
 	position:absolute;
 	bottom:0px;
-	margin:auto;
-	padding:.8em;
 	left:0px;
 	right:0px;
+}
+
+#info-area .info-area-element {
+	margin:auto;
+	padding:.8em;
 	text-align:center;
 }
 

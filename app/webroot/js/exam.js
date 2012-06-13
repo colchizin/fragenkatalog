@@ -3,6 +3,7 @@ var questions_total = 0;
 var questions_correct = 0;
 var time_start = new Date();
 var time_end;
+var finished = false;
 
 function checkAll() {
 	questions_total = $('.question').get().length;
@@ -61,6 +62,7 @@ function previousQuestion() {
 		}
 	}
 	scrollToQuestion(currentQuestion);
+	updateQuestionCounter();
 }
 
 function nextQuestion() {
@@ -78,6 +80,7 @@ function nextQuestion() {
 		}
 	}
 	scrollToQuestion(currentQuestion);
+	updateQuestionCounter();
 }
 
 function setCurrentQuestion(question) {
@@ -88,6 +91,7 @@ function setCurrentQuestion(question) {
 
 	currentQuestion = question;
 	currentQuestion.addClass('current');
+	updateQuestionCounter();
 }
 
 function scrollToQuestion(q) {
@@ -113,7 +117,6 @@ function selectAnswer(index) {
 
 function select(c) {
 	//$(c).attr('checked','checked');
-	$(c).click();
 	$(c).click();
 }
 
@@ -308,4 +311,51 @@ function toggleViewmode() {
 	switchViewmode(viewModeSingle);	
 }	
 
+function updateQuestionCounter() {
+	var answeredQuestionsCount = $('.question input:checked').get().length;
+	questions_total = $('.question').get().length;
+	$('#questions-answers-count').text(answeredQuestionsCount);
+	$('#questions-total-count').text(questions_total);
 
+	// Alle Fragen beantwortet, Sitzung beeendet
+	if (answeredQuestionsCount == questions_total) {
+		finishSession();
+	}
+}
+
+function addQuestionCounter(el, className) {
+	$('<div class="' + className + '"></div>')
+		.append("Frage ")
+		.append($('<span id="questions-answers-count">0</span>'))
+		.append(" von ")
+		.append($('<span id="questions-total-count">0</span>'))
+		.appendTo($(el));
+}
+
+function submitAnswer(question_id, answer_id) {
+	$.ajax({
+		url:"/fragenkatalog/examsessions_questions/add_or_save/useRH:true.json",
+		type:"POST",
+		data: {'ExamsessionsQuestion' : { 
+			'answer_id' : answer_id,
+			'question_id' : question_id
+		}},
+		complete: function(jqXHR, textStatus) {
+			//alert(jqXHR.responseText);
+		}
+	});
+}
+
+function finishSession() {
+	if (!finished) {
+		$.ajax({
+			url:"/fragenkatalog/examsessions/finish/useRH:true.json",
+			type:"POST",
+			complete: function (jqXHR, textStatus) {
+				alert(jqXHR.responseText);
+			}
+		});
+		finished = true;
+		alert("Fertig!");
+	}
+}

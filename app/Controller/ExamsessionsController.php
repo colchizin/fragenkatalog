@@ -7,6 +7,13 @@ App::uses('AppController', 'Controller');
  */
 class ExamsessionsController extends AppController {
 
+	public $paginate = array(
+		'limit' => 25,
+		'order' => array(
+			'Examsession.finished' => 'ASC',
+			'Examsession.created' => 'DESC'
+		)
+	);
 
 /**
  * index method
@@ -14,8 +21,37 @@ class ExamsessionsController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->Examsession->recursive = 0;
+		$this->Examsession->contain(array(
+			'Exam'=>array('id','fullname','Subject'),
+			'User'
+		));
 		$this->set('examsessions', $this->paginate());
+	}
+
+	public function my_sessions() {
+		$userid = $this->Auth->user('id');
+		$contain = array(
+			'Exam'=>array('id','fullname','Subject'),
+			'User'
+		);
+		
+		$this->Examsession->contain($contain);
+		$sessions_unfinished = $this->Examsession->find('all', array(
+			'conditions' => array(
+				'user_id' => $userid,
+				'finished' => null
+			)
+		));
+		$this->Examsession->contain($contain);
+		$sessions_finished = $this->Examsession->find('all', array(
+			'conditions' => array(
+				'user_id' => $userid,
+				'NOT' => array('finished' => null)
+			)
+		));
+
+		$this->set(compact('sessions_unfinished','sessions_finished'));
+		$this->set('_serialize', compact('sessions_unfinished','sessions_finished'));
 	}
 
 /**
@@ -29,7 +65,15 @@ class ExamsessionsController extends AppController {
 		if (!$this->Examsession->exists()) {
 			throw new NotFoundException(__('Invalid examsession'));
 		}
-		$this->set('examsession', $this->Examsession->read(null, $id));
+		$this->set('examsession', $this->Examsession->findById($id));
+	}
+
+	public function result($id = null) {
+		$this->Examsession->contain(array(
+			'ExamsessionsQuestion' => array('answer_id', 'Question' => array('question','Answer'))
+		));
+		
+		$this->view($id);
 	}
 
 /**
@@ -100,5 +144,53 @@ class ExamsessionsController extends AppController {
 		}
 		$this->Session->setFlash(__('Examsession was not deleted'));
 		$this->redirect(array('action' => 'index'));
+	}
+
+	public function continue_current_session() {
+		$this->redirect(array('controller' => 'exams', 'action'=>'exam'));
+	}
+
+	public function continue_session($id = null) {
+		if ($id != null) {
+			$session = $this->Examsession->findById($id);
+			if ($session['Examsession']['user_id'] != $this->Auth->user('id')) {
+				$this->Session->flash(__('This session does not belong to you'));
+				$this->redirect($this->referer());
+			}
+
+			$this->Session->write('Examsession', $id);
+		}
+
+		$this->continue_current_session();
+	}
+
+	public function confirm_session($id = null) {
+		$sessionid = $this->Session->read('Examsession');
+		if (!$sessionid)
+			$this->redirect(array('controller'=>'exams', 'action'=>'exam',$id));
+
+		$session = $this->Examsession->findById($sessionid);
+
+		$this->Examsession->Exam->id = $id;
+		if (!$this->Examsession->Exam->exists()) {
+			throw new NotFoundException(__('Invalid exam'));
+		}
+		$exam = $this->Examsession->Exam->findById($id);
+		$this->set(compact('exam','session'));
+	}
+
+	public function new_session($id = null) {
+		$this->Session->write('Examsession',null);
+		$this->redirect(array('action'=>'exam', $id));
+	}
+
+	
+	public function finish() {
+		$this->Examsession->id = $this->Session->read('Examsession');
+
+		if (!$this->Examsession->field('finished'))
+			$this->Examsession->saveField('finished',date("y:m:d H:i:s"));
+
+		$this->set('_serialize', true);
 	}
 }
