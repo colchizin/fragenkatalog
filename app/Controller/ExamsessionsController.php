@@ -49,7 +49,15 @@ class ExamsessionsController extends AppController {
 			'conditions' => array(
 				'user_id' => $userid,
 				'NOT' => array('finished' => null)
-			)
+			),
+			'joins'=>array(
+				array(
+					'table'=>'exams',
+					'alias'=>'MyExam',
+					'conditions'=>'MyExam.id = Examsession.exam_id'
+				)
+			),
+			'order' => array('MyExam.subject_id')
 		));
 
 		$this->set(compact('sessions_unfinished','sessions_finished'));
@@ -136,13 +144,19 @@ class ExamsessionsController extends AppController {
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}
+
 		$this->Examsession->id = $id;
 		if (!$this->Examsession->exists()) {
 			throw new NotFoundException(__('Invalid examsession'));
 		}
+
+		$exam = $this->Examsession->read(null,$id);
+		if ($exam['Examsession']['user_id'] != $this->Auth->user('id')) {
+			throw new ForbiddenException();
+		}
 		if ($this->Examsession->delete()) {
 			$this->Session->setFlash(__('Examsession deleted'));
-			$this->redirect(array('action' => 'index'));
+			$this->redirect(array('action' => 'my_sessions'));
 		}
 		$this->Session->setFlash(__('Examsession was not deleted'));
 		$this->redirect(array('action' => 'index'));

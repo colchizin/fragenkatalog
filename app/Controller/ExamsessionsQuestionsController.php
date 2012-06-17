@@ -6,7 +6,7 @@ App::uses('AppController', 'Controller');
  * @property ExamsessionsQuestion $ExamsessionsQuestion
  */
 class ExamsessionsQuestionsController extends AppController {
-	public $components = array('RequestHandler');
+	// public $components = array('RequestHandler');
 
 /**
  * index method

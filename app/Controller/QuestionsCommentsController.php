@@ -7,7 +7,7 @@ App::uses('AppController', 'Controller');
  */
 class QuestionsCommentsController extends AppController {
 
-	public $components = array('RequestHandler');
+	// public $components = array('RequestHandler');
 
 /**
  * index method

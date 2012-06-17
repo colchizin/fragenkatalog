@@ -117,6 +117,8 @@ class Subject extends AppModel {
 
 	public function getExamCountGroupedBySemesterAndSubject() {
 		$db = $this->getDataSource();
+		$userquery = "";
+
 		$query = "SELECT
 					Exam.semester,
 					Subject.name,
@@ -134,15 +136,30 @@ class Subject extends AppModel {
 			$result[$entry['Exam']['semester']][] = $entry;
 		}
 
+
 		return $result;
 	}
 
 	public function getExamsGroupedBySemester($subject_id) {
-			$this->Exam->contain();
-			$data = $this->Exam->findAllBySubjectId($subject_id);
+			//$this->Exam->contain();
+			//$this->Exam->recursive = -1;
+			$data = $this->Exam->find('all', array(
+				'conditions' => array(
+					'subject_id' => $subject_id,
+				),
+				'joins' => array(
+					array(
+						'table' => 'examsessions',
+						'alias' => 'Examsession',
+						'type' => 'LEFT',
+						'conditions' => array('Examsession.exam_id = Exam.id')
+					)
+				)
+			));
 			$result = array();
 
 			foreach ($data as $entry) {
+				var_dump($entry);
 				$result[$entry['Exam']['semester']][] = $entry;
 			}
 

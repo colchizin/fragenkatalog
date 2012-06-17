@@ -59,7 +59,7 @@ function submitComment() {
 	if (field.parents('.answer').get().length > 0) {
 		var par = field.parents('.answer');
 		$.ajax({
-			url : '/fragenkatalog/answers_comments/add/useRH:true/.json',
+			url : '/fragenkatalog/answers_comments/add.json',
 			type: 'POST',
 			data: {
 				'AnswersComment' : {
@@ -71,12 +71,18 @@ function submitComment() {
 			},
 			success: function(data) {
 				onCommentSubmitted(data,par.find('.comments'));
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+				if (jqXHR.status == 403) {
+					alert('Sitzung abgelaufen. Neu anmelden');
+					location.reload();
+				}
 			}
 		});
 	} else if (field.parents('.question').get().length > 0) {
 		var par = field.parents('.question');
 		$.ajax({
-			url : '/fragenkatalog/questions_comments/add/useRH:true/.json',
+			url : '/fragenkatalog/questions_comments/add.json',
 			type: 'POST',
 			data: {
 				'QuestionsComment' : {
@@ -88,6 +94,12 @@ function submitComment() {
 			},
 			success: function(data) {
 				onCommentSubmitted(data,par.children('.comments'));
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+				if (jqXHR.status == 403) {
+					alert('Sitzung abgelaufen. Neu anmelden');
+					location.reload();
+				}
 			}
 		});
 	} else {
@@ -137,7 +149,6 @@ function previousQuestion() {
 		}
 	}
 	scrollToQuestion(currentQuestion);
-	updateQuestionCounter();
 }
 
 function nextQuestion() {
@@ -155,7 +166,6 @@ function nextQuestion() {
 		}
 	}
 	scrollToQuestion(currentQuestion);
-	updateQuestionCounter();
 }
 
 function setCurrentQuestion(question) {
@@ -166,7 +176,6 @@ function setCurrentQuestion(question) {
 
 	currentQuestion = question;
 	currentQuestion.addClass('current');
-	updateQuestionCounter();
 }
 
 function scrollToQuestion(q) {
@@ -254,13 +263,20 @@ function addQuestionCounter(el, className) {
 
 function submitAnswer(question_id, answer_id) {
 	$.ajax({
-		url:"/fragenkatalog/examsessions_questions/add_or_save/useRH:true.json",
+		url:"/fragenkatalog/examsessions_questions/add_or_save.json",
 		type:"POST",
 		data: {'ExamsessionsQuestion' : { 
 			'answer_id' : answer_id,
 			'question_id' : question_id
 		}},
-		complete: function(jqXHR, textStatus) {
+		success: function(data) {
+			updateQuestionCounter();
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+			if (jqXHR.status == 403) {
+				alert('Sitzung abgelaufen. Neu anmelden');
+				location.reload();
+			}
 		}
 	});
 }
@@ -270,7 +286,11 @@ function finishSession() {
 		$.ajax({
 			url:"/fragenkatalog/examsessions/finish/useRH:true.json",
 			type:"POST",
-			complete: function (jqXHR, textStatus) {
+			error: function(jqXHR, textStatus, errorThrown) {
+				if (jqXHR.status == 403) {
+					alert('Sitzung abgelaufen. Neu anmelden');
+					location.reload();
+				}
 			}
 		});
 		finished = true;

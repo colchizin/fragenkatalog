@@ -43,7 +43,7 @@ class AppController extends Controller {
 			'loginRedirect' => array('controller'=>'pages','action'=>'display','home'),
 
 		),
-		'RequestHandler' => array('enabled' => false),
+		'RequestHandler',
 		'Session');
 	var $helpers = array('Html','Form','Session','Js');
 
@@ -65,6 +65,7 @@ class AppController extends Controller {
 		}
 
 		if (isset($this->request->named['useRH']) && $this->request->named['useRH']) {
+			var_dump("Request-Handler enabled");
 			$this->RequestHandler->enabled = true;
 		}
 	}

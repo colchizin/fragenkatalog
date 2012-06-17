@@ -9,7 +9,7 @@
 	));
 	echo $this->Form->input('username',array('type'=>'text','label'=>false));
 	echo $this->Form->input('password', array('label'=>false));
-	echo $this->Form->end('submit');
+	echo $this->Form->end(__('Log in'));
 
 	echo $this->Html->link(__('Register'),array(
 		'controller'=>'users',

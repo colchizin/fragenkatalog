@@ -34,7 +34,7 @@ class ProgrammesController extends AppController {
 			'University'
 		));
 		$programme = $this->Programme->read(null, $id);
-		$semesters = $this->Programme->Subject->getExamCountGroupedBySemesterAndSubject();
+		$semesters = $this->Programme->Subject->getExamCountGroupedBySemesterAndSubject($this->Auth->user('id'));
 		$this->set('programme',$programme);
 		$this->set('semesters', $semesters);
 		$this->set('title_for_layout', $programme['Programme']['name']);

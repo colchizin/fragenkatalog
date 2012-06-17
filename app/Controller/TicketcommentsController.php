@@ -6,7 +6,6 @@ App::uses('AppController', 'Controller');
  * @property Ticketcomment $Ticketcomment
  */
 class TicketcommentsController extends AppController {
-	public $components = array('RequestHandler');
 
 /**
  * index method

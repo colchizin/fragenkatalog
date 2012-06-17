@@ -1,7 +1,7 @@
 function addTicketcomment(ticket_id, user_id) {
 	var comment = $('#TicketcommentComment').attr('value');
 	$.ajax({
-		url: '/fragenkatalog/ticketcomments/add.json',
+		url: '/fragenkatalog/ticketcomments/add/useRH:true.json',
 		data: { 'Ticketcomment' : {
 			'ticket_id' : ticket_id,
 			'comment' : comment

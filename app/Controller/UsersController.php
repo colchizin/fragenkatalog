@@ -63,6 +63,8 @@ class UsersController extends AppController {
 		$this->Acl->allow($group, 'controllers/Examsessions/confirm_session');
 		$this->Acl->allow($group, 'controllers/Examsessions/continue_session');
 		$this->Acl->allow($group, 'controllers/Examsessions/continue_current_session');
+		$this->Acl->allow($group, 'controllers/Examsessions/delete');
+		$this->Acl->allow($group, 'controllers/ExamsessionsQuestions/add_or_save');
 		echo "all done";
 		exit;
 	}

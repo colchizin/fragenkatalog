@@ -61,7 +61,14 @@ class ExamsController extends AppController {
 
 		$this->set('current_question',$question);
 
-		$this->view($id);
+		$this->Exam->id = $id;
+		if (!$this->Exam->exists()) {
+			$this->redirect(array('controller'=>'examsessions','action'=>'my_sessions'));
+		}
+
+		$exam = $this->Exam->findByIdMergeExamsession($id, $this->Session->read('Examsession'));
+		$this->set('title_for_layout',$exam['Exam']['shortname']);
+		$this->set('exam', $exam);
 	}
 
 

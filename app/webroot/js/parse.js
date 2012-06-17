@@ -90,7 +90,7 @@ function parse(c) {
 
 				var material = {};
 				material.title = $(a).text();
-				material.text = 'Mindmap: ' + 'http://www.myencephalon.de' + $(a).attr('href');
+				material.text = 'http://www.myencephalon.de' + $(a).attr('href');
 				material.type = "mindmap";
 				question.materials.push(material);
 				console.log('Mindmap gefunden: ' + a.attr('href'));
@@ -230,7 +230,7 @@ function parse(c) {
 			);
 			mat.append($('<input type="text" name="' + namebase2+'[type]" value="'+material.type+'" />'));
 	//		mat.append($(material.text));
-			mat.append($('<textarea rows=4 name="'+namebase2+'[text]"></textarea>').text(material.text);
+			mat.append($('<textarea rows=4 name="'+namebase2+'[text]"></textarea>').text(material.text));
 
 			mats.append(mat);
 		}

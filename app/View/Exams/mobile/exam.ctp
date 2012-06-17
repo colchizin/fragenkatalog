@@ -15,13 +15,16 @@
 		<?php else:?>
 			nextQuestion();
 		<?php endif;?>
-		// addQuestionCounter(document.getElementById('info-area'), 'info-area-element');
-		// addTimer(document.getElementById('info-area'), 'info-area-element');
-		// updateQuestionCounter();
+		updateQuestionCounter();
 	});
 </script>
 
 	<form id='exam' name='examform'>
+		<div id='question-counter'>
+			<span id='questions-answers-count'>0</span> 
+			von <span id='questions-total-count'>0</span>
+			Fragen beantwortet
+		</div>
 <?php
 	$i = 1;	
 	foreach ($exam['Question'] as $question):
@@ -125,7 +128,6 @@
 		</div>
 <?php
 	endforeach;
-
 ?>
 	</form>
 
