@@ -15,6 +15,10 @@ class ExamsController extends AppController {
 	 * @access public
 	 * @return void
 	 */
+	public function exam_test($id = null) {
+		$this->exam($id);
+	}
+
 	public function exam($id = null) {
 		$this->Exam->contain(array(
 			'Question' => array(
