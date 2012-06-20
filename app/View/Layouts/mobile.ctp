@@ -48,16 +48,26 @@ echo $this->Js->writeBuffer();
 <div data-role="page">
 	<div id='header' data-role="header">
 		<h1><?php echo $title_for_layout;?></h1>
-		<?php echo $this->Html->link(__('Home'),
-			array(
-				'controller'=>'pages',
-				'action'=>'home'
-			),
-			array(
-				'data-icon'=>'home',
-				'data-iconpos'=>'notext'
-			)
-		);?>
+		<?php if (count($breadcrumbs)>1):?>
+			<?php echo $this->Html->link($breadcrumbs[count($breadcrumbs)-2]['title'],
+				$breadcrumbs[count($breadcrumbs)-2]['link'],
+				array(
+					'data-icon'=>'arrow-l',
+					'data-iconpos'=>'notext'
+				)
+			);?>
+		<?php else:?>
+			<?php echo $this->Html->link(__('Home'),
+				array(
+					'controller'=>'pages',
+					'action'=>'home'
+				),
+				array(
+					'data-icon'=>'home',
+					'data-iconpos'=>'notext'
+				)
+			);?>
+		<?php endif;?>
 		<a
 			data-icon='grid'
 			data-iconpos='notext'

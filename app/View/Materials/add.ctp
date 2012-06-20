@@ -10,6 +10,9 @@
 		echo $this->Form->input('Question');
 	?>
 	</fieldset>
+	<a href='javascript:window.open("<?php echo Router::url(array('action'=>'pick_image', 'layout'=>'dialog','use_layout_once'=>true));?>","imagedialog","width=700,height=300");'>
+		Bild einfügen
+	</a>
 <?php echo $this->Form->end(__('Submit'));?>
 </div>
 <div class="actions">

@@ -41,6 +41,7 @@ class UsersController extends AppController {
 		$this->Acl->allow($group, 'controllers/Subjects/add');
 		$this->Acl->allow($group, 'controllers/Subjects/edit');
 		$this->Acl->allow($group, 'controllers/Exams');
+		$this->Acl->deny($group, 'controllers/Exams/delete');
 		$this->Acl->allow($group, 'controllers/Questions');
 		$this->Acl->allow($group, 'controllers/Materials');
 		$this->Acl->allow($group, 'controllers/Answers');

@@ -32,9 +32,12 @@ class ExamsController extends AppController {
 		// Prüfen, ob eine Examsession schon geöffnet ist
 		if ($sessionid) {
 			// ja, eine Examsession ist schon geöffnet
-			if ($id != null)	// es wurde aber auch eine Klausur übergeben, was nun?
+
+			$session = $this->Exam->Examsession->findById($sessionid);
+
+			if ($id != null && $id!=$session['Examsession']['exam_id'])	// es wurde aber auch eine Klausur übergeben, was nun?
 				$this->redirect(array('controller'=>'examsessions', 'action' => 'confirm_session', $id));
-			else { // keine Klausur übergeben, also Session fortführen
+			else { // keine neue Klausur übergeben, also Session fortführen
 				$id = $sessionid;
 				$session = $this->Exam->Examsession->findById($sessionid);
 				$id = $session['Examsession']['exam_id'];
@@ -69,6 +72,24 @@ class ExamsController extends AppController {
 		$exam = $this->Exam->findByIdMergeExamsession($id, $this->Session->read('Examsession'));
 		$this->set('title_for_layout',$exam['Exam']['shortname']);
 		$this->set('exam', $exam);
+
+		$programme = $this->Exam->Subject->Programme->findById($exam['Subject']['programme_id']);
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>$programme['Programme']['name'],
+			'link' => array('controller'=>'programmes', 'action'=>'view', $exam['Subject']['programme_id'])
+		));
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>$exam['Subject']['name'],
+			'link' => array('controller'=>'subjects', 'action'=>'view', $exam['Subject']['id'])
+		));
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>$exam['Exam']['fullname'],
+			'link' => array('controller'=>'exams', 'action'=>'view', $exam['Exam']['id'])
+		));
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' => __('Running exam'),
+			'link' => array('controller'=>'exams', 'action'=>'exam')
+		));
 	}
 
 
@@ -96,6 +117,20 @@ class ExamsController extends AppController {
 		$exam = $this->Exam->findByIdMergeExamsession($id, $this->Session->read('Examsession'));
 		$this->set('title_for_layout',$exam['Exam']['shortname']);
 		$this->set('exam', $exam);
+
+		$programme = $this->Exam->Subject->Programme->findById($exam['Subject']['programme_id']);
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>$programme['Programme']['name'],
+			'link' => array('controller'=>'programmes', 'action'=>'view', $exam['Subject']['programme_id'])
+		));
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>$exam['Subject']['name'],
+			'link' => array('controller'=>'subjects', 'action'=>'view', $exam['Subject']['id'])
+		));
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>$exam['Exam']['fullname'],
+			'link' => array('controller'=>'exams', 'action'=>'view', $exam['Exam']['id'])
+		));
 	}
 
 /**

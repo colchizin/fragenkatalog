@@ -42,6 +42,15 @@ class ProgrammesController extends AppController {
 		{
 			$this->set('ask_programme',true);
 		}
+
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>$programme['University']['name'],
+			'link' => array('controller'=>'universities', 'action'=>'view', $programme['University']['id'])
+		));
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>$programme['Programme']['name'],
+			'link' => array('controller'=>'programmes', 'action'=>'view', $id)
+		));
 	}
 
 /**

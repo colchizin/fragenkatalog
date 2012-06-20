@@ -29,6 +29,8 @@ class ExamsessionsController extends AppController {
 	}
 
 	public function my_sessions() {
+		$this->Breadcrumb->addBreadcrumb(array('title'=>__('My Exams'), 'link'=>array('action'=>'my_sessions')));
+
 		$this->set('title_for_layout', __('My Exams'));
 		$userid = $this->Auth->user('id');
 		$contain = array(

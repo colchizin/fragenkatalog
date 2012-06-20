@@ -7,6 +7,9 @@ App::uses('AppController', 'Controller');
  */
 class UniversitiesController extends AppController {
 
+	public function beforeFilter() {
+		parent::beforeFilter();
+	}
 
 /**
  * index method
@@ -16,6 +19,10 @@ class UniversitiesController extends AppController {
 	public function index() {
 		$this->University->recursive = 0;
 		$this->set('universities', $this->paginate());
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>__('Universities'),
+			'link' => array('controller'=>'universities', 'action'=>'index')
+		));
 	}
 
 /**
@@ -29,7 +36,17 @@ class UniversitiesController extends AppController {
 		if (!$this->University->exists()) {
 			throw new NotFoundException(__('Invalid university'));
 		}
-		$this->set('university', $this->University->read(null, $id));
+		$university = $this->University->read(null, $id);
+		$this->set('university', $university);
+
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>__('Universities'),
+			'link' => array('controller'=>'universities', 'action'=>'index')
+		));
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>$university['University']['name'],
+			'link' => array('controller'=>'universities', 'action'=>'view', $id)
+		));
 	}
 
 /**
@@ -47,6 +64,8 @@ class UniversitiesController extends AppController {
 				$this->Session->setFlash(__('The university could not be saved. Please, try again.'));
 			}
 		}
+		$this->Breadcrumb->addBreadcrumb(__('Universities'), array('controller'=>'universities', 'action'=>'index'));
+		$this->Breadcrumb->addBreadcrumb(__('Add University'), array('controller'=>'universities', 'action'=>'add'));
 	}
 
 /**
@@ -70,6 +89,9 @@ class UniversitiesController extends AppController {
 		} else {
 			$this->request->data = $this->University->read(null, $id);
 		}
+
+		$this->Breadcrumb->addBreadcrumb(__('Universities'), array('controller'=>'universities', 'action'=>'index'));
+		$this->Breadcrumb->addBreadcrumb(__('Edit University'), array('controller'=>'universities', 'action'=>'edit'));
 	}
 
 /**

@@ -43,9 +43,10 @@ class AppController extends Controller {
 			'loginRedirect' => array('controller'=>'pages','action'=>'display','home'),
 
 		),
+		'Breadcrumb',
 		'RequestHandler',
 		'Session');
-	var $helpers = array('Html','Form','Session','Js');
+	var $helpers = array('Html','Form','Session','Js','Breadcrumb');
 
 	public function beforeFilter() {
 		if (isset($this->request->named['layout'])) {
@@ -53,7 +54,7 @@ class AppController extends Controller {
 			if (is_array($layout))
 				$layout = $layout[count($layout)-1];
 			
-			$this->Session->write('Client.Layout', $layout);
+				$this->Session->write('Client.Layout', $layout);
 		} else {
 			if ($this->Session->read('Client.Layout') != 'default' && $this->request->isMobile()) {
 				$this->Session->write('Client.Layout', 'mobile');
@@ -62,6 +63,10 @@ class AppController extends Controller {
 
 		if ($layout = $this->Session->read('Client.Layout')) {
 			$this->layout = $layout;
+		}
+
+		if (isset($this->request->named['layout_once'])) {
+			$this->layout = $this->request->named['layout_once'];
 		}
 
 		if (isset($this->request->named['useRH']) && $this->request->named['useRH']) {
@@ -76,6 +81,10 @@ class AppController extends Controller {
 			if (file_exists($file)) {
 				$this->viewPath .= '/' . $this->layout;
 			}
+		}
+
+		if (is_object($this->Breadcrumb)) {
+			$this->set('breadcrumbs', $this->Breadcrumb->getBreadcrumbs());
 		}
 	}
 }

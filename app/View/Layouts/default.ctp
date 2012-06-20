@@ -35,6 +35,7 @@ $cakeDescription = "Fragenkatalog";
 
 		echo $this->Html->css('default');
 		echo $this->Html->css('jquery.wysiwyg');
+		echo $this->Html->css('ui-lightness/jquery-ui-1.8.17.custom');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -44,7 +45,6 @@ $cakeDescription = "Fragenkatalog";
 <?php
 $this->Js->buffer('scrollcontainer = $("#content");');
 echo $this->Js->writeBuffer();
-
 ?>
 <body>
 	<div id="container">
@@ -174,6 +174,9 @@ echo $this->Js->writeBuffer();
 				class='ui-button'
 				onclick='switchFullscreen(false)'
 			>Vollbild beenden</a>
+			<div class='breadcrumbs'>
+				<?php echo $this->Breadcrumb->display($breadcrumbs);?>
+			</div>
 			<div>		
 				<?php echo $this->Session->flash('flash');?>
 				<?php echo $this->Session->flash('error',array('class'=>'failure'));?>

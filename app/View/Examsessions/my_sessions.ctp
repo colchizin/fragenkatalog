@@ -5,6 +5,7 @@
 		<th><?php echo __('Subject');?></th>
 		<th><?php echo __('Exam');?></th>
 		<th><?php echo __('Started');?></th>
+		<th><?php echo __('Answered');?></th>
 		<th><?php echo __('Actions');?></th>
 	</tr>
 	<?php foreach ($sessions_unfinished as $session):?>
@@ -17,6 +18,7 @@
 				$session['Exam']['id']
 			));;?></td>
 			<td><?php echo $session['Examsession']['created'];?></td>
+			<td><?php echo count($session['ExamsessionsQuestion']);?></td>
 			<td>
 				<?php echo $this->Html->link(
 					__('Continue exam'),

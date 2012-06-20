@@ -159,7 +159,6 @@ class Subject extends AppModel {
 			$result = array();
 
 			foreach ($data as $entry) {
-				var_dump($entry);
 				$result[$entry['Exam']['semester']][] = $entry;
 			}
 

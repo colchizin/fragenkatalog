@@ -38,6 +38,20 @@ class MaterialsController extends AppController {
 			),
 			'recursive'=>'-1'
 		)));
+
+		$programme = $this->Material->Subject->Programme->findById($material['Subject']['programme_id']);
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>$programme['Programme']['name'],
+			'link' => array('controller'=>'programmes', 'action'=>'view', $material['Subject']['programme_id'])
+		));
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>$material['Subject']['name'],
+			'link' => array('controller'=>'subjects', 'action'=>'view', $material['Subject']['id'])
+		));
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>__('Material') . ": " . $material['Material']['title'],
+			'link' => array('controller'=>'materials', 'action'=>'view', $material['Material']['id'])
+		));
 	}
 
 /**
@@ -146,7 +160,6 @@ class MaterialsController extends AppController {
 				'text LIKE' => 'http://%'
 			)
 		));
-		var_dump(getcwd());
 		foreach ($materials as $material) {
 			$base = getcwd();
 			$name = basename($material['Material']['text']);
@@ -164,5 +177,10 @@ class MaterialsController extends AppController {
 			echo "<br>";
 		}
 		exit();
+	}
+
+	public function pick_image() {
+		$this->loadModel('Image');
+		$this->set('images', $this->Image->findAll());
 	}
 }

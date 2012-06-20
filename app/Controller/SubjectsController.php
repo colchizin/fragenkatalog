@@ -33,6 +33,15 @@ class SubjectsController extends AppController {
 		$this->set('subject', $subject);
 		$this->set('semesters',$this->Subject->getExamsGroupedBySemester($id));
 		$this->set('title_for_layout', $subject['Subject']['name']);
+
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>$subject['Programme']['name'],
+			'link' => array('controller'=>'programmes', 'action'=>'view', $subject['Programme']['id'])
+		));
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' =>$subject['Subject']['name'],
+			'link' => array('controller'=>'subjects', 'action'=>'view', $id)
+		));
 	}
 
 /**
