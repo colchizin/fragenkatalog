@@ -84,7 +84,32 @@ class Examsession extends AppModel {
 	);
 
 	public $hasMany = array(
-		'ExamsessionsQuestion'
+		'ExamsessionsQuestion' => array(
+		)
 	);
+
+	public function calculateResult($id = null) {
+		$count = 0;
+		$correct = 0;
+
+		if ($id == null) {
+			if ($this->id != null)
+				$id = $this->id;
+			else
+				return false;
+		} else {
+			$this->id = $id;
+		}
+
+		$questions = $this->ExamsessionsQuestion->findAllByExamsessionId($id);
+
+		foreach ($questions as $question) {
+			$count++;
+			if ($question['Answer']['correct'])
+				$correct++;
+		}
+
+		return $this->saveField('correct', $correct);
+	}
 
 }

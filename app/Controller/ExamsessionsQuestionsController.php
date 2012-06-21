@@ -72,7 +72,7 @@ class ExamsessionsQuestionsController extends AppController {
 						'answer_id' => $data['answer_id'],
 						'examsession_id' => $session_id
 					));
-					$this->ExamsessionsQuestion->create();
+					$this->ExamsessionsQuestion->create($eq);
 				}
 				$eq = $this->ExamsessionsQuestion->save($eq);
 				$this->set('examsessionsQuestion', $eq);

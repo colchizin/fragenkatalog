@@ -59,7 +59,8 @@ class ExamsessionsQuestion extends AppModel {
 			'foreignKey' => 'examsession_id',
 			'conditions' => '',
 			'fields' => '',
-			'order' => ''
+			'order' => '',
+			'counterCache' => "examsessions_question_count"
 		),
 		'Question' => array(
 			'className' => 'Question',

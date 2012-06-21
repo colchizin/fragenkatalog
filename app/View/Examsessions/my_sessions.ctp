@@ -18,7 +18,11 @@
 				$session['Exam']['id']
 			));;?></td>
 			<td><?php echo $session['Examsession']['created'];?></td>
-			<td><?php echo count($session['ExamsessionsQuestion']);?></td>
+			<td>
+				<?php echo $session['Examsession']['examsessions_question_count'];?>
+				/
+				<?php echo $session['Exam']['question_count'];?>
+			</td>
 			<td>
 				<?php echo $this->Html->link(
 					__('Continue exam'),
@@ -57,23 +61,29 @@
 	<tr>
 		<th><?php echo __('Subject');?></th>
 		<th><?php echo __('Exam');?></th>
+		<th><?php echo __('correct');?></th>
 		<th><?php echo __('Started');?></th>
 		<th><?php echo __('Finished');?></th>
 		<th><?php echo __('Results');?></th>
 	</tr>
 	<?php foreach ($sessions_finished as $session):?>
-		
 		<tr>
 			<td><?php echo $session['Exam']['Subject']['name'];?></td>
 			<td><?php echo $session['Exam']['fullname'];?></td>
+			<td><?php echo round(($session['Examsession']['correct']/$session['Exam']['question_count'])*100,0);?> %</td>
 			<td><?php echo $session['Examsession']['created'];?></td>
 			<td><?php echo $session['Examsession']['finished'];?></td>
 			<td>
-				<?php echo $this->Html->link(__('Results'), array(
-					'controller'=>'examsessions',
-					'action'=>'result',
-					$session['Examsession']['id']
-				));?>
+				<?php echo $this->Html->link(__('Results'),
+					array(
+						'controller'=>'examsessions',
+						'action'=>'result',
+						$session['Examsession']['id']
+					),
+					array(
+						'data-role'=>'button'
+					)
+				);?>
 			</td>
 		</tr>
 

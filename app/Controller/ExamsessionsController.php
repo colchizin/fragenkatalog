@@ -34,7 +34,7 @@ class ExamsessionsController extends AppController {
 		$this->set('title_for_layout', __('My Exams'));
 		$userid = $this->Auth->user('id');
 		$contain = array(
-			'Exam'=>array('id','fullname','shortname','Subject'),
+			'Exam'=>array('id','fullname','shortname','Subject','question_count'),
 			'User',
 			'ExamsessionsQuestion'
 		);
@@ -209,6 +209,26 @@ class ExamsessionsController extends AppController {
 		if (!$this->Examsession->field('finished'))
 			$this->Examsession->saveField('finished',date("y:m:d H:i:s"));
 
+		$this->Examsession->calculateResult();
+
 		$this->set('_serialize', true);
+	}
+
+	public function calculateResults() {
+		$sessions = $this->Examsession->find('all', array(
+			'conditions'=>array(
+				'NOT'=> array(
+					'finished'=>true
+				)
+			)
+		));
+		foreach ($sessions as $session) {
+			if ($this->Examsession->calculateResult($session['Examsession']['id'])) {
+				echo "Session berechnet<br />";
+			} else {
+				echo "Session nicht berechnet<br />";
+			}
+		}
+		exit();
 	}
 }

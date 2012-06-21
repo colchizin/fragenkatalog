@@ -315,4 +315,19 @@ class ExamsController extends AppController {
 		$this->request->data['Exam']['subject_id'] = $subject;
 		$this->set('subjects', $this->Exam->Subject->find('list'));
 	}
+
+	public function calculateQuestioncount() {
+		$exams = $this->Exam->find('all');
+
+		foreach ($exams as $exam) {
+			$count = count($exam['Question']);
+			$this->Exam->id = $exam['Exam']['id'];
+			if ($this->Exam->saveField('question_count', $count)) {
+				echo "Question-Count saved<br>";
+			} else {
+				echo "Question-Count not saved<br>";
+			}
+		}
+		exit();
+	}
 }

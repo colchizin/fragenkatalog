@@ -127,6 +127,12 @@ echo $this->Js->writeBuffer();
 				)
 			);?>
 			</li>
+			<li>
+				<?php echo $this->Html->link(__('Invite someone'), array(
+					'controller' => 'invitations',
+					'action' => 'add'
+				));?>
+			</li>
 			
 			<?php if ($loggedIn):?>
 				<li data-role='list-divider'></li>

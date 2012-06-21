@@ -122,7 +122,8 @@ class Exam extends AppModel {
 	public $hasAndBelongsToMany = array(
 		'Question' => array(
 			'className' => 'Question',
-			'joinTable' => 'questions_exams'
+			'joinTable' => 'questions_exams',
+			'counterCache' => true
 		)
 	);
 
