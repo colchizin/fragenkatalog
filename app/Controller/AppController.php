@@ -73,6 +73,13 @@ class AppController extends Controller {
 			var_dump("Request-Handler enabled");
 			$this->RequestHandler->enabled = true;
 		}
+
+		if (Configure::read('Fragenkatalog.maintenance')) {
+			echo "<h1>Maintenance</h1><p>This service is currently undergoing some maintenance. Please return in a few minutes</p>";
+			exit();
+		}
+
+
 	}
 
 	public function beforeRender() {

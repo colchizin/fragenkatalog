@@ -1,3 +1,4 @@
+<?php $this->Html->css('exam', null, array('inline'=>false));?>
 <div class="examsessions index">
 <h2><?php echo __('Unfinished Exams');?></h2>
 <table>
@@ -66,11 +67,13 @@
 		<th><?php echo __('Finished');?></th>
 		<th><?php echo __('Results');?></th>
 	</tr>
-	<?php foreach ($sessions_finished as $session):?>
+	<?php foreach ($sessions_finished as $session):
+		$percent = round(($session['Examsession']['correct']/$session['Exam']['question_count'])*100,0);
+	?>
 		<tr>
 			<td><?php echo $session['Exam']['Subject']['name'];?></td>
 			<td><?php echo $session['Exam']['fullname'];?></td>
-			<td><?php echo round(($session['Examsession']['correct']/$session['Exam']['question_count'])*100,0);?> %</td>
+			<td class="<?php echo $this->Exam->classByPercentage($percent);?>"><?php echo $percent?> %</td>
 			<td><?php echo $session['Examsession']['created'];?></td>
 			<td><?php echo $session['Examsession']['finished'];?></td>
 			<td>

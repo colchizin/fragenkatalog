@@ -1,0 +1,28 @@
+.failed, .very_good, .good, .average, .sufficient {
+	font-weight:bold;
+	background-image:none;
+}
+
+.failed {
+	color:white;
+	background-color:red !important;
+}
+
+.very_good {
+	color:white;
+	background-color:green !important;
+}
+
+.good {
+	background-color:lightgreen !important;
+}
+
+.average {
+	background-color:yellow !important;
+}
+
+.sufficient {
+	background-color:orange !important;
+}
+
+

@@ -237,7 +237,7 @@ Configure::write('Routing.prefixes', array('admin'));
 	Configure::write('Config.language','deu');
 	Configure::write('Fragenkatalog.Admin.email','johannesschulze@gmx.net');
 	Configure::write('Fragenkatalog.email','johannesschulze@gmx.net');
-
+	Configure::write('Fragenkatalog.maintenance',false);
 
 /**
  * Pick the caching engine to use.  If APC is enabled use it.

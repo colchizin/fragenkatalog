@@ -7,6 +7,8 @@ App::uses('AppController', 'Controller');
  */
 class ExamsessionsController extends AppController {
 
+	public $helpers = array("Exam");
+
 	public $paginate = array(
 		'limit' => 25,
 		'order' => array(
