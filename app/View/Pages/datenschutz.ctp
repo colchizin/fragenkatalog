@@ -16,13 +16,14 @@
 		<li>Kommentare, die der/die Benutzer_In zu einzelnen
 		Fragen oder Antwortmöglichkeiten postet sowie ein zugehöroger
 		Zeitstempel</li>
+		<li>Für jeden Login-Vorgang der Zeitstempel des Logins</li>
 	</ul>
 </p>
 <p>
-	Im Rahmen der Nutzung der Plattform werden <b>nur auf Wunsch der Benutzer_In</b>
+	Im Rahmen der Nutzung der Plattform werden  <!--<b>nur auf Wunsch der Benutzer_In</b>!-->
 	folgende Nutzundsdaten aufgezeichnet:
 	<ul>
-		<li>Durchgeführte Klausuren einschließlich der dafür benötigten Zeit</li>
+		<li>Durchgeführte Klausuren</li>
 		<li>Ausgwählte Antwortmöglichkeiten</li>
 	</ul>
 </p>
@@ -36,6 +37,7 @@
 	</ul>
 </p>
 
+<div class='info'>
 <h2>Hinweise</h2>
 <p>Zu keinem Zeitpunkt werden irgendwelche Daten an Dritte weitergegeben. Was im Fragenkatalog passiert, bleibt im Fragenkatalog.</p>
 <p>Die einzige Ausnahme ist natürlich eine gültige richterliche Anordnung zur Herausgabe von Informationen.</p>
@@ -45,3 +47,4 @@
 
 <h3>Urheberrecht</h3>
 <p>Ich übernehme <b>keine Verantwortung</b> für eventuelle Urheberrechtsverletzungen, die aus dem Einstellen von Informationen in diese Plattform resultieren. Dafür ist <b>jeder selbst verantwortlich</b>.</p>
+</div>

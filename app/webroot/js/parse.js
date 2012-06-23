@@ -104,6 +104,9 @@ function parse(c) {
 		
 			table = $(table);
 			material.title = $.trim(table.find('th').text());
+			if (material.title == "") 
+				material.title = $.trim(table.find('td:first').text());
+
 			material.text = "<table>" + table.html() + "</table>";
 			material.type= "table";
 			question.materials.push(material);

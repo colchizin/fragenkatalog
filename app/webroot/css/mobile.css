@@ -57,6 +57,7 @@ div.sample.wrong {
 
 .answer {
 	counter-increment:Answers;
+	font-weight:normal;
 }
 
 .answer span.ui-icon {
@@ -66,12 +67,12 @@ div.sample.wrong {
 .answer .comments {
 	font-style:italic;
 	font-weight:normal;
-	display:none;
 }
 
 .answer .comments .comment {
-	padding:1em;
-}
+	white-space: normal !important;
+	padding-top:0.6em;
+} 
 
 .answer span.ui-icon {
 	visibility:hidden;
@@ -129,6 +130,16 @@ form#exam .question.current {
 	padding:.5em 1em 0em 1em;
 }*/
 
+.comment .comment-author {
+	color:grey;
+	margin-left:0.4em;
+}
+
+.wrong .comment .comment-author,
+.correct .comment .comment-author {
+	color:lightgrey;
+}
+
 .question .materials {
 	display:none;
 }
@@ -148,6 +159,13 @@ form#exam .question.current {
 }
 
 /*
+ * Question-Index
+ */
+#question-index-list li.answered {
+	font-weight:normal !important;
+}
+
+/*
  * Messages
  */
 
@@ -157,6 +175,7 @@ div.message {
 	border-top:		2px solid blue;
 	border-bottom:	2px solid blue;
 	background-color: lightblue;
+	margin-bottom:1em;
 }
 
 #btn-printversion,
@@ -183,9 +202,10 @@ form div.error-message {
 	color:red;
 }
 
-form#UserLoginForm {
+form.login {
 	max-width:300px;
 	margin:auto;
+	text-align:center;
 }
 
 /*

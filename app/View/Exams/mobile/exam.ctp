@@ -1,135 +1,37 @@
 <?php
-	echo $this->Html->script('exam');
+	echo $this->Html->script('exam_test');
 	echo $this->Html->script('shortcuts');
 	echo $this->Html->script('timer');
-?>
-<script language='javascript'>
-	$(document).ready(function() {
-		<?php if (isset($session_finished) && $session_finished):?>
-			finished = true;
-		<?php endif;?>
-
-		<?php if (!empty($current_question)):?>
-			setCurrentQuestion($('#question<?php echo $current_question;?>'));
-			scrollToQuestion($('#question<?php echo $current_question;?>'));
-		<?php else:?>
-			nextQuestion();
-		<?php endif;?>
+	echo $this->Js->buffer("
+		exam = " . json_encode($exam) . ";
+		buildIndex();
 		updateQuestionCounter();
-	});
-</script>
-
-	<form id='exam' name='examform'>
-		<div id='question-counter'>
-			<span id='questions-answers-count'>0</span> 
-			von <span id='questions-total-count'>0</span>
-			Fragen beantwortet
-		</div>
-<?php
-	$i = 1;	
-	foreach ($exam['Question'] as $question):
+		showNextUnansweredQuestion();
+	");
 ?>
-		<div
-			class='question'
-			id='question<?php echo $question['id'];?>'
-			onclick="if (true) {
-				setCurrentQuestion($(document.getElementById('question<?php echo $question['id'];?>')));
-			}"
-		>
-			<p class='question-text'>
-				<span class='counter'><?php echo $i++;?>.</span>
-				<?php echo $question['question'];?>
-			</p>
-			
-			<div class='attachment'>
-				<?php echo $question['attachment'];?>
-			</div>
 
-			<fieldset class='answers' data-role='controlgroup'>
-				<?php foreach ($question['Answer'] as $answer):?>
-					<div class='answer'
-<?php
-						if ($answer['correct']) {
-							echo 'data-correct="true"';
-						}
-?>
-					>
-						<input
-							type='radio'
-							id='answer_<?php echo $answer['id']?>'
-							name='question_<?php echo $question['id']?>'
-							<?php if (isset($answer['checked']) && $answer['checked']):?>
-								checked="checked"
-							<?php endif;?>
-							onclick="submitAnswer(<?php echo $question['id'];?>,<?php echo $answer['id'];?>);"
-						/>
-						<label
-							for='answer_<?php echo $answer['id'];?>'
-						>
-							<span class='answer-text'><?php echo $answer['answer'];?></span>
+<a
+	href='javascript:showIndex()'
+	data-role='button'
+	id='question-counter'
+	data-icon='grid'
+	data-mini='true'
+>
+	<span id='questions-answers-count'>0</span> 
+	von <span id='questions-total-count'>0</span>
+	Fragen beantwortet
+</a>
 
-						<div class='comments' >
-		<?php 			if (isset($answer['Comment']) && count($answer['Comment'])> 0) : ?>
-		<?php				foreach ($answer['Comment'] as $comment): ?>
-								<span class='comment'>
-									<?php echo $comment['comment'];?>
-								</span>
-		<?php				endforeach;?>
-		<?php			endif; ?>
-						</div> <!-- End Comments !-->
-						</label> <!-- End Label Answer !-->
-					</div> <!-- End Answer !-->
-				<?php endforeach;?>
-				<?php
-				?>
-			</fieldset> <!-- End Answers !-->
+<div id='question'>
+</div>
 
-			<div data-role='navbar' data-inset='true'>	
-				<ul>
-					<li>
-						<a
-							href='javascript:previousQuestion()'
-							id='btn-question-previous'
-						><?php echo __('Previous');?></a>
-					</li>
-					<li>
-						<a
-							href='javascript:showQuestionDetails($(document.getElementById("question<?php echo $question['id'];?>")));'
-							class='button btn-show-solution'
-							title='<?php echo __('Show Solution');?>'
-						>
-							<?php echo __('Solution');?>
-						</a>
-					</li>
-					<li>
-						<a
-							href='javascript:nextQuestion()'
-							id='btn-question-next'
-						><?php echo __('Next');?></a>
-					</li>
-				</ul>
-			</div>
-
-			<ul data-role='listview' data-inset='true' class='materials'>
-		<?php	foreach ($question['Material'] as $material): ?>
-				<li><?php echo $this->Html->link(
-					$material['title'],
-					array(
-						'controller'=>'materials',
-						'action'=>'view',
-						$material['id']
-					),
-					array(
-						'target'=>'blank'
-					)
-				);?></li>
-		<?php	endforeach; ?>
-			</ul>
-		</div>
-<?php
-	endforeach;
-?>
-	</form>
+<div data-role='navbar' data-inset='true'>
+	<ul>
+		<li><a id='button-previous-question' href='javascript:showPreviousQuestion()'>Zurück</a></li>
+		<li><a id='button-show-solution' href='javascript:showSolution()'>Lösung</a></li>
+		<li><a id='button-next-question' href='javascript:showNextQuestion()'>Vor</a></li>
+	</ul>
+</div>
 
 <dl id='statistics'>
 </dl>
@@ -143,10 +45,8 @@
 
 <div class='actions'>
 	<ul data-role='listview' data-theme='b' data-inset='true'>
-		<li><?php echo $this->Html->link(
-			__('Show All Solutions'),
-			"#",
-			array('onclick'=>'checkAll(); showComments()'));?>
+		<li>
+			<a href="javascript:showAllSolutions();"><?php echo __('Score');?></a>
 		</li>
 		<li><?php echo $this->Html->link(
 			__('Back'),
@@ -156,11 +56,11 @@
 </div>
 
 <script language='javascript'>
-	$('#exam').bind('swipeleft',function() {
-		nextQuestion();	
+	$('#question').bind('swipeleft',function() {
+		showNextQuestion();	
 	});
 
-	$('#exam').bind('swiperight',function() {
-		previousQuestion();	
+	$('#question').bind('swiperight',function() {
+		showPreviousQuestion();	
 	});
 </script>

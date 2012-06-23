@@ -530,13 +530,25 @@ table.cake-sql-log {
  * Tabellen
  */
 
-table th {
-	background-color:lightgrey;
+table th,
+table td.separator {
+	background-color:lightgrey !important;
+	padding:.3em;
+	font-size:12pt;
 }
 
 table tr:nth-child(2n) td{
-	background-color:#F0EBE2;
+	background-color:#F8EDE9;
 }
+
+table.full-width {
+	width:100%;
+}
+
+table td.separator {
+	font-weight:bold;
+}
+
 
 /*
  * Form Elements

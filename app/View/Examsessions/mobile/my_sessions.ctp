@@ -1,5 +1,20 @@
 <?php $this->Html->css('exam', null, array('inline'=>false));?>
-<ul data-role="listview">
+
+<script language='javascript'>
+	function limitExams(limit) {
+		var lis = $('#exams li[data-role="exams-finished"]');
+		lis.each(function(idx,elem) {
+			elem = $(elem);
+			if (parseInt(elem.attr('data-value')) > limit) {
+				elem.hide();
+			} else {
+				elem.show();
+			}
+		});
+	}
+</script>
+
+<ul data-role="listview" id='exams'>
 	<li data-role='list-divider'><?php echo __('Unfinished Exams');?></li>
 	<?php foreach ($sessions_unfinished as $session):?>
 		
@@ -16,13 +31,26 @@
 
 	<?php endforeach;?>
 <li data-role='list-divider'><?php echo __('Finished Exams');?></li>
+<li data-role='fieldcontain'>
+	<label for='slider-percentage'><?php echo __('Upper Limit');?></label>
+	<input
+		type='range'
+		name='slider-percentage'
+		id='slider-percentage'
+		value='100'
+		max='100'
+		min='0'
+		step='10'
+		data-highlight="true"
+		onchange='limitExams(this.value);' />
+</li>
 
 	<?php foreach ($sessions_finished as $session):?>
 		<?php
 			$percent = round(($session['Examsession']['correct']/$session['Exam']['question_count'])*100,0);
 		?>
 		
-		<li>
+		<li data-value='<?php echo $percent;?>' data-role='exams-finished'>
 			<span
 				class='ui-li-count <?php echo $this->Exam->classByPercentage($percent);?>'
 			><?php echo $percent;?> %</span>

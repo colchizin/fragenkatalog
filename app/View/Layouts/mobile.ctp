@@ -45,7 +45,7 @@ echo $this->Js->writeBuffer();
 ?>
 
 <body>
-<div data-role="page">
+<div data-role="page" id='page-main'>
 	<div id='header' data-role="header">
 		<h1><?php echo $title_for_layout;?></h1>
 		<?php if (count($breadcrumbs)>1):?>
@@ -59,7 +59,7 @@ echo $this->Js->writeBuffer();
 		<?php else:?>
 			<?php echo $this->Html->link(__('Home'),
 				array(
-					'controller'=>'pages',
+					'controller'=>'users',
 					'action'=>'home'
 				),
 				array(
@@ -130,6 +130,13 @@ echo $this->Js->writeBuffer();
 			<li>
 				<?php echo $this->Html->link(__('Invite someone'), array(
 					'controller' => 'invitations',
+					'action' => 'add'
+				));?>
+			</li>
+
+			<li>
+				<?php echo $this->Html->link(__('Report an error'), array(
+					'controller' => 'tickets',
 					'action' => 'add'
 				));?>
 			</li>

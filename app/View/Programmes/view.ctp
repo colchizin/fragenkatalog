@@ -1,42 +1,61 @@
+<?php if (!empty($programme['Programme']['description'])):?>
+	<div class='info'>
+		<?php echo $programme['Programme']['description'];?>
+	</div>
+<?php endif;?>
 <div class="related">
-	<h3>Semester</h3>
+		<table class='full-width'>
+			<tr>
+				<th><?php echo __('Subject');?></th>
+				<th><?php echo __('Exams');?></th>
+				<th><?php echo __('Actions');?></th>
+			</tr>
 	<?php
 		foreach ($semesters as $semester=>$subjects):
 	?>
-		<h4><?php echo __('%sth semester', $semester);?></h4>
-		<ul data-role='listview'>
+		<tr>
+			<td class='separator' colspan=5>
+				<?php echo __('%sth semester', $semester);?>
+			</td>
+		</tr>
 			<?php
 				foreach($subjects as $subject):
 			?>
-					<li>
-						<span class='ui-li-count'><?php echo $subject['Subject']['exam_count'];?></span>
+				<tr>
+					<td>
 						<?php echo $this->Html->link($subject['Subject']['name'], array(
 							'controller'=>'subjects',
 							'action'=>'view',
 							$subject['Subject']['id']));
 						?>
-					</li>
+					</td>
+					<td>
+						<?php echo $subject['Subject']['exam_count'];?>
+					</td>
+					<td>
+						<?php echo $this->Html->link(__('View'),
+							array(
+								'controller'=>'subjects',
+								'action'=>'view',
+								$subject['Subject']['id']
+							),
+							array(
+								'data-role'=>'button'
+							)
+						);
+						?>
+					</td>
 			<?php
 				endforeach;
 			?>
-		</ul>
 	<?php
 		endforeach;
 	?>
+		</table>
 </div>
 
 <div class="programmes view">
 	<dl>
-		<dt><?php echo __('Name'); ?></dt>
-		<dd>
-			<?php echo h($programme['Programme']['name']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Description'); ?></dt>
-		<dd>
-			<?php echo h($programme['Programme']['description']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('University'); ?></dt>
 		<dd>
 			<?php echo $this->Html->link(
