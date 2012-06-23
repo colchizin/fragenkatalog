@@ -18,6 +18,10 @@ class TicketsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' => __('Tickets'),
+			'link' => array('controller'=>'tickets','action'=>'index')
+		));
 		$this->Ticket->recursive = 0;
 		$this->Ticket->contain(array(
 			'Tickettype',
@@ -59,6 +63,15 @@ class TicketsController extends AppController {
 			'Tickettype'
 		));
 		$this->set('ticket', $this->Ticket->read(null, $id));
+
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' => __('Tickets'),
+			'link' => array('controller'=>'tickets','action'=>'index')
+		));
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' => __('Ticket details'),
+			'link' => array('controller'=>'tickets','action'=>'view', $id)
+		));
 	}
 
 /**
@@ -116,6 +129,15 @@ class TicketsController extends AppController {
 		}
 		$tickettypes = $this->Ticket->Tickettype->find('list');
 		$this->set(compact('tickettypes'));
+
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' => __('Tickets'),
+			'link' => array('controller'=>'tickets','action'=>'index')
+		));
+		$this->Breadcrumb->addBreadcrumb(array(
+			'title' => __('Report an error'),
+			'link' => array('controller'=>'tickets','action'=>'add')
+		));
 	}
 
 /**

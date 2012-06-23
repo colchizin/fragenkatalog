@@ -13,7 +13,7 @@
 			}
 
 			if ($this->print_homepage) {
-				$result .= $this->_displayCrumb(array('title'=>__('Home'), 'link' => Router::url("/")));
+				$result .= $this->_displayCrumb(array('title'=>__('Home'), 'link' => Router::url("/", true)));
 				if (count($crumbs) > 0) {
 					$result .= $this->separator;
 				}

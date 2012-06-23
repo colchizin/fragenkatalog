@@ -98,9 +98,8 @@ echo $this->Js->writeBuffer();
 			>&lt;</a>
 			<ul class='menu'>
 				<li><?php echo $this->Html->link(__('Home'), array(
-					'controller'=>'pages',
-					'action'=>'display',
-					'home'
+					'controller'=>'users',
+					'action'=>'home'
 				));?></li>
 				<li><?php echo $this->Html->link(__('Universities'), array(
 					'controller'=>'universities',

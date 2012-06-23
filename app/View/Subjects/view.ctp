@@ -1,5 +1,11 @@
+<?php if (!empty($subject['Subject']['description'])):?>
+<div class='info'>
+	<?php echo $subject['Subject']['description'];?>
+</div>
+<?php endif;?>
+
 <div class="related">
-	<h3>Exams</h3>
+	<h3><?php echo __('Exams');?></h3>
 	<?php foreach($semesters as $semester=>$exams):?>
 	<h4><?php echo __('%sth semester', $semester);?></h4>
 		<ul data-role='listview'>

@@ -128,6 +128,9 @@ class Exam extends AppModel {
 	);
 
 	public function saveEntirelyNew($data) {
+		$datasource = $this->getDatasource();
+		$datasource->begin();
+
 		$questions = array();
 		if (isset($data['Question']) && count($data['Question']>0))	{
 			foreach ($data['Question'] as $question) {
@@ -144,6 +147,7 @@ class Exam extends AppModel {
 				$this->Question->create($question);
 				if (!$this->Question->save($question)) {
 					echo "Frage konnt nicht gespeichert werden<br>";
+					$datasource->rollback();
 					return false;
 				}
 				$questions[] = $this->Question->getInsertID();
@@ -160,10 +164,10 @@ class Exam extends AppModel {
 
 		$this->create($data);
 		if (!$this->save()) {
-			var_dump("Speichern des Exams fehlgeschlagen");
-			var_dump($data['Exam']);
+			$datasource->rollback();
 			return false;
 		}
+		$datasource->commit();
 		return $this->read();
 	}
 
@@ -193,6 +197,7 @@ class Exam extends AppModel {
 				foreach ($question['Answer'] as &$answer) {
 					foreach ($session['ExamsessionsQuestion']as &$esquestion) {
 						if ($esquestion['answer_id'] == $answer['id']) {
+							$question['answered'] = true;
 							$answer['checked'] = true;
 						}
 					}

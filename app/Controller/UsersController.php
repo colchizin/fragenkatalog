@@ -15,6 +15,7 @@ class UsersController extends AppController {
 	}
 
 	public function home() {
+		$this->set('title_for_layout', __('Home'));
 		$userid = $this->Auth->user('id');
 		$this->User->contain(array(
 			'Examsession'=>array('id','finished','Exam')
@@ -188,7 +189,9 @@ class UsersController extends AppController {
 			echo $this->request->data['User']['username'];
 			echo $this->request->data['User']['password'];
 			if ($this->Auth->login()) {
-				$group = $this->User->Group->findById($this->Auth->user('group_id'));
+				// $group = $this->User->Group->findById($this->Auth->user('group_id'));
+				$this->User->Login->create(array('Login'=>array('user_id'=>$this->Auth->user('id'))));
+				$this->User->Login->save();
 
 				$this->redirect($this->Auth->redirect());
 			} else {

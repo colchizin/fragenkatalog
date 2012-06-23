@@ -40,8 +40,7 @@ class AppController extends Controller {
 			'authorize' => array(
 				'Actions'=>array('actionPath'=>'controllers')
 			),
-			'loginRedirect' => array('controller'=>'pages','action'=>'display','home'),
-
+			'loginRedirect' => array('controller'=>'users','action'=>'home')
 		),
 		'Breadcrumb',
 		'RequestHandler',

@@ -6,11 +6,11 @@ $(document).ready(function() {
 			switch(eventObject.which) {
 				case 37:
 				case 38:
-					previousQuestion();
+					showPreviousQuestion();
 					return false;
 				case 39:
 				case 40:
-					nextQuestion();
+					showNextQuestion();
 					return false;
 				case 13:
 					showQuestionDetails($(".question.current"));
@@ -33,12 +33,12 @@ $(document).ready(function() {
 		}
 		switch(eventObject.charCode) {
 			case 32:	// Leertaste
-				nextQuestion(); return false;
+				showNextQuestion(); return false;
 			case 110:	// n 
-				nextQuestion();
+				showNextQuestion();
 				break;
 			case 112:	// p
-				previousQuestion();
+				showPreviousQuestion();
 				break;
 			case 97:	// a
 			case 49:	// 1

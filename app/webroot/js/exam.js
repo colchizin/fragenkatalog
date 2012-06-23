@@ -134,7 +134,7 @@ function showComments() {
 	$('.materials').show();
 }
 
-function previousQuestion() {
+function showPreviousQuestion() {
 //	alert('nextQuestion');
 	var currentQuestion = $('div.question.current');
 	if (currentQuestion.get().length == 0) {
@@ -151,7 +151,7 @@ function previousQuestion() {
 	scrollToQuestion(currentQuestion);
 }
 
-function nextQuestion() {
+function showNextQuestion() {
 //	alert('nextQuestion');
 	var currentQuestion = $('div.question.current');
 	if (currentQuestion.get().length == 0) {

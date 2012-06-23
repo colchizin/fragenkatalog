@@ -164,6 +164,7 @@ class Question extends AppModel {
 				} else {
 					echo "Material konnt nicht gespeichert werden<br>";
 					var_dump($material);
+					var_dump($this->Material->invalidFields());
 					return false;
 				}
 			}

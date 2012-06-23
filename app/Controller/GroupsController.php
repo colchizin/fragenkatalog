@@ -11,6 +11,18 @@ class GroupsController extends AppController {
 		parent::beforeFilter();
 	}
 
+	public function privileges($id = null) {
+		$aros = $this->Acl->Aco->find('threaded', array(
+			'conditions' => array(
+				// 'Aro.foreign_key' => $id,
+				// 'Aro.model' => 'Group'
+			)
+		));
+		var_dump($aros[0]['Aro']);
+		// var_dump($aros[1]['Aco']);
+		exit();
+	}
+
 /**
  * index method
  *

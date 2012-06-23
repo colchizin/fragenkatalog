@@ -25,16 +25,6 @@ class Subject extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'description' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
 		'programme_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
@@ -147,14 +137,19 @@ class Subject extends AppModel {
 				'conditions' => array(
 					'subject_id' => $subject_id,
 				),
-				'joins' => array(
-					array(
-						'table' => 'examsessions',
-						'alias' => 'Examsession',
-						'type' => 'LEFT',
-						'conditions' => array('Examsession.exam_id = Exam.id')
-					)
+				'order' => array(
+					'title' => 'ASC',
+					'year' => 'ASC',
+					'term' => 'ASC'
 				)
+				// 'joins' => array(
+					// array(
+						// 'table' => 'examsessions',
+						// 'alias' => 'Examsession',
+						// 'type' => 'LEFT',
+						// 'conditions' => array('Examsession.exam_id = Exam.id')
+					// )
+				// )
 			));
 			$result = array();
 

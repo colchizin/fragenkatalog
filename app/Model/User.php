@@ -101,7 +101,8 @@ class User extends AppModel {
 			'counterQuery' => ''
 		),
 		'Invitation',
-		'Examsession'
+		'Examsession',
+		'Logi'
 	);
 
 	/**

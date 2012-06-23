@@ -62,10 +62,10 @@
 	<tr>
 		<th><?php echo __('Subject');?></th>
 		<th><?php echo __('Exam');?></th>
-		<th><?php echo __('correct');?></th>
+		<th><?php echo __('Result');?></th>
 		<th><?php echo __('Started');?></th>
 		<th><?php echo __('Finished');?></th>
-		<th><?php echo __('Results');?></th>
+		<th><?php echo __('Details');?></th>
 	</tr>
 	<?php foreach ($sessions_finished as $session):
 		$percent = round(($session['Examsession']['correct']/$session['Exam']['question_count'])*100,0);
@@ -77,7 +77,7 @@
 			<td><?php echo $session['Examsession']['created'];?></td>
 			<td><?php echo $session['Examsession']['finished'];?></td>
 			<td>
-				<?php echo $this->Html->link(__('Results'),
+				<?php echo $this->Html->link(__('Details'),
 					array(
 						'controller'=>'examsessions',
 						'action'=>'result',
