@@ -17,7 +17,7 @@
 			<?php echo $this->Html->link($examsession['User']['username'], array('controller' => 'users', 'action' => 'view', $examsession['User']['id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->Html->link($examsession['Exam']['fullname'], array('controller' => 'exams', 'action' => 'view', $examsession['Exam']['id'])); ?>
+			<?php echo $this->Html->link($examsession['Exam']['fullname'] . " " . $examsession['Exam']['Subject']['name'], array('controller' => 'exams', 'action' => 'view', $examsession['Exam']['id'])); ?>
 		</td>
 		<td><?php echo h($examsession['Examsession']['created']); ?>&nbsp;</td>
 		<td><?php echo h($examsession['Examsession']['finished']); ?>&nbsp;</td>

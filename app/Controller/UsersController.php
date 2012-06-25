@@ -50,6 +50,7 @@ class UsersController extends AppController {
 		$this->Acl->allow($group, 'controllers/Users/view_myprofile');
 		$this->Acl->allow($group, 'controllers/Users/edit_myprofile');
 		$this->Acl->allow($group, 'controllers/Users/logout');
+		$this->Acl->allow($group, 'controllers/Users/home');
 		$this->Acl->allow($group, 'controllers/Users/setProgramme');
 		$this->Acl->allow($group, 'controllers/Invitations/add');
 		$this->Acl->allow($group, 'controllers/Tickets/add');

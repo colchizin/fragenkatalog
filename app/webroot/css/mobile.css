@@ -36,6 +36,7 @@ div.sample.correct {
 
 .answers div.answer.correct label.ui-radio-on span.ui-btn-inner span,
 .answers div.answer.wrong label span.ui-btn-inner span,
+#question-index-list li.wrong,
 ul.ui-listview li.correct div.ui-btn-text *,
 ul.ui-listview li.wrong div.ui-btn-text *,
 ul.ui-listview li.correct,
@@ -47,6 +48,7 @@ div.sample.wrong {
 }
 
 .answers div.answer.wrong label,
+#question-index-list li.wrong,
 ul.ui-listview li.wrong,
 div.sample.wrong {
 	background-image:-webkit-linear-gradient(#C17171,red);
@@ -164,6 +166,7 @@ form#exam .question.current {
 #question-index-list li.answered {
 	font-weight:normal !important;
 }
+
 
 /*
  * Messages

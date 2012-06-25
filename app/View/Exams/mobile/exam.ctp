@@ -5,8 +5,15 @@
 	echo $this->Js->buffer("
 		exam = " . json_encode($exam) . ";
 		buildIndex();
+
+		finished = " . ((isset($session_finished) && $session_finished) ? 'true' : 'false') . ";
+		if (finished) {
+			showAllSolutions();
+		} else {
+			showNextUnansweredQuestion();
+		}
+
 		updateQuestionCounter();
-		showNextUnansweredQuestion();
 	");
 ?>
 

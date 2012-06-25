@@ -1,6 +1,18 @@
 
+	/*
+	 * the exam-object as provided by the server
+	 */
 	var exam;
+
+	/*
+	 * the index of the currently displayed question
+	 */
 	var currentQuestionIndex = 0;
+
+	/*
+	 * stores wheter the exam has already been finished
+	 */
+	var finished = false;
 
 	/*
 	 * Show the question defined by the provided index.
@@ -74,6 +86,7 @@
 				)
 				.append(question.question)
 			)
+			.append($("<p class='question-attachment'></p>").html(question.attachment))
 			.append(answers);
 		;
 		answers.find('input[type=radio]').checkboxradio();
@@ -128,6 +141,7 @@
 				)
 				.append(question.question)
 			)
+			.append($("<p class='question-attachment'></p>").html(question.attachment))
 			.append(answers)
 			.append(comments)
 			.append(materials)
@@ -180,7 +194,29 @@
 	function showSolution() {
 		exam.Question[currentQuestionIndex].solved = true;
 		showQuestion(currentQuestionIndex);
+		if (isQuestionAnsweredCorrectly(currentQuestionIndex)==0)
+			$('#question-index-list #question-index-list-' + currentQuestionIndex).addClass('wrong');
 	}
+
+	/*
+	 * checks wheter a question has been answered and whether it has been
+	 * answered correctly.
+	 * @return	1 if answered correctly, 0 if answered incorrectly and
+	 * 			-1 if the question has not been answered at all
+	 */
+	function isQuestionAnsweredCorrectly(question_index) {
+		var question = exam.Question[question_index];
+		
+		for (var i=0;i<question.Answer.length;i++) {
+			if (question.Answer[i].checked) {
+				if (question.Answer[i].correct)
+					return 1;
+				else
+					return 0;
+			}
+		}
+		return -1;
+	}	
 
 	/*
 	 * sets the 'solved'-property of all questions to trueand rebulds the
@@ -189,6 +225,9 @@
 	function showAllSolutions() {
 		$(exam.Question).each(function(idx, question) {
 			question.solved = true;
+
+			if (isQuestionAnsweredCorrectly(idx)==0)
+				$('#question-index-list #question-index-list-' + idx).addClass('wrong');
 		});
 		showQuestion(currentQuestionIndex);
 		showStatistics();
@@ -211,6 +250,7 @@
 				return;
 			}
 		}
+		showQuestion(0);
 	}
 
 	/*
@@ -304,8 +344,23 @@
 	}
 
 	function finishSession() {
-		showAllSolutions();
-		alert('Fertig');
+		if (!finished) {
+			$.ajax({
+				url:"/fragenkatalog/examsessions/finish/useRH:true.json",
+				type:"POST",
+				success: function() {
+					showAllSolutions();
+					finished = true;
+					alert('fertig');
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+					if (jqXHR.status == 403) {
+						alert('Sitzung abgelaufen. Neu anmelden');
+						location.reload();
+					}
+				}
+			});
+		}
 	}
 
 	function selectAnswer(index) {
