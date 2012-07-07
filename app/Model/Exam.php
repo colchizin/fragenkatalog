@@ -174,7 +174,7 @@ class Exam extends AppModel {
 	public function findByIdMergeExamsession($id, $session_id) {
 		$this->contain(array(
 			'Question'=>array(
-				'id','question','attachment',
+				'id','question','attachment','valid',
 				'Answer'=>array(
 					'answer',
 					'id',

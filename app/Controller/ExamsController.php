@@ -6,7 +6,7 @@ App::uses('AppController', 'Controller');
  * @property Exam $Exam
  */
 class ExamsController extends AppController {
-	var $helpers = array('Js');
+	var $helpers = array('Js','Exam');
 	/**
 	 * Starte eine Klausur 
 	 * ruft intern ExamsController::view auf
@@ -24,6 +24,7 @@ class ExamsController extends AppController {
 			'Question' => array(
 				'question',
 				'attachment',
+				'valid',
 				'Answer' => array('answer','id','correct','Comment'),
 				'Comment',
 				'Material'
@@ -76,6 +77,7 @@ class ExamsController extends AppController {
 		$exam = $this->Exam->findByIdMergeExamsession($id, $this->Session->read('Examsession'));
 		$this->set('title_for_layout',$exam['Exam']['shortname']);
 		$this->set('exam', $exam);
+		$this->set('_serialize', 'exam');
 
 		$programme = $this->Exam->Subject->Programme->findById($exam['Subject']['programme_id']);
 		$this->Breadcrumb->addBreadcrumb(array(
@@ -135,6 +137,9 @@ class ExamsController extends AppController {
 			'title' =>$exam['Exam']['fullname'],
 			'link' => array('controller'=>'exams', 'action'=>'view', $exam['Exam']['id'])
 		));
+
+		$sessions = $this->Exam->Examsession->findAllByExamIdAndUserId($id, $this->Auth->user('id'));
+		$this->set('examsessions', $sessions);
 	}
 
 /**
@@ -237,7 +242,6 @@ class ExamsController extends AppController {
 		if ($this->request->is('put')) {
 			echo "POST-Request";
 			if ($this->Exam->save($this->request->data)) {
-				var_dump($this->request->data);
 				$this->Session->setFlash(__('Questions added'));
 			//	$this->redirect(array('action'=>'view',$id));
 			} else {
@@ -275,8 +279,6 @@ class ExamsController extends AppController {
 			$this->redirect($this->referer());
 		}
 		if ($this->request->is('post')) {
-			// var_dump($this->request->data['Question'][0]);
-			var_dump($this->request->data['Question'][11]);
 			if ($exam = $this->Exam->saveEntirelyNew($this->request->data)) {
 				$this->Session->setFlash(__('Exam has been saved'));
 				/*$this->redirect(array(

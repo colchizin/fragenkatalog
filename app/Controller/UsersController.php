@@ -192,17 +192,31 @@ class UsersController extends AppController {
 				$this->User->Login->create(array('Login'=>array('user_id'=>$this->Auth->user('id'))));
 				$this->User->Login->save();
 
-				$this->redirect($this->Auth->redirect());
+				if ($this->request->is('ajax')) {
+					$this->set('user', $this->Auth->user());
+					$this->set('_serialize','user');
+				} else {
+					$this->redirect($this->Auth->redirect());
+				}
 			} else {
-				$this->Session->setFlash(__('Invalid Login-Data'));
+				if ($this->request->is('ajax')) {
+					$this->redirect(null,403);
+				} else {
+					$this->Session->setFlash(__('Invalid Login-Data'));
+				}
 			}
 		}
 	}
 
 	public function logout() {
-		$this->Session->setFlash(__("Good Bye!"));
-		$this->Session->write('Module',null);
-		$this->redirect($this->Auth->logout()); 
+		$this->Auth->logout();
+		if ($this->request->is('ajax')) {
+			$this->set('_serialize',true);
+		} else {
+			$this->Session->setFlash(__("Good Bye!"));
+			$this->Session->write('Module',null);
+			$this->redirect($this->Auth->redirect()); 
+		}
 	}
 
 	public function setProgramme($programme = null) {
@@ -272,7 +286,7 @@ class UsersController extends AppController {
 			}
 
 			$this->request->data['User']['group_id'] = Configure::read('User.users_group');
-			var_dump($this->request->data);
+
 			$this->User->create();
 			if (!$this->User->save($this->request->data)) {
 				$this->Session->setFlash('Your Account could not be created. Please, try again.');

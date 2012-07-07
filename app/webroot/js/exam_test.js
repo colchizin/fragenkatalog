@@ -328,6 +328,17 @@
 	}
 
 	/*
+	 * returns, wheter all valid questions have been answered
+	 */
+	function allValidQuestionsAnswered() {
+		for (question in exam.Question) {
+			if (question.valid && !question.answered)
+				return false;
+		}
+		return true;
+	}
+
+	/*
 	 * Updates the Counter-Display, displaying the count of answered questions
 	 * and the total question count.
 	 * When all questions have been answered finishSession() is called
@@ -338,7 +349,7 @@
 		$('#questions-total-count').text(exam.Question.length);
 
 		// Alle Fragen beantwortet, Sitzung beeendet
-		if (answeredQuestionsCount == exam.Question.length) {
+		if (allValidQuestionsAnswered()) {
 			finishSession();
 		}
 	}
@@ -379,7 +390,8 @@
 			total : exam.Question.length,
 			answered : 0,
 			valid : 0,
-			correct : 0
+			correct_invalid : 0,
+			correct_valid : 0
 		};
 
 		$(exam.Question).each(function (index, question) {
@@ -390,24 +402,16 @@
 				result.answered++;
 			}
 
-			// Iterate through all answers to check, whether multiple answers
-			// have been marked as correct
-			for (var i=0;i<question.Answer.length;i++) {
-				if (question.Answer[i].correct) {
-					answers_marked_correct++;
-				}
+			if (question.valid) {
+				result.valid++;
 			}
 
-			// the quesiton is if only one answer has been marked as correct.
-			// If this is the case, check whether the selected answer is
-			// correct and increase the correct-count
-			if (answers_marked_correct == 1) {
-				result.valid++;
-
-				for (var i=0;i<question.Answer.length;i++) {
-					if (question.Answer[i].checked && question.Answer[i].correct) {
-						result.correct++;
-					}
+			for (var i=0;i<question.Answer.length;i++) {
+				if (question.Answer[i].checked && question.Answer[i].correct) {
+					if (question.valid)
+						result.correct_valid++;
+					else
+						result.correct_invalid++;
 				}
 			}
 		});
@@ -428,12 +432,14 @@
 					.append($('<dd>' + statistics.valid + '</dd>'))
 					.append($('<dt>Beantwortet</dt>'))
 					.append($('<dd>' + statistics.answered + '</dd>'))
-					.append($('<dt>Korrekt</dt>'))
-					.append($('<dd>' + statistics.correct + '</dd>'))
+					.append($('<dt>Korrekt (gültig)</dt>'))
+					.append($('<dd>' + statistics.correct_valid + '</dd>'))
+					.append($('<dt>Korrekt (ungültig)</dt>'))
+					.append($('<dd>' + statistics.correct_invalid + '</dd>'))
 					.append($('<dt>Ergebnis</dt>'))
-					.append($('<dd>' + Math.round((statistics.correct/statistics.valid)*100) + ' %</dd>'))
+					.append($('<dd>' + Math.round((statistics.correct_valid/statistics.valid)*100) + ' %</dd>'))
 				)
-				.append("<p>Ein Frage gilt als <strong>gültig</strong>, wenn es genau <strong>1</strong> als korrekt eingetragene Antwortmöglichkeit gibt.</p>")
+				.append("<p>Ein Frage gilt als <strong>gültig</strong>, wenn es genau <strong>1</strong> als korrekt eingetragene Antwortmöglichkeit gibt. Das Ergebnis berücksichtigt nur gültige Fragen.</p>")
 			)
 			.appendTo('body')
 			.dialog();

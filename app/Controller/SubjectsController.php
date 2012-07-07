@@ -31,7 +31,7 @@ class SubjectsController extends AppController {
 		}
 		$subject = $this->Subject->read(null,$id);
 		$this->set('subject', $subject);
-		$this->set('semesters',$this->Subject->getExamsGroupedBySemester($id));
+		$this->set('semesters',$this->Subject->getExamsGroupedBySemester($id, $this->Auth->user('id')));
 		$this->set('title_for_layout', $subject['Subject']['name']);
 
 		$this->Breadcrumb->addBreadcrumb(array(

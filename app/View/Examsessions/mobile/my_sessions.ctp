@@ -27,6 +27,19 @@
 			<h3><?php echo $session['Exam']['Subject']['name'];?></h3>
 			<p><?php echo $session['Exam']['shortname'];?></p>
 			</a>
+
+			<?php echo $this->Form->postLink(
+				__('Delete'),
+				array(
+					'controller'=>'examsessions',
+					'action' => 'delete',
+					$session['Examsession']['id']
+				),
+				array(
+					'data-icon' => 'delete'
+				),
+				__("Are you sure you want to remove this exam from your list of unfinished exams?")
+			);?>
 		</li>
 
 	<?php endforeach;?>

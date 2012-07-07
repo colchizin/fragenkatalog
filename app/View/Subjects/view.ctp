@@ -10,10 +10,17 @@
 	<h4><?php echo __('%sth semester', $semester);?></h4>
 		<ul data-role='listview'>
 		<?php foreach ($exams as $exam):?>
-			<li><?php echo $this->Html->link($exam['Exam']['fullname'],array(
-				'controller'=>'exams',
-				'action'=>'view',
-				$exam['Exam']['id']));?></li>
+			<li>
+				<span class='ui-li-count'>
+					<?php echo $exam['Examsession']['count_finished'];?> /
+					<?php echo $exam['Examsession']['count_total']-$exam['Examsession']['count_finished'];?>
+				</span>
+				<?php echo $this->Html->link($exam['Exam']['fullname'],array(
+					'controller'=>'exams',
+					'action'=>'view',
+					$exam['Exam']['id']
+				));?>
+			</li>
 		<?php endforeach;?>
 		</ul>
 	<?php endforeach;?>

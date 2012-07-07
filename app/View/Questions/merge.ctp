@@ -21,7 +21,6 @@
 				?>)
 				<ul class='answers'>
 				<?php	foreach ($question['Answer'] as $answer): ?>
-					<?php var_dump($answer);?>
 					<li>
 						<?php echo $answer['answer'];?>
 						<div class='comments'>

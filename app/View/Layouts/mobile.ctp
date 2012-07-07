@@ -17,7 +17,7 @@ echo $this->Html->script("jquery.mobile-1.1.0.min.js", array('inline'=>false));
 
 ?>
 
-<html>
+<html manifest='fragenkatalog_mobile.appcache'>
 <head>
 	<?php echo $this->Html->charset();?>
 	<meta name="viewport" content="width=device-width,initial-scale=1" />

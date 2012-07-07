@@ -120,6 +120,45 @@ class Question extends AppModel {
 		)
 	);
 
+
+	public function beforeSave($create) {
+		$this->data['Question']['valid'] = $this->isValid($this->data);
+	}
+
+	/*
+	 * very performant checking of validity
+	 */
+	public function isValid($data = null) {
+		$data = null;
+		if ($data === null) {
+			$answers = $this->query('
+				SELECT Answer.correct FROM answers AS Answer
+				LEFT JOIN questions AS Question ON  Question.id = Answer.question_ID
+				WHERE Question.id = ' . $this->id );
+		} else {
+			$answers = $data['Answer'];
+		}
+
+		$answers_marked_correct = 0;
+
+		if (count($answers) < 2) {
+			return false;
+		}
+
+		foreach ($answers as $answer) {
+			if (!empty ($answer['Answer']))
+				$answer = $answer['Answer'];
+			if (!empty($answer['correct']) && $answer['correct']) {
+				$answers_marked_correct++;
+			}
+		}
+
+		if ($answers_marked_correct == 0 || $answers_marked_correct > 1) {
+			return false;
+		}
+		return true;
+	}
+
 	/**
 	 * Speicher eine Frage mitsamt der dazugehörigen Antworten 
 	 * 
@@ -175,7 +214,10 @@ class Question extends AppModel {
 			return false;
 		}
 
+		$valid = false;
 		if (isset($data['Answer'])) {
+			$valid = true;
+			$answers_marked_correct = 0;
 			foreach ($data['Answer'] as $answer) {
 				// when saving a single entry, CakePHP expexts Data in the Form
 				// array('Model'=>data, 'Model2'=>data);

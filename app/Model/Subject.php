@@ -130,10 +130,36 @@ class Subject extends AppModel {
 		return $result;
 	}
 
-	public function getExamsGroupedBySemester($subject_id) {
-			//$this->Exam->contain();
-			//$this->Exam->recursive = -1;
-			$data = $this->Exam->find('all', array(
+	public function getExamsGroupedBySemester($subject_id, $user_id) {
+			$data = $this->query("
+				SELECT
+					Exam.id,
+					Exam.title,
+					Exam.term,
+					Exam.year,
+					Exam.semester,
+					Examsession.`count_finished`,
+					Examsession.`count_total`,
+				" . $this->Exam->virtualFields['fullname'] . " as Exam__fullname
+				FROM exams AS Exam
+				LEFT JOIN (
+					SELECT
+						COUNT(examsessions.finished) as `count_finished`,
+						COUNT(examsessions.exam_id) as `count_total`,
+						exam_id
+					FROM examsessions
+					WHERE examsessions.user_id = $user_id
+					GROUP BY examsessions.exam_id
+				) AS Examsession
+				ON Examsession.exam_id = Exam.id
+				WHERE Exam.subject_id = $subject_id
+				ORDER BY
+					Exam.title ASC,
+					Exam.year ASC,
+					Exam.term ASC
+			");
+
+			/*$data = $this->Exam->find('all', array(
 				'conditions' => array(
 					'subject_id' => $subject_id,
 				),
@@ -142,15 +168,7 @@ class Subject extends AppModel {
 					'year' => 'ASC',
 					'term' => 'ASC'
 				)
-				// 'joins' => array(
-					// array(
-						// 'table' => 'examsessions',
-						// 'alias' => 'Examsession',
-						// 'type' => 'LEFT',
-						// 'conditions' => array('Examsession.exam_id = Exam.id')
-					// )
-				// )
-			));
+			));*/
 			$result = array();
 
 			foreach ($data as $entry) {

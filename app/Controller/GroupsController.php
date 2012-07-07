@@ -19,7 +19,6 @@ class GroupsController extends AppController {
 			)
 		));
 		var_dump($aros[0]['Aro']);
-		// var_dump($aros[1]['Aco']);
 		exit();
 	}
 

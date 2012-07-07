@@ -69,7 +69,6 @@ class AppController extends Controller {
 		}
 
 		if (isset($this->request->named['useRH']) && $this->request->named['useRH']) {
-			var_dump("Request-Handler enabled");
 			$this->RequestHandler->enabled = true;
 		}
 

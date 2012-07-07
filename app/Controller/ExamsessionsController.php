@@ -65,7 +65,9 @@ class ExamsessionsController extends AppController {
 		));
 
 		$this->set(compact('sessions_unfinished','sessions_finished'));
-		$this->set('_serialize', compact('sessions_unfinished','sessions_finished'));
+		// $this->set('sessions_unfinished', $sessions_unfinished);
+		// $this->set('sessions_finished', $sessions_finished);
+		$this->set('_serialize', array('sessions_unfinished','sessions_finished'));
 	}
 
 /**

@@ -9,11 +9,24 @@
 
 				<ul>
 				<?php foreach ($exams as $exam):?>
-					<li><?php echo $this->Html->link($exam['Exam']['fullname'],array(
-						'controller'=>'exams',
-						'action'=>'view',
-						$exam['Exam']['id']));?></li>
+					<li>
+						<span class='ui-li-count'>
+							<?php echo $exam['Examsession']['count_finished'];?> /
+							<?php echo $exam['Examsession']['count_total']-$exam['Examsession']['count_finished'];?>
+						</span>
+						<?php echo $this->Html->link($exam['Exam']['fullname'],array(
+							'controller'=>'exams',
+							'action'=>'view',
+							$exam['Exam']['id']
+						));?>
+					</li>
 				<?php endforeach;?>
+					<li data-theme='a'>
+						<span class='ui-li-count'>
+							<?php echo __('finished');?> / <?php echo __('Unfinished Exams');?>
+						</span>
+						<span>Legende</span>
+					</li>
 				</ul>
 			</li>
 		<?php endforeach;?>
