@@ -2,12 +2,13 @@
 
 <script language='javascript'>
 	function limitExams(lower, upper) {
-		var lis = $('#exams li[data-role="exams-finished"]');
+		console.log("lower: " + lower + " upper: " + upper);
+		var lis = $('#exams tr[data-role="exams-finished"]');
 		lis.each(function(idx,elem) {
-			var value = parseInt(elem.attr('data-value'));
+			var value = parseInt($(elem).attr('data-value'));
 			elem = $(elem);
 
-			if (value < lower || value > uppper) {
+			if (value < lower || value > upper) {
 				elem.hide();
 			} else {
 				elem.show();
@@ -16,16 +17,28 @@
 	}
 
 	$(document).ready(function() {
-		$('#slider-percentage').slider( {
-			range:true,
-			min:0,
-			max:100,
-			values:[ 0, 100],
-			slide : function(event,ui) {
-				limitExams(ui.values[0], ui.values[1]);
-			}
+		// $('#slider-percentage').slider( {
+			// range:true,
+			// min:0,
+			// max:100,
+			// values:[ 0, 100],
+			// slide : function(event,ui) {
+				// limitExams(ui.values[0], ui.values[1]);
+			// }
+		// });
+
+		$('#slider-percentage-lower').change(function() {
+			var val = $('#slider-percentage-lower').val();
+			limitExams(val, $('#slider-percentage-upper').val());	
+			$('#slider-percentage-lower-value').text(val + "%");
 		});
-	})
+
+		$('#slider-percentage-upper').change(function() {
+			var val = $('#slider-percentage-upper').val();
+			limitExams($('#slider-percentage-lower').val(), val);	
+			$('#slider-percentage-upper-value').text(val + "%");
+		});
+	});
 </script>
 
 <div class="examsessions index">
@@ -34,6 +47,7 @@
 	<tr>
 		<th><?php echo __('Subject');?></th>
 		<th><?php echo __('Exam');?></th>
+		<th><?php echo __('Sem.');?></th>
 		<th><?php echo __('Started');?></th>
 		<th><?php echo __('Answered');?></th>
 		<th><?php echo __('Actions');?></th>
@@ -41,12 +55,19 @@
 	<?php foreach ($sessions_unfinished as $session):?>
 		
 		<tr>
-			<td><?php echo $session['Exam']['Subject']['name'];?></td>
+			<td>
+			<?php echo $this->Html->link($session['Exam']['Subject']['name'], array(
+				'controller'=>'subjects',
+				'action'=>'view',
+				$session['Exam']['Subject']['id']
+			));?>
+			</td>
 			<td><?php echo $this->Html->link($session['Exam']['fullname'], array(
 				'controller'=>'exams',
 				'action'=>'view',
 				$session['Exam']['id']
 			));;?></td>
+			<td><?php echo $session['Exam']['semester'];?></td>
 			<td><?php echo $session['Examsession']['created'];?></td>
 			<td>
 				<?php echo $session['Examsession']['examsessions_question_count'];?>
@@ -85,32 +106,49 @@
 </table>
 </div>
 
-<div class="examsessions index">
+<div class="examsessions index" id='exams'>
 <h2><?php echo __('Finished Exams');?></h2>
 <p>
-	<label for='slider-percentage'><?php echo __("Limit:");?></label>
-	<input type='text' id='slider-percentage' />
+	<span id='slider-percentage-lower-value'>0%</span>
+	<input type='range' id='slider-percentage-lower' min='0' max='100' value='0' />
+
+	bis
+
+	<input type='range' id='slider-percentage-upper' min='0' max='100' value='100' />
+	<span id='slider-percentage-upper-value'>100%</span>
 </p>
 <table>
 	<tr>
 		<th><?php echo __('Subject');?></th>
 		<th><?php echo __('Exam');?></th>
+		<th><?php echo __('Sem.');?></th>
 		<th><?php echo __('Result');?></th>
 		<th><?php echo __('Started');?></th>
 		<th><?php echo __('Finished');?></th>
 		<th><?php echo __('Details');?></th>
 	</tr>
 	<?php foreach ($sessions_finished as $session):
-		$percent = round(($session['Examsession']['correct']/$session['Exam']['question_count'])*100,0);
+		$percent = round(($session['Examsession']['correct']/$session['Examsession']['valid'])*100,0);
 	?>
-		<tr>
-			<td><?php echo $session['Exam']['Subject']['name'];?></td>
-			<td><?php echo $session['Exam']['fullname'];?></td>
+		<tr data-role="exams-finished" data-value="<?php echo $percent;?>">
+			<td>
+			<?php echo $this->Html->link($session['Exam']['Subject']['name'], array(
+				'controller'=>'subjects',
+				'action'=>'view',
+				$session['Exam']['Subject']['id']
+			));?>
+			</td>
+			<td><?php echo $this->Html->link($session['Exam']['fullname'], array(
+				'controller'=>'exams',
+				'action'=>'view',
+				$session['Exam']['id']
+			));;?></td>
+			<td><?php echo $session['Exam']['semester'];?></td>
 			<td class="<?php echo $this->Exam->classByPercentage($percent);?>"><?php echo $percent?> %</td>
 			<td><?php echo $session['Examsession']['created'];?></td>
 			<td><?php echo $session['Examsession']['finished'];?></td>
-			<td>
-				<?php echo $this->Html->link(__('Details'),
+			<td class='actions'>
+				<?php echo $this->Html->link(__('Result'),
 					array(
 						'controller'=>'examsessions',
 						'action'=>'result',

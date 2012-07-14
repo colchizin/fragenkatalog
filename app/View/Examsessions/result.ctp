@@ -23,9 +23,19 @@
 	endforeach;
 ?>
 	<dl>
-		<dt>Falsch:</dt>
-		<dd><?php echo $wrong;?></dd>
+		<dt><?php echo __('Correct');?>:</dt>
+		<dd><?php echo $examsession['Examsession']['correct'];?></dd>
 
-		<dt>Gesamt:</dt>
-		<dd><?php echo $total;?></dd>
+		<dt><?php echo __('Valid');?>:</dt>
+		<dd><?php echo $examsession['Examsession']['valid'];?></dd>
+
+		<dt><?php echo __('Result');?>:</dt>
+		<dd>
+		<?php
+			echo round(
+				($examsession['Examsession']['correct']/$examsession['Examsession']['valid'])*100,
+				0
+			);
+		?> %
+		</dd>
 	</dl>

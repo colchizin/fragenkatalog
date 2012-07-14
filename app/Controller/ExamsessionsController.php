@@ -36,7 +36,7 @@ class ExamsessionsController extends AppController {
 		$this->set('title_for_layout', __('My Exams'));
 		$userid = $this->Auth->user('id');
 		$contain = array(
-			'Exam'=>array('id','fullname','shortname','Subject','question_count'),
+			'Exam'=>array('id','fullname','shortname','Subject','question_count','semester'),
 			'User',
 			'ExamsessionsQuestion'
 		);
@@ -214,6 +214,15 @@ class ExamsessionsController extends AppController {
 			$this->Examsession->saveField('finished',date("y:m:d H:i:s"));
 
 		$this->Examsession->calculateResult();
+	
+		if ($this->Examsession->field('valid')==0) {
+			$this->Examsession->delete();
+		}
+
+
+		// die Sessionvariable wird wieder zurückgesetzt, denn die Prüfung ist
+		// ja abgeschlossen
+		$this->Session->delete('Examsession');
 
 		$this->set('_serialize', true);
 	}
@@ -224,7 +233,9 @@ class ExamsessionsController extends AppController {
 				'NOT'=> array(
 					'finished'=>true
 				)
-			)
+			),
+			'limit' => 200,
+			'offset' => 500
 		));
 		foreach ($sessions as $session) {
 			if ($this->Examsession->calculateResult($session['Examsession']['id'])) {

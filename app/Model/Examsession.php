@@ -89,8 +89,11 @@ class Examsession extends AppModel {
 	);
 
 	public function calculateResult($id = null) {
-		$count = 0;
-		$correct = 0;
+		$total = 0;
+		$answered = 0;
+		$valid = 0;
+		$correct_invalid = 0;
+		$correct_valid = 0;
 
 		if ($id == null) {
 			if ($this->id != null)
@@ -104,12 +107,34 @@ class Examsession extends AppModel {
 		$questions = $this->ExamsessionsQuestion->findAllByExamsessionId($id);
 
 		foreach ($questions as $question) {
-			$count++;
-			if ($question['Answer']['correct'])
-				$correct++;
+			$answered++;
+
+			// nur gültige Fragen werden für die Berechnung des Ergebnisses
+			// zugrund gelegt
+			if ($question['Question']['valid']) {
+				$valid++;
+			}
+
+			if ($question['Answer']['correct']) {
+				if ($question['Question']['valid'])
+					$correct_valid++;
+				else
+					$correct_invalid++;
+			}
 		}
 
-		return $this->saveField('correct', $correct);
+		return $this->save(
+			array('Examsession'=>array(
+				'correct' => $correct_valid,
+				'valid' => $valid,
+				'id' => $id
+			)),
+			array('fieldList'=>array(
+				// wir speichern nur die Anzahl der korrekt beantworteten
+				// die Anzahl der gültigen Fragen
+				'correct','valid'
+			))
+		);
 	}
 
 }

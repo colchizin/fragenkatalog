@@ -48,6 +48,7 @@ class AppController extends Controller {
 	var $helpers = array('Html','Form','Session','Js','Breadcrumb');
 
 	public function beforeFilter() {
+
 		if (isset($this->request->named['layout'])) {
 			$layout = $this->request->named['layout'];
 			if (is_array($layout))

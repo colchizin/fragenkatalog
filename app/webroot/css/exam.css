@@ -1,27 +1,28 @@
-.failed, .very_good, .good, .average, .sufficient {
+.examresult {
+	text-align:center;
 	font-weight:bold;
 	background-image:none;
 }
 
-.failed {
+.examresult.failed {
 	color:white;
 	background-color:red !important;
 }
 
-.very_good {
+.examresult.very_good {
 	color:white;
 	background-color:green !important;
 }
 
-.good {
+.examresult.good {
 	background-color:lightgreen !important;
 }
 
-.average {
+.examresult.average {
 	background-color:yellow !important;
 }
 
-.sufficient {
+.examresult.sufficient {
 	background-color:orange !important;
 }
 

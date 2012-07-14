@@ -60,7 +60,7 @@
 
 	<?php foreach ($sessions_finished as $session):?>
 		<?php
-			$percent = round(($session['Examsession']['correct']/$session['Exam']['question_count'])*100,0);
+			$percent = round(($session['Examsession']['correct']/$session['Examsession']['valid'])*100,0);
 		?>
 		
 		<li data-value='<?php echo $percent;?>' data-role='exams-finished'>

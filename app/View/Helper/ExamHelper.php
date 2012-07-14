@@ -8,16 +8,17 @@
 
 class ExamHelper extends AppHelper {
 	public function classByPercentage($percent) {
+		$res = "examresult";
 		if ($percent >= 90)
-			return "very_good";
+			return "$res very_good";
 		else if ($percent >=80)
-			return "good";
+			return "$res good";
 		else if ($percent >= 70) {
-			return "average";
+			return "$res average";
 		} else if ($percent >= 60) {
-			return "sufficient";
+			return "$res sufficient";
 		} else {
-			return "failed";
+			return "$res failed";
 		}
 	}
 }

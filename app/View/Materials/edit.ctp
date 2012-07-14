@@ -66,7 +66,7 @@
 	<div>
 		<input type='text' id='insert-image-filename'>
 		<button onclick='insertImageIntoWYSIWYG();return false;'>
-			<?php echo __('Insert Image');?>
+			<?php echo __('Insert image');?>
 		</button>
 	</div>
  </div>

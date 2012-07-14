@@ -15,6 +15,7 @@ class UsersController extends AppController {
 	}
 
 	public function home() {
+		$this->loadModel('News');
 		$this->set('title_for_layout', __('Home'));
 		$userid = $this->Auth->user('id');
 		$this->User->contain(array(
@@ -22,6 +23,7 @@ class UsersController extends AppController {
 		));
 		$user = $this->User->findById($userid);
 		$this->set('user', $user);
+		$this->set('news', $this->News->find('first', array('order'=>'News.created DESC')));
 	}
 
 	public function init_db() {
@@ -47,6 +49,8 @@ class UsersController extends AppController {
 		$this->Acl->allow($group, 'controllers/Materials');
 		$this->Acl->allow($group, 'controllers/Answers');
 		$this->Acl->allow($group, 'controllers/Comments');
+		$this->Acl->allow($group, 'controllers/QuestionsComments/add');
+		$this->Acl->allow($group, 'controllers/AnswersComments/add');
 		$this->Acl->allow($group, 'controllers/Users/view_myprofile');
 		$this->Acl->allow($group, 'controllers/Users/edit_myprofile');
 		$this->Acl->allow($group, 'controllers/Users/logout');
@@ -68,6 +72,7 @@ class UsersController extends AppController {
 		$this->Acl->allow($group, 'controllers/Examsessions/continue_current_session');
 		$this->Acl->allow($group, 'controllers/Examsessions/delete');
 		$this->Acl->allow($group, 'controllers/ExamsessionsQuestions/add_or_save');
+		$this->Acl->allow($group, 'controllers/News/index');
 		echo "all done";
 		exit;
 	}

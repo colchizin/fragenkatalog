@@ -26,7 +26,7 @@
 		<?php foreach ($examsessions as $session):?>
 			<li>
 				<?php if ($session['Examsession']['finished']):
-					$percent = round(($session['Examsession']['correct'] / $exam['Exam']['question_count']) * 100, 0);
+					$percent = round(($session['Examsession']['correct'] / $exam['Examsession']['valid']) * 100, 0);
 				?>
 						<span class='ui-li-count <?php echo $this->Exam->classByPercentage($percent);?>'>
 							<?php echo $percent;?> %

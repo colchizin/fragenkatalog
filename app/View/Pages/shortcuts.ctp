@@ -63,6 +63,7 @@
 
 	<div class='definition'>
 		<p class='term'>
+			<span class='keyboard'>s</span>,
 			<span class='keyboard'>&lt;Eingabe&gt;</span>
 		</p>
 		<p class='description'>Lösungen und Kommentare der aktuellen Frage anzeigen</p>

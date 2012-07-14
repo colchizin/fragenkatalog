@@ -436,8 +436,17 @@ ul[data-role=listview] li span.ui-li-count {
 }
 
 .question .comments,
-#exam .question .materials {
+.exam .question .materials {
 	display:none;
+}
+
+.question .answer .comments {
+	margin-left:3em;
+}
+
+.question.solved .comments,
+.question.solved .materials {
+	display: block;
 }
 
 .question .comment {
@@ -455,9 +464,36 @@ ul[data-role=listview] li span.ui-li-count {
 	background-color:#F0EBE2;
 }
 
+.question.solved.invalid {
+	border:3px solid red;
+}
+
+/*.question.valid {
+	border:3px solid green;
+}*/
+
 .question fieldset {
 	border:none;
 }
+
+.question .btn-add-comment {
+	display:none;
+	float:right;
+	color:grey;
+	cursor:pointer;
+}
+
+.question .answer .btn-add-comment {
+}
+
+.question .btn-add-comment:hover {
+	color:black;
+}
+
+.question.solved .btn-add-comment {
+	display:inline;
+}
+
 
 .question .btn-show-solution,
 .question .btn-edit-question,
@@ -480,8 +516,6 @@ ul[data-role=listview] li span.ui-li-count {
 .question .btn-comment:hover {
 	opacity:1;
 }
-
-
 
 /*
  * Exam
@@ -534,7 +568,7 @@ table th,
 table td.separator {
 	background-color:lightgrey !important;
 	padding:.3em;
-	font-size:12pt;
+	font-size:10pt;
 }
 
 table tr:nth-child(2n) td{
@@ -575,6 +609,7 @@ textarea[data-role=richtext] {
 }
 
 a.button,
+td.actions a,
 a[data-role=button],
 input[type=button],
 input[type=submit],
@@ -614,6 +649,7 @@ button {
 }
 
 a.button:hover,
+td.actions a:hover,
 a[data-role=button]:hover,
 input[type=button]:hover,
 input[type=submit]:hover,
@@ -629,6 +665,7 @@ button:hover {
 }
 
 a.button:active,
+td.actions a:active,
 a[data-role=button]:active,
 input[type=button]:active,
 input[type=submit]:active,
@@ -737,6 +774,35 @@ div.info {
 	background-color:#F0EBE2;
 	padding:1em;
 	border: 1px dashed lightGrey;
+}
+
+.dialog-modal {
+	vertical-align:middle;
+	text-align:center;
+	position:fixed;
+	padding:10em;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	background-color:black;
+	background-color:rgba(0,0,0,0.3);
+	z-index:10;
+	display:none;
+	cursor:default;
+	user-select:none;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+}
+
+.dialog-modal .dialog-modal-content {
+	box-shadow:0px 0px 8px black;
+	text-align:left;
+	max-width:400px;
+	margin:auto;
+	border:3px solid grey;
+	background-color:white;
+	padding:1em;
 }
 
 /*

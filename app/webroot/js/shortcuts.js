@@ -13,7 +13,7 @@ $(document).ready(function() {
 					showNextQuestion();
 					return false;
 				case 13:
-					showQuestionDetails($(".question.current"));
+					showSolution(currentQuestionIndex);
 					/*if (confirm("Wirklich alle Lösungen anzeigen?")) {
 						showAllQuestions();
 						showAllSolutions();
@@ -33,7 +33,11 @@ $(document).ready(function() {
 		}
 		switch(eventObject.charCode) {
 			case 32:	// Leertaste
-				showNextQuestion(); return false;
+				if (eventObject.shiftKey)
+					showPreviousQuestion();
+				else
+					showNextQuestion();
+				return false;
 			case 110:	// n 
 				showNextQuestion();
 				break;
@@ -61,6 +65,8 @@ $(document).ready(function() {
 				selectAnswer(6); break;
 			case 56:	// 8
 				selectAnswer(7); break;
+			case 115:	// s
+				showSolution(currentQuestionIndex); break;
 			case 118:	// v
 				toggleDisplayType(); break;
 			case 102:	// f

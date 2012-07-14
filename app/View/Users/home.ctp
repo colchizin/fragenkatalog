@@ -1,8 +1,30 @@
+<?php
+	$this->Html->css('news',null, array('inline'=>false));
+?>	
 <p>
 	Wilkommen in der Desktop-Version des <strong>Fragenkataloges</strong>.
 	Hier kannst du den vollen Funktionsumfang des Fragenkataloges nutzen.
 </p>
-
+	<div class='news-entry info news'>
+		<span style='float:right'><?php echo $this->Html->link(__('All news entries'), array(
+			'controller'=>'news',
+			'action'=>'index'
+		));?></span>
+		<h3><?php echo h($news['News']['title']);?></h3>
+		<p class='news-metadata'>
+			<?php echo __('created by');?>
+			<?php echo $this->Html->link($news['User']['username'], array(
+				'controller' => 'users',
+				'action' => 'view',
+				$news['User']['id']
+			));?>
+			<?php echo __('on');?>
+			<?php echo $news['News']['created'];?>
+		</p>
+		<div class='news-content'>
+			<?php echo $news['News']['description'];?>
+		</div>
+	</div>
 <p>
 	Dein Einstig in den Fragenkatalog ist dein Studiengang. Wenn du noch keinen Studiengang angegeben hast, dann such zunächst unter
 	<?php echo $this->Html->link(__('Universities'),array(

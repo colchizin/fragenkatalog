@@ -204,7 +204,14 @@ class QuestionsController extends AppController {
 		$this->set('questions', $this->Question->find('all',$params));
 	}
 
-	public function check_validity() {
+	public function check_validity($id = null) {
+		if ($id != null) {
+			$this->Question->id = $id;
+			$valid = $this->Question->isValid();
+			$this->Question->saveField('valid', $valid);
+			echo "{$this->Question->id} updated to $valid<br>";
+			exit();
+		}
 
 		$this->Question->contain(array(
 			'Answer' => 'correct'

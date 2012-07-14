@@ -1,3 +1,6 @@
+<?php
+	$this->Html->css('news',null, array('inline'=>false));
+?>	
 <p>
 	Wilkommen in der mobilen Version des <em>Fragenkataloges</em>. Mit wenigen Einschränkungen kannst du hier auf die gleichen Funktionen wie in der Desktop-Version zugreifen. Den Einstieg findest du über die Menüpunkte <em><?php echo __('My Programme');?></em> und <em><?php echo __('My Exams');?></em>.
 </p>
@@ -11,6 +14,36 @@
 	<a data-role='button' data-icon='grid' data-iconpos='notext' data-inline='true'>Menü</a>,
 	mit der du von jeder Seite aus zusätzliche Navigationspunkte aufrufen kannst.
 </p>
+
+<h2><?php echo __('News');?></h2>
+
+	<div class='news-entry info news'>
+		<span style='float:right'></span>
+		<h3><?php echo h($news['News']['title']);?></h3>
+		<p class='news-metadata'>
+			<?php echo __('created by');?>
+			<?php echo $this->Html->link($news['User']['username'], array(
+				'controller' => 'users',
+				'action' => 'view',
+				$news['User']['id']
+			));?>
+			<?php echo __('on');?>
+			<?php echo $news['News']['created'];?>
+		</p>
+		<div class='news-content'>
+			<?php echo $news['News']['description'];?>
+		</div>
+		<?php echo $this->Html->link(
+			__('All news entries'),
+			array(
+				'controller'=>'news',
+				'action'=>'index'
+			),
+			array(
+				'data-role' => 'button'
+			)
+		);?>
+	</div>
 
 <ul data-role='listview' data-inset='true' data-theme='b'>
 	<li>

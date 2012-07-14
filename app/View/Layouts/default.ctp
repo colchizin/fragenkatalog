@@ -149,6 +149,7 @@ echo $this->Js->writeBuffer();
 				));?></li>
 			</ul>
 
+
 			<div id='info-area'>
 
 			</div>
@@ -190,7 +191,7 @@ echo $this->Js->writeBuffer();
 				<?php echo $this->element('sql_dump'); ?>
 			<?php endif;?>
 		</div>
-		<div id="footer">
+		<div id="footer"><b>
 			<?php echo $this->Html->link(
 				__('Donate'),
 				array(
@@ -198,7 +199,7 @@ echo $this->Js->writeBuffer();
 					'action'=>'display',
 					'donate'
 				)
-			);?>
+			);?></b>
 			<?php echo $this->Html->link(
 				__('Privacy'),
 				array('controller'=>'pages','action'=>'display','datenschutz')
