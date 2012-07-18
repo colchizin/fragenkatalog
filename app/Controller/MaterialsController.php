@@ -153,20 +153,48 @@ class MaterialsController extends AppController {
 		$this->set('materials', $this->Material->find('all', $params));
 	}
 
-	public function copyExternalMindmaps() {
-		$materials = $this->Material->find('all', array(
-			'conditions' => array(
-				'type' => 'mindmap',
-				'text LIKE' => 'http://%'
-			)
-		));
+	public function unifyImageTexts() {
+		$materials = $this->Material->findAllByType('image');
+		$pattern = '/<img.*src="(.*?)".*\/?>/';
+
+
+//<?php // simply for getting proper syntax highlighting in vim. the above 
+		// regular expression messes everything up a bit
+
+		error_reporting(E_ALL);
+
+		foreach ($materials as $material) {
+			$strpos = strpos($material['Material']['text'], "<img");
+			if ($strpos === 0) {
+				// Bild-Material mit <img> im Text	
+				$filename = preg_replace($pattern, "$1", $material['Material']['text']);
+
+				$this->Material->id = $material['Material']['id'];
+				if ($this->Material->saveField('text', $filename)) {
+					echo "updated Material {$material['Material']['title']}<br />";	
+				}
+			}
+		}
+
+		exit();
+	}
+
+	protected function copyExternalFiles($materials, $dest_dir) {
 		foreach ($materials as $material) {
 			$base = getcwd();
 			$name = basename($material['Material']['text']);
 			$source = $material['Material']['text'];
 
-			$dest = $base . "/flash/mindmaps/"  . $name;
+			$dest = $base . "/" . $dest_dir . "/"  . $name;
 			echo 'kopiere ' . $source . ' nach ' . $dest . ' ... ';
+
+			if (file_exists($dest)) {
+				echo "Datei existiert bereits. Ändere nur den Datenbankeintrag <br />";	
+				$material['Material']['text'] = $name;
+				$this->Material->save($material);
+				continue;
+			}
+
 			if (copy($source, $dest)) {
 				echo "Erfolg";
 				$material['Material']['text'] = $name;
@@ -176,7 +204,90 @@ class MaterialsController extends AppController {
 				echo "Fehlschlag";
 			echo "<br>";
 		}
+	}
+
+	public function copyExternalMindmaps() {
+		$materials = $this->Material->find('all', array(
+			'conditions' => array(
+				'type' => 'mindmap',
+				'text LIKE' => 'http://%'
+			)
+		));
+		$this->copyExternalFiles($materials, "flash/mindmaps");
 		exit();
+	}
+
+	public function copyExternalImages() {
+		$materials = $this->Material->find('all', array(
+			'conditions' => array(
+				'type' => 'image',
+				'text LIKE' => 'http://%'
+			)
+		));
+		$this->copyExternalFiles($materials, "img/materials");
+		exit();
+	}
+
+	public function findImagesInAllTexts() {
+		$materials = $this->Material->find('list');	
+
+		foreach ($materials as $id=>$material) {
+			$this->findImagesInText($id);
+		}
+
+		exit();
+	}
+
+	public function findImagesInText($id = 1) {
+		$dest_dir = "img/materials";
+		$pattern = '/<img.*src="(.*?)".*\/?>/';
+		$material = $this->Material->findById($id);	
+		$results;
+		preg_match_all($pattern, $material['Material']['text'], $results);//, PREG_SPLIT_DELIM_CAPTURE));
+
+		foreach ($results[1] as $img) {
+			$base = getcwd();
+			$source = $this->getThumblessSrc($img);
+			$name = basename($source);
+
+			$dest = $base . "/" . $dest_dir . "/"  . $name;
+			$success = false;
+
+			if (file_exists($dest)) {
+				echo "Datei $dest existiert bereits. <br />";	
+				$success = true;
+			} else {
+				echo 'kopiere ' . $source . ' nach ' . $dest . ' ... ';
+				if (copy($source, $dest)) {
+					echo "<span style='color:green'>Erfolg</span><br>";
+					$success = true;
+				} else {
+					echo "<span style='color:red>Fehler</span><br>";
+				}
+			}
+
+			if ($success) {
+				$newsrc = "/fragenkatalog/$dest_dir/$name";
+				$material['Material']['text'] = str_replace($img, $newsrc, $material['Material']['text']);
+			}
+		}
+
+		$this->Material->id = $id;
+		if ($this->Material->saveField('text', $material['Material']['text'])) {
+			echo "<b>Datenbankeintrag aktualisiert</b> <br />\n";	
+		}
+
+		exit();
+	}
+
+	protected function getThumblessSrc($source) {
+		if (!strpos($source, "/thumb/"))
+			return $source;
+
+		$thumbless = str_replace("/thumb", "", $source);
+		$lastslash = strrpos($thumbless, "/");
+		$thumbless = substr($thumbless, 0, $lastslash);
+		return $thumbless;
 	}
 
 	public function pick_image() {

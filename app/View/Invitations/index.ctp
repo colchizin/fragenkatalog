@@ -18,7 +18,7 @@
 		<td><?php echo h($invitation['Invitation']['created']); ?>&nbsp;</td>
 		<td><?php echo h($invitation['Invitation']['used']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($invitation['User']['id'], array('controller' => 'users', 'action' => 'view', $invitation['User']['id'])); ?>
+			<?php echo $this->Html->link($invitation['User']['username'], array('controller' => 'users', 'action' => 'view', $invitation['User']['id'])); ?>
 		</td>
 		<td><?php echo h($invitation['Invitation']['email']); ?>&nbsp;</td>
 		<td class="actions">
@@ -39,7 +39,7 @@
 	<div class="paging">
 	<?php
 		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
+		echo $this->Paginator->numbers(array('separator' => '', 'first'=>2,'last'=>2));
 		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>

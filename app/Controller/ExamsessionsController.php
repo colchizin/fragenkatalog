@@ -61,13 +61,16 @@ class ExamsessionsController extends AppController {
 					'conditions'=>'MyExam.id = Examsession.exam_id'
 				)
 			),
-			'order' => array('MyExam.subject_id')
+			'order' => array('MyExam.subject_id','MyExam.semester', 'MyExam.year', 'MyExam.term', 'Examsession.finished')
 		));
 
-		$this->set(compact('sessions_unfinished','sessions_finished'));
-		// $this->set('sessions_unfinished', $sessions_unfinished);
-		// $this->set('sessions_finished', $sessions_finished);
-		$this->set('_serialize', array('sessions_unfinished','sessions_finished'));
+		$subjects = $this->Examsession->Exam->Subject->find('list', array(
+			'conditions'=>array('programme_id'=>$this->Auth->user('programme_id')),
+			'order' => array('Subject.name' => 'ASC')
+		));
+
+		$this->set(compact('sessions_unfinished','sessions_finished', 'subjects'));
+		$this->set('_serialize', array('sessions_unfinished','sessions_finished','subjects'));
 	}
 
 /**
@@ -245,5 +248,24 @@ class ExamsessionsController extends AppController {
 			}
 		}
 		exit();
+	}
+
+	public function my_wrong_answers() {
+		if (empty ($this->request->named['semester']) ||
+			empty($this->request->named['subject']))
+		{
+			throw new NotFoundException(__('Invalid semester or subject'));
+		}
+
+		var_dump($this);
+		exit();
+
+		$this->loadModel('Question');
+		$this->set('questions', $this->Question->wronglyAnsweredQuestions(
+			$this->Auth->user('id'),
+			$this->request->named['subject'],
+			$this->request->named['semester']
+		));
+
 	}
 }

@@ -1,4 +1,9 @@
+<div class='info'>
+	<p>Nutze diese Ansicht bitte nur, um Fragen zu korrigieren. Bitte nutze diese Ansicht <strong>nicht</strong>, um Fragen oder Antworten zu kommentieren. Nutze dafür bitte die Kommentarfelder in der Klausuransicht.</p>
+	<p>Kommentare, die hier erstellt erstellt werden, werden wie Alt-Kommentare aus dem Mediwiki behandelt (kein zugeordneter User). Das heißt, dass sie von anderen beliebig bearbeitet oder gelöscht werden können. Von Benutzern im Fragenkatalog erstellte Kommentare hingegen können nur vom ensprechenden Benutzer gelöscht werden und werden hier ausgegraut dargestellt.</p>
+</div>
 <div class="questions form">
+
 <?php echo $this->Html->script('question');?>
 <?php echo $this->Form->create('Question');?>
 	<?php

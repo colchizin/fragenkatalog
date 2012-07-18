@@ -54,7 +54,7 @@ class MaterialHelper extends AppHelper {
 	 * @return void
 	 */
 	public function writeImage($data) {
-		return "<img src='" . $data['text'] . "' title='" . $data['title'] . "' />";
+		return "<img src='" . Router::url('/') . "img/materials/" . $data['text'] . "' title='" . $data['title'] . "' />";
 	}
 
 }

@@ -14,11 +14,12 @@ function switchFullscreen(fullscreen) {
 		$('#content').addClass('full_width full_height','fast');
 		$('#header').slideUp('fast');
 		$('#footer').hide('fast');
+		// $('#content').get(0).webkitRequestFullScreen();
 	} else {
 		$('#content').removeClass('full_width full_height','fast');
 		$('#header').slideDown('fast');
 		$('#footer').show('fast');
-
+		// $('#content').get(0).webkitCancelFullScreen();
 	}
 }
 

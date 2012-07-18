@@ -1,3 +1,10 @@
+<?php
+	$this->Js->buffer('
+		$(".thumb").find("img").attr("width","").attr("height","");
+		$(".thumbinner").css("width","");
+		$("textarea[data-role=richtext]").wysiwyg();
+	');
+?>
 <div class="materials view">
 <h2><?php  echo h($material['Material']['title']);?></h2>
 	<div><?php echo $this->Material->write($material); ?></div>

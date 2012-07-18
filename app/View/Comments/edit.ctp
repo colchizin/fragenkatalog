@@ -6,8 +6,6 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('comment');
 		echo $this->Form->input('user_id');
-		echo $this->Form->input('Answer');
-		echo $this->Form->input('Question');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit'));?>

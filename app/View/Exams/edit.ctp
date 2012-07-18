@@ -1,3 +1,6 @@
+<?php
+	echo $this->Html->script('edit_exam');
+?>
 <div class="exams form">
 <?php echo $this->Form->create('Exam');?>
 	<fieldset>

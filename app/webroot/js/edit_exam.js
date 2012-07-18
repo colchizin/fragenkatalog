@@ -28,13 +28,13 @@ function addQuestion(json) {
 		.addClass('question input')
 		.append($('<textarea>'+question+'</textarea>')
 			.attr('name',namebase + '[question]')
-			.attr('placeholder', 'Fragestellung')
+			.attr('placeholder', __('Question'))
 			.keydown(function(ev) {
 				switch (ev.which) {
 					case 8:
 						// Wenn das Feld leer ist und Backspace betätigt wird,
 						// dann wird die Frage gelöscht
-						if (this.value == "" && confirm('Frage löschen?')) {
+						if (this.value == "" && confirm(__('confirm remove question'))) {
 							removeQuestion($(this).parent());
 							return false;
 						}
@@ -44,12 +44,13 @@ function addQuestion(json) {
 		)
 		.append($('<textarea>'+attachment+'</textarea>')
 			.attr('name', namebase + '[attachment]')
-			.attr('placeholder', 'Anhang (z.b. ein Bild oder eine Tabelle)')
+			.attr('placeholder', __("attachment placeholder"))
 		)
 		.append($('<input type="hidden" value="'+question_id+'" name="'+namebase + '[id]" />'))
 		.append($('<div class="answers"></div>'))
 		.appendTo($('div.questions'))
-		.append($('<button>Antwort hinzufügen</button>')
+		.append($('<button>')
+			.text(__('add answer'))
 			.click(function() {
 				addAnswer($(this).parent());
 				return false;
@@ -124,7 +125,8 @@ function addAnswer(question, json) {
 			.attr('id', id + '_correct')
 			.attr('checked', correct)
 		)
-		.append($('<label>Richtige Antwort</label>')
+		.append($('<label>')
+			.text(__('correct answer'))
 			.attr('for', id + '_correct'))
 		.appendTo(question.children('.answers'));
 	div.find('input[type=text]').focus();

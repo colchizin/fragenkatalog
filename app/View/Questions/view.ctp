@@ -1,4 +1,9 @@
 <div class="questions view">
+<?php if (!$question['Question']['valid']):?>
+	<div class="info">
+		<strong><?php echo __('This question is not valid');?></strong>
+	</div>
+<?php endif;?>
 <h2>
 	<?php echo h($question['Question']['question']); ?>
 </h2>

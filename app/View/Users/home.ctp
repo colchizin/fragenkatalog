@@ -1,11 +1,15 @@
 <?php
 	$this->Html->css('news',null, array('inline'=>false));
+	$this->Html->script('comment', array('inline'=>false));
+	$this->Html->script('news', array('inline'=>false));
 ?>	
 <p>
 	Wilkommen in der Desktop-Version des <strong>Fragenkataloges</strong>.
 	Hier kannst du den vollen Funktionsumfang des Fragenkataloges nutzen.
 </p>
-	<div class='news-entry info news'>
+
+<?php if (!empty($news)):?>
+	<div class='news-entry info news' id='news_<?php echo $news['News']['id'];?>'>
 		<span style='float:right'><?php echo $this->Html->link(__('All news entries'), array(
 			'controller'=>'news',
 			'action'=>'index'
@@ -24,7 +28,30 @@
 		<div class='news-content'>
 			<?php echo $news['News']['description'];?>
 		</div>
+		<div class='comments'>
+			<?php foreach ($news['HasComment'] as $comment):?>
+			<div class='comment'>
+				<p>
+					<?php echo $comment['Comment']['comment'];?>
+					<span class='comment-author'><?php echo $comment['Comment']['User']['username'];?></span>
+				</p>
+			</div>
+			<?php endforeach;?>
+		</div>
+		<div style='position:relative' class='comment-field' id='comment-field-<?php echo $news['News']['id'];?>'>
+			<textarea placeholder='<?php echo __('comment');?>'></textarea>
+			<button class='btn-comment-submit'
+				onclick='submitNewsComment(
+					<?php echo $news['News']['id'];?>,
+					$(commentFieldNamePrefix + <?php echo $news['News']['id'];?>)
+				);'
+			>
+				<?php echo __('comment');?>
+			</button>
+		</div>
 	</div>
+<?php endif;?>
+
 <p>
 	Dein Einstig in den Fragenkatalog ist dein Studiengang. Wenn du noch keinen Studiengang angegeben hast, dann such zunächst unter
 	<?php echo $this->Html->link(__('Universities'),array(
@@ -88,4 +115,5 @@
 			'action'=>'add'
 		), array('data-role'=>'button'));?>
  hier einladen.</p>
+ <p>Mittlerweile sind nahezu alle Fragen aus nahezu allen Fachgebieten aller klinischen Semester hierher übertragen... Es ist also nicht nur für K4- und K5-ler interessant.</p>
 </div>

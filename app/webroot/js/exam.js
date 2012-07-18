@@ -29,6 +29,13 @@
 	var finished = false;
 
 	/*
+	 * stores whether the solution is immediatly shown after selecting an
+	 * answer
+	 * @default	false
+	 */
+	var quickSolutionMode = false;
+
+	/*
 	 * Show the question defined by the provided index.
 	 * If the solution for the question has already been shown, show the
 	 * solution.Otherwise, show the unsolved question.
@@ -72,6 +79,9 @@
 
 		onAnswerChanged(question_index, answer_index);
 		submitAnswer(exam.Question[question_index].id, exam.Question[question_index].Answer[answer_index].id);
+		if (quickSolutionMode == true) {
+			showSolution(question_index);
+		}
 	}
 
 	/*
@@ -131,10 +141,11 @@
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 				if (jqXHR.status == 403) {
-					alert('Sitzung abgelaufen. Neu anmelden');
+					alert(__('info session expired'));
 					location.reload();
 				} else {
-					alert("Fehler: " + textStatus + " (" + errorThrown + ")");
+					alert(__("Error")  + ": "+ textStatus + " (" + errorThrown + ")");
+					console.log(jqXHR.responseText);
 				}
 			},
 		});
@@ -194,7 +205,7 @@
 				},
 				error: function(jqXHR, textStatus, errorThrown) {
 					if (jqXHR.status == 403) {
-						alert('Sitzung abgelaufen. Neu anmelden');
+						alert(__('info session expired'));
 						location.reload();
 					}
 				}

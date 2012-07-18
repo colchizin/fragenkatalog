@@ -68,3 +68,26 @@
 		</ul>
 	</div>
 </div>
+
+<div class='invitations'>
+	<table>
+		<thead>
+			<tr>
+				<th><?php echo __('Id');?></th>
+				<th><?php echo __('Email');?></th>
+				<th><?php echo __('Created');?></th>
+				<th><?php echo __('Used');?></th>
+			</tr>
+		</thead>
+		<tbody>
+		<?php foreach ($user['Invitation'] as $invitation):?>
+			<tr>
+				<td><?php echo $invitation['id'];?></td>
+				<td><?php echo $invitation['email'];?></td>
+				<td><?php echo $invitation['created'];?></td>
+				<td><?php echo ($invitation['used'] ? __('Yes') : "&nbsp");?></td>
+			</tr>
+		<?php endforeach;?>
+		</tbody>
+	</table>
+</div>

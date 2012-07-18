@@ -1,45 +1,7 @@
-<?php $this->Html->css('exam', null, array('inline'=>false));?>
-
-<script language='javascript'>
-	function limitExams(lower, upper) {
-		console.log("lower: " + lower + " upper: " + upper);
-		var lis = $('#exams tr[data-role="exams-finished"]');
-		lis.each(function(idx,elem) {
-			var value = parseInt($(elem).attr('data-value'));
-			elem = $(elem);
-
-			if (value < lower || value > upper) {
-				elem.hide();
-			} else {
-				elem.show();
-			}
-		});
-	}
-
-	$(document).ready(function() {
-		// $('#slider-percentage').slider( {
-			// range:true,
-			// min:0,
-			// max:100,
-			// values:[ 0, 100],
-			// slide : function(event,ui) {
-				// limitExams(ui.values[0], ui.values[1]);
-			// }
-		// });
-
-		$('#slider-percentage-lower').change(function() {
-			var val = $('#slider-percentage-lower').val();
-			limitExams(val, $('#slider-percentage-upper').val());	
-			$('#slider-percentage-lower-value').text(val + "%");
-		});
-
-		$('#slider-percentage-upper').change(function() {
-			var val = $('#slider-percentage-upper').val();
-			limitExams($('#slider-percentage-lower').val(), val);	
-			$('#slider-percentage-upper-value').text(val + "%");
-		});
-	});
-</script>
+<?php
+	$this->Html->css('exam', null, array('inline'=>false));
+	$this->Html->script('examsession', array('inline'=>false));
+?>
 
 <div class="examsessions index">
 <h2><?php echo __('Unfinished Exams');?></h2>
@@ -115,7 +77,15 @@
 	bis
 
 	<input type='range' id='slider-percentage-upper' min='0' max='100' value='100' />
-	<span id='slider-percentage-upper-value'>100%</span>
+	<span id='slider-percentage-upper-value'>100%</span>,
+
+	<?php echo $this->Form->input('subject_id', array(
+		'type'=>'select',
+		'label' => false,
+		'div'=>false,
+		'options' => $subjects,
+		'empty' => __('All Subjects')
+	));?>
 </p>
 <table>
 	<tr>
@@ -130,7 +100,11 @@
 	<?php foreach ($sessions_finished as $session):
 		$percent = round(($session['Examsession']['correct']/$session['Examsession']['valid'])*100,0);
 	?>
-		<tr data-role="exams-finished" data-value="<?php echo $percent;?>">
+		<tr
+			data-role="exams-finished"
+			data-value="<?php echo $percent;?>"
+			data-subject="<?php echo $session['Exam']['Subject']['id'];?>"
+		>
 			<td>
 			<?php echo $this->Html->link($session['Exam']['Subject']['name'], array(
 				'controller'=>'subjects',

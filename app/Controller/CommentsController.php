@@ -29,6 +29,9 @@ class CommentsController extends AppController {
 		if (!$this->Comment->exists()) {
 			throw new NotFoundException(__('Invalid comment'));
 		}
+		$this->Comment->contain(array(
+			'User', 'Question', 'News', 'Answer'
+		));
 		$this->set('comment', $this->Comment->read(null, $id));
 	}
 

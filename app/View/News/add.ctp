@@ -1,10 +1,15 @@
 <div class="news form">
-<?php echo $this->Form->create('News');?>
+<?php
+	echo $this->Form->create('News');
+	$this->Html->script('jquery.wysiwyg', array('inline'=>false));
+	$this->Js->buffer("$('textarea[data-role=wysiwyg]').wysiwyg();");
+
+?>
 	<fieldset>
 		<legend><?php echo __('Add News'); ?></legend>
 	<?php
 		echo $this->Form->input('title');
-		echo $this->Form->input('description');
+		echo $this->Form->input('description', array('data-role'=>'wysiwyg'));
 		echo $this->Form->input('user_id');
 	?>
 	</fieldset>

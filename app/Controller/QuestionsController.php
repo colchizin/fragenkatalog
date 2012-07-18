@@ -77,6 +77,7 @@ class QuestionsController extends AppController {
 
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Question->save($this->request->data)) {
+				$this->Question->saveField('valid', $this->Question->isValid());
 				$this->Session->setFlash(__('The question has been saved'));
 				$this->redirect(array('action' => 'view',$this->Question->id));
 			} else {
@@ -210,7 +211,7 @@ class QuestionsController extends AppController {
 			$valid = $this->Question->isValid();
 			$this->Question->saveField('valid', $valid);
 			echo "{$this->Question->id} updated to $valid<br>";
-			exit();
+			exit;
 		}
 
 		$this->Question->contain(array(

@@ -85,7 +85,7 @@ function addAnswer(obj) {
 	// Wenn es schon Kommentare gibt, dann dises Kommentare hinzufügen
 	if (comments) {
 		for (var i=0;i<comments.length;i++) {
-			addComment(dc,comments[i]);
+			addComment(dc,comments[i], comments[i].user_id);
 		}
 	}
 
@@ -94,10 +94,13 @@ function addAnswer(obj) {
 	d.trigger("create");
 }
 
-function addComment(dc,obj) {
+function addComment(dc,obj, readOnly) {
 	if (!obj) {
 		obj = {comment:'',id:0};
 	}
+
+	if (!readOnly)
+		readOnly = false;
 
 	var apos = dc.parent().attr('data-pos');
 	var id = dc.parent().attr('data-id');
@@ -116,6 +119,7 @@ function addComment(dc,obj) {
 		// Textfeld für den Kommentar
 		.append($('<textarea>' + obj.comment + '</textarea>')
 			.attr('name',namebase + '[comment]')
+			.attr('readonly', readOnly)
 		)
 		// Verstecktes Feld mit ID des Kommentares
 		.append($('<input type="hidden"></input>')
@@ -124,6 +128,7 @@ function addComment(dc,obj) {
 		)
 		// Button zum löschen des Kommentares
 		.append($('<button>Kommentar löschen</button>')
+			.attr('disabled', readOnly)
 			.click(function () {
 				if (confirm("Kommentar wirklich löschen? (kann nicht rückgängig gemacht werden)")) {
 					if (id!=0) {

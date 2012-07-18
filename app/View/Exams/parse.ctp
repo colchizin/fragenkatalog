@@ -39,7 +39,7 @@
 </div>
 <?php
 echo $this->Form->input('subject_id');
-echo $this->Form->input('title', array('value'=>__('Exam')));
+echo $this->Form->input('title', array('value'=>'Klausur'));
 echo $this->Form->input('year',array('min'=>2000,'value'=>'2000'));
 echo $this->Form->input('term',	array(
 	'type'=>'select',

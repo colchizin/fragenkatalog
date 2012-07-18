@@ -4,7 +4,7 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
 			<th><?php echo $this->Paginator->sort('title');?></th>
-			<th><?php echo $this->Paginator->sort('text');?></th>
+			<th><?php echo $this->Paginator->sort('type');?></th>
 			<th><?php echo $this->Paginator->sort('subject_id');?></th>
 			<th><?php echo $this->Paginator->sort('created');?></th>
 			<th><?php echo $this->Paginator->sort('modified');?></th>
@@ -15,7 +15,7 @@
 	<tr>
 		<td><?php echo h($material['Material']['id']); ?>&nbsp;</td>
 		<td><?php echo h($material['Material']['title']); ?>&nbsp;</td>
-		<td><?php echo h($material['Material']['text']); ?>&nbsp;</td>
+		<td><?php echo h($material['Material']['type']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($material['Subject']['name'], array('controller' => 'subjects', 'action' => 'view', $material['Subject']['id'])); ?>
 		</td>

@@ -4,43 +4,62 @@
 	$this->Html->script('shortcuts', array('inline'=>false));
 	$this->Html->script('timer', array('inline'=>false));
 	$this->Html->script('jquery.wysiwyg', array('inline'=>false));
-	$this->Js->buffer('$("textarea[data-role=richtext]").wysiwyg();');
-	echo $this->Html->link(
-		__('Printversion'),
-		array(
-			'controller'=>'exams',
-			'action'=>'exam',
-			'layout_once'=>'print',
-			$exam['Exam']['id']
-		),
-		array(
-			'data-role'=>'button',
-			'class'=>'button',
-			'rel'=>'external',
-			'target'=>'blank',
-			'id'=>'btn-printversion'
-		)
-	);
-	echo $this->Html->link(
-		__('Keyboard shortcuts'),
-		array(
-			'controller'=>'pages',
-			'action'=>'display',
-			'shortcuts'
-		),
-		array(
-			'data-role'=>'button',
-			'class'=>'button',
-			'rel'=>'dialog',
-			'id'=>'btn-shortcuts'
-		)
-	);
+?>
+	<ul class='menu info-area-element' id='second-menu'>
+		<li>
+			<?php echo $this->Html->link(
+				__('Printversion'),
+				array(
+					'controller'=>'exams',
+					'action'=>'exam',
+					'layout_once'=>'print',
+					$exam['Exam']['id']
+				),
+				array(
+					'rel'=>'external',
+					'target'=>'blank',
+					'id'=>'btn-printversion'
+				)
+			);?>
+		</li>
+		<li>
+			<?php echo $this->Html->link(
+				__('Keyboard shortcuts'),
+				array(
+					'controller'=>'pages',
+					'action'=>'display',
+					'shortcuts'
+				),
+				array(
+					'rel'=>'dialog',
+					'id'=>'btn-shortcuts'
+				)
+			);?>
+		</li>
+		<li>
+			<input
+				type='checkbox'
+				id='quick-solution-mode'
+				onchange="quickSolutionMode = this.checked;"
+			/>
+			<label
+				for='quick-solution-mode'
+				title='<?php echo __('quick solution mode description');?>'
+			>
+				<?php echo __('immediatly show solution');?>
+			</label>
+
+		</li>
+	</ul>
+<?php	
 ?>
 <script language='javascript'>
 	$(document).ready(function() {
+		$('#second-menu').appendTo($('#info-area'));
 		exam = <?php echo json_encode($exam);?>;
 		initializeExam();
 		showNextUnansweredQuestion();
+		addTimer(document.getElementById('info-area'), 'info-area-element');
 	});
 </script>
 

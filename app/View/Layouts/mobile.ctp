@@ -11,13 +11,9 @@
 
 $loggedIn = AuthComponent::user('id');
 
-echo $this->Html->script("jquery-1.7.1.js", array('inline'=>false));
-// echo $this->Html->script("jquery-ui-1.8.18.custom.min.js", array('inline'=>false));
-echo $this->Html->script("jquery.mobile-1.1.0.min.js", array('inline'=>false));
-
 ?>
 
-<html manifest='fragenkatalog_mobile.appcache'>
+<html manifest='/fragenkatalog_mobile.appcache'>
 <head>
 	<?php echo $this->Html->charset();?>
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -28,8 +24,11 @@ echo $this->Html->script("jquery.mobile-1.1.0.min.js", array('inline'=>false));
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css');
-		// echo $this->Html->css('jquery.mobile-1.1.0-rc.1.min');
 		echo $this->Html->css('mobile');
+
+		echo $this->Html->script("jquery-1.7.1.js");
+		echo $this->Html->script("jquery.mobile-1.1.0.min.js");
+		echo $this->Html->script("mobile");
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -113,7 +112,7 @@ echo $this->Js->writeBuffer();
 
 			<li data-role='list-divider'>Sonstiges</li>
 			<li>
-				<a href='<?php echo $this->here;?>/layout:default' rel='external'><?php echo __('Desktopversion');?></a>
+				<?php echo $this->Html->link(__('Desktopversion'), array('layout'=>'default'));?>
 			</li>
 			<li>
 			<?php echo $this->Html->link(__('Privacy'),

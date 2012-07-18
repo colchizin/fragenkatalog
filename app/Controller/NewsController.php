@@ -20,7 +20,11 @@ class NewsController extends AppController {
 		));
 		$this->News->recursive = 0;
 		$this->paginate  = array(
-			'order' => 'News.created DESC'
+			'order' => 'News.created DESC',
+			'contain' => array(
+				'HasComment' => array('Comment'=>array('comment', 'User')),
+				'User'
+			)
 		);
 		$this->set('news', $this->paginate());
 	}
@@ -104,5 +108,42 @@ class NewsController extends AppController {
 		}
 		$this->Session->setFlash(__('News was not deleted'));
 		$this->redirect(array('action' => 'index'));
+	}
+
+	public function addComment() {
+		if ($this->request->is('post')) {
+
+			$this->request->data['Comment']['user_id'] = $this->Auth->user('id');
+			$this->News->Comment->create($this->request->data);
+
+			if ($this->News->Comment->save()) {
+				$this->request->data['HasComment']['comment_id'] = $this->News->Comment->getInsertId();
+				$this->News->HasComment->create($this->request->data);
+
+				if (!$this->News->HasComment->save()) {
+					if ($this->request->is('ajax')) {
+						$this->redirect(null,200);
+					} else {
+						$this->Session->setFlash(__('Error saving comment'));
+						$this->redirect($this->referer());
+					}
+				} else {
+					$this->News->Comment->contain(array(
+						'User', 'News'
+					));
+
+					$this->set('comment', $this->News->Comment->findById(
+						$this->News->Comment->getInsertId()
+					));
+
+					if ($this->request->is('ajax')) {
+						$this->set('_serialize', 'comment');
+					} else {
+						$this->Session->setFlash(__('Comment created'));
+						$this->redirect($this->referer());
+					}
+				}
+			}	
+		}
 	}
 }

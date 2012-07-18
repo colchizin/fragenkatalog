@@ -27,7 +27,7 @@ function buildQuestions() {
 			addQuestion(index,$('#questions'));
 		});
 	} else {
-		alert("Empty exam");
+		alert(__("empty exam"));
 	}
 }
 
@@ -89,21 +89,22 @@ function showStatistics() {
 
 	var dialog = getDialog(
 		$('<div>')
-			.append($('<h3>Ergebnisse</h3>'))
+			.append($('<h3></h3>').html(__('Results')))
 			.append($('<dl></dl>')
-				.append($('<dt>Gesamt</dt>'))
+				.append($('<dt>').html(__('Total')))
 				.append($('<dd>' + statistics.total + '</dd>'))
-				.append($('<dt>Gültig</dt>'))
+				.append($('<dt>').html(__('Valid')))
 				.append($('<dd>' + statistics.valid + '</dd>'))
-				.append($('<dt>Beantwortet</dt>'))
+				.append($('<dt>').html(__('Answered')))
 				.append($('<dd>' + statistics.answered + '</dd>'))
-				.append($('<dt>Korrekt (gültig)</dt>'))
+				.append($('<dt>').html(__('Correct') + " (" + __('valid') + ")"))
 				.append($('<dd>' + statistics.correct_valid + '</dd>'))
-				.append($('<dt>Korrekt (ungültig)</dt>'))
+				.append($('<dt>').html(__('Correct') + " (" + __('invalid') + ")"))
 				.append($('<dd>' + statistics.correct_invalid + '</dd>'))
-				.append($('<dt>Ergebnis</dt>'))
+				.append($('<dt>').html(__('Result')))
 				.append($('<dd>' + Math.round((statistics.correct_valid/statistics.valid)*100) + ' %</dd>'))
 			)
+			.append($("<p>").html(__('description questions invalid')))
 	);
 	$('#container').append(dialog);
 	dialog.show();
@@ -155,7 +156,7 @@ function submitComment() {
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 				if (jqXHR.status == 403) {
-					alert('Sitzung abgelaufen. Neu anmelden');
+					alert(__('info session expired'));
 					location.reload();
 				}
 			}
@@ -178,13 +179,13 @@ function submitComment() {
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 				if (jqXHR.status == 403) {
-					alert('Sitzung abgelaufen. Neu anmelden');
+					alert(__('info session expired'));
 					location.reload();
 				}
 			}
 		});
 	} else {
-		alert('Ungültige Geschichte');
+		alert(__('Something is wrong'));
 		reactivateElement(field);
 	}
 }
@@ -213,6 +214,19 @@ function examAddComment(comment, target) {
 		.appendTo(target);
 }
 
+function examAddMaterial(material, target) {
+	if (material.Material)
+		material = material.Material;
+	
+	$("<li class='material'>")
+		.append($("<a>")
+			.attr('href', '/fragenkatalog/materials/view/' + material.id)
+			.attr('target', '_blank')
+			.html(material.title)
+		)
+		.appendTo(target);
+}
+
 function addQuestionCounter(el, className) {
 	$('<div class="' + className + '"></div>')
 		.append("Frage ")
@@ -229,7 +243,7 @@ function addQuestion(index, target) {
 	var question = exam.Question[index];
 	var answers = $('<fieldset class="answers"></fieldset>');
 	var comments = $('<div class="comments"></div>');
-	var materials = $('<div class="materials"></div>');
+	var materials = $('<ul class="materials" data-role="listview"></ul>');
 
 	$(question.Answer).each(function(idx, ans) {
 		var checked = "notchecked";
@@ -254,7 +268,8 @@ function addQuestion(index, target) {
 			)
 			.append($('<label></label>')
 				.attr('for', 'answer_' + ans.id)
-				.append($('<a>Kommentieren</a>')
+				.append($('<a>')
+					.text(__('comment'))
 					.addClass('btn-add-comment')
 					.click(function() { showCommentField(comments); })
 				)
@@ -269,10 +284,9 @@ function addQuestion(index, target) {
 		examAddComment(comment, comments);
 	});
 
-
-
 	$(question.Material).each(function (idx, material) {
 		examAddMaterial(material, materials);
+		console.log(material);
 	});
 
 	$('<div class="question"></div>')
@@ -285,22 +299,23 @@ function addQuestion(index, target) {
 			.html(question.attachment)
 		)
 		.append($('<a></a>')
-			.text('Lösung')
+			.text(__('Solution'))
 			.click(function() { showSolution(index); })
 			.addClass('button btn-show-solution')
 		)
 		.append($('<a></a>')
 			.append($('<img src="/fragenkatalog/img/editor.gif"></img>')
-				.attr('title','Frage bearbeiten')
+				.attr('title',__('edit Question'))
 			)
-			.attr('title','Frage bearbeiten')
+			.attr('title',__('edit Question'))
 			.attr('href','/fragenkatalog/questions/edit/' + question.id)
 			.attr('target', '_blank')
 			.addClass('button btn-edit-question')
 		)
 		.addClass((question.valid) ? "valid" : "invalid")
 		.append(answers)
-		.append($('<a>Frage Kommentieren</a>')
+		.append($('<a>')
+			.text(__('comment on question'))
 			.addClass('btn-add-comment')
 			.click(function() { showCommentField(comments); })
 		)
@@ -318,7 +333,7 @@ function getDialog(content) {
 	var div_content = $('<div class="dialog-modal-content"></div>')
 		.append(content)
 		.append($('<a class="dialog-modal-btn-close button"></a>')
-			.text('close')
+			.text(__('close'))
 			.click(function() {
 				modal.hide();
 			})

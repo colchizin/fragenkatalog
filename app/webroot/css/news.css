@@ -6,3 +6,7 @@ div.news .news-metadata {
 	margin-left:1em;
 	font-style:italic;
 }
+
+.news .comments {
+	margin-left:2em;
+}

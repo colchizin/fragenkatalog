@@ -1,5 +1,7 @@
 	function initializeExam() {
-
+		buildIndex();
+		showNextUnansweredQuestion();
+		updateQuestionCounter();
 	}
 
 	function onQuestionShown(index) {
@@ -130,7 +132,7 @@
 		target.append($("<p class='comment'></p>")
 			.html(comment.comment)
 			.append($("<span class='comment-author'></span>")
-				.text((comment.User.username) ? comment.User.username : "unbekannt")
+				.text((comment.User.username) ? comment.User.username : __("unknown"))
 			)
 		);
 	}
@@ -149,11 +151,11 @@
 	 * sets the 'solved'-property of the current question to true and rebuilds
 	 * the question view
 	 */
-	function showSolution() {
-		exam.Question[currentQuestionIndex].solved = true;
-		showQuestion(currentQuestionIndex);
-		if (isQuestionAnsweredCorrectly(currentQuestionIndex)==0)
-			$('#question-index-list #question-index-list-' + currentQuestionIndex).addClass('wrong');
+	function showSolution(index) {
+		exam.Question[index].solved = true;
+		showQuestion(index);
+		if (isQuestionAnsweredCorrectly(index)==0)
+			$('#question-index-list #question-index-list-' + index).addClass('wrong');
 	}
 
 	/*
@@ -180,7 +182,7 @@
 		$('#question-index').remove();
 		$("body").append($("<div data-role='page' id='question-index'></div>")
 			.append($("<div data-role='header'></div>")
-				.append($("<h1>Fragen</h1>"))
+				.append($("<h1>").text(__('Questions')))
 			)
 			.append($("<div data-role='content'></div>")
 				.append($("<ul data-role='listview' id='question-index-list'></ul>"))
@@ -218,23 +220,23 @@
 		var statistics = doStatistics();
 		$('#dialog-statistics').remove();
 		$('<div data-role="dialog" id="dialog-statistics"></div>')
-			.append($('<div data-role="header"><h1>Statistik</h1></div>'))
+			.append($('<div data-role="header"><h1>' + __('Statistics') + '</h1></div>'))
 			.append($('<div data-role="content"></div>')
 				.append($('<dl></dl>')
-					.append($('<dt>Gesamt</dt>'))
+					.append($('<dt>').html(__('Total')))
 					.append($('<dd>' + statistics.total + '</dd>'))
-					.append($('<dt>Gültig</dt>'))
+					.append($('<dt>').html(__('Valid')))
 					.append($('<dd>' + statistics.valid + '</dd>'))
-					.append($('<dt>Beantwortet</dt>'))
+					.append($('<dt>').html(__('Answered')))
 					.append($('<dd>' + statistics.answered + '</dd>'))
-					.append($('<dt>Korrekt (gültig)</dt>'))
+					.append($('<dt>').html(__('Correct') + " (" + __('valid') + ")"))
 					.append($('<dd>' + statistics.correct_valid + '</dd>'))
-					.append($('<dt>Korrekt (ungültig)</dt>'))
+					.append($('<dt>').html(__('Correct') + " (" + __('invalid') + ")"))
 					.append($('<dd>' + statistics.correct_invalid + '</dd>'))
-					.append($('<dt>Ergebnis</dt>'))
+					.append($('<dt>').html(__('Result')))
 					.append($('<dd>' + Math.round((statistics.correct_valid/statistics.valid)*100) + ' %</dd>'))
 				)
-				.append("<p>Ein Frage gilt als <strong>gültig</strong>, wenn es genau <strong>1</strong> als korrekt eingetragene Antwortmöglichkeit gibt. Das Ergebnis berücksichtigt nur gültige Fragen.</p>")
+				.append($("<p>").html(__('description questions invalid')))
 			)
 			.appendTo('body')
 			.dialog();

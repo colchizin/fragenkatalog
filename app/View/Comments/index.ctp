@@ -15,7 +15,7 @@
 		<td><?php echo h($comment['Comment']['id']); ?>&nbsp;</td>
 		<td><?php echo h($comment['Comment']['comment']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($comment['User']['name'], array('controller' => 'users', 'action' => 'view', $comment['User']['id'])); ?>
+			<?php echo $this->Html->link($comment['User']['username'], array('controller' => 'users', 'action' => 'view', $comment['User']['id'])); ?>
 		</td>
 		<td><?php echo h($comment['Comment']['created']); ?>&nbsp;</td>
 		<td><?php echo h($comment['Comment']['modified']); ?>&nbsp;</td>
@@ -37,7 +37,7 @@
 	<div class="paging">
 	<?php
 		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
+		echo $this->Paginator->numbers(array('separator' => '','first'=>2, 'last'=>2));
 		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>

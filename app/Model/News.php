@@ -60,4 +60,30 @@ class News extends AppModel {
 			'order' => ''
 		)
 	);
+
+	public $hasMany = array(
+		'HasComment' => array(
+			'className' => 'HasNewsComment',
+			'table' => 'news_comments',
+			'foreignKey' => 'news_id',
+		)
+	);
+
+	public $hasAndBelongsToMany = array(
+		'Comment' => array(
+			'className' => 'Comment',
+			'joinTable' => 'news_comments',
+			'foreignKey' => 'news_id',
+			'associationForeignKey' => 'comment_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => 'created',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
+		)
+	);
 }

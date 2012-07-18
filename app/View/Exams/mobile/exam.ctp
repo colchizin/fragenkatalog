@@ -35,7 +35,7 @@
 <div data-role='navbar' data-inset='true'>
 	<ul>
 		<li><a id='button-previous-question' href='javascript:showPreviousQuestion()'>Zurück</a></li>
-		<li><a id='button-show-solution' href='javascript:showSolution()'>Lösung</a></li>
+		<li><a id='button-show-solution' href='javascript:showSolution(currentQuestionIndex)'>Lösung</a></li>
 		<li><a id='button-next-question' href='javascript:showNextQuestion()'>Vor</a></li>
 	</ul>
 </div>

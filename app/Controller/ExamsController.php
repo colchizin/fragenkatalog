@@ -243,14 +243,14 @@ class ExamsController extends AppController {
 			echo "POST-Request";
 			if ($this->Exam->save($this->request->data)) {
 				$this->Session->setFlash(__('Questions added'));
-			//	$this->redirect(array('action'=>'view',$id));
+				$this->redirect(array('action'=>'view',$id));
 			} else {
 				$this->Sessions->setFlash(__('Quesitons could not be added'));
 			}
 		} else {
-			echo "Muhaha";
 			$this->request->data = $exam;
 		}
+
 		$this->Exam->Question->contain(array());
 		$questions = $this->Exam->Question->find(
 			'list',

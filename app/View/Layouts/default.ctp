@@ -31,6 +31,8 @@ $cakeDescription = "Fragenkatalog";
 		echo $this->Html->script("jquery-1.7.1.js");
 		echo $this->Html->script("jquery-ui-1.8.18.custom.min");
 		echo $this->Html->script("default");
+		echo $this->Html->script("i18n");
+		echo $this->Html->script("locale/" . Configure::Read('Config.language'));
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('default');
@@ -50,9 +52,12 @@ echo $this->Js->writeBuffer();
 	<div id="container">
 		<div id="header">
 			<h1>
-				<span class='description'><?php echo $cakeDescription; ?>:</span>
+				<?php echo $this->Html->link($cakeDescription . ":",'/', array('class'=>'description')); ?>
 				<?php echo __($title_for_layout); ?>
 			</h1>
+			<div id='crumbtrail' class='breadcrumbs'>
+				<?php echo $this->Breadcrumb->display($breadcrumbs);?>
+			</div>
 			<div id='userdiv'>
 <?php
 			if (AuthComponent::user()):?>
@@ -97,10 +102,6 @@ echo $this->Js->writeBuffer();
 				title='<?php echo __('Hide sidebar');?>'
 			>&lt;</a>
 			<ul class='menu'>
-				<li><?php echo $this->Html->link(__('Home'), array(
-					'controller'=>'users',
-					'action'=>'home'
-				));?></li>
 				<li><?php echo $this->Html->link(__('Universities'), array(
 					'controller'=>'universities',
 					'action'=>'index'
@@ -149,6 +150,17 @@ echo $this->Js->writeBuffer();
 				));?></li>
 			</ul>
 
+			<div style='text-align:center; padding:1em;'>
+				<?php echo $this->Html->link(
+					__('Donate'), array(
+						'controller'=>'pages',
+						'action' => 'display',
+						'donate',
+					),
+					array('data-role'=>'button')
+				);?>
+			</div>
+
 
 			<div id='info-area'>
 
@@ -174,9 +186,6 @@ echo $this->Js->writeBuffer();
 				class='ui-button'
 				onclick='switchFullscreen(false)'
 			>Vollbild beenden</a>
-			<div class='breadcrumbs'>
-				<?php echo $this->Breadcrumb->display($breadcrumbs);?>
-			</div>
 			<div>		
 				<?php echo $this->Session->flash('flash');?>
 				<?php echo $this->Session->flash('error',array('class'=>'failure'));?>
@@ -204,7 +213,7 @@ echo $this->Js->writeBuffer();
 				__('Privacy'),
 				array('controller'=>'pages','action'=>'display','datenschutz')
 			);?>
-			<a href='<?php echo $this->here;?>/layout:mobile'><?php echo __('Mobile Version');?></a>
+			<?php echo $this->Html->link(__('Mobile Version'), array('layout'=>'mobile'));?>
 			<?php echo $this->Html->link(
 					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
 					'http://www.cakephp.org/',

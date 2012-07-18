@@ -88,6 +88,12 @@ class Comment extends AppModel {
 			'finderQuery' => '',
 			'deleteQuery' => '',
 			'insertQuery' => ''
+		),
+		'News' => array(
+			'className' => 'News',
+			'joinTable' => 'news_comments',
+			'foreignKey' => 'comment_id',
+			'associationForgeinKey' => 'news_id'
 		)
 	);
 

@@ -1,4 +1,5 @@
 CACHE MANIFEST
+
 # Stylesheets
 css/mobile.css
 http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css
@@ -6,10 +7,13 @@ http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css
 # Javascript
 js/jquery.mobile-1.1.0.min.js
 js/jquery-1.7.1.js
-js/fragenkatalog.js
+js/exam.js
+js/exam_mobile.js
+js/comment.js
+js/news.js
 
 NETWORK:
 *
 
-# Version 0.1.2
-# build 1
+# Version 0.1.6
+# build 4

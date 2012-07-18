@@ -23,6 +23,11 @@ class UsersController extends AppController {
 		));
 		$user = $this->User->findById($userid);
 		$this->set('user', $user);
+
+		$this->News->contain(array(
+			'User',
+			'HasComment' => array('Comment' => array('comment', 'User'))
+		));
 		$this->set('news', $this->News->find('first', array('order'=>'News.created DESC')));
 	}
 
@@ -56,6 +61,7 @@ class UsersController extends AppController {
 		$this->Acl->allow($group, 'controllers/Users/logout');
 		$this->Acl->allow($group, 'controllers/Users/home');
 		$this->Acl->allow($group, 'controllers/Users/setProgramme');
+		$this->Acl->allow($group, 'controllers/Users/statistics');
 		$this->Acl->allow($group, 'controllers/Invitations/add');
 		$this->Acl->allow($group, 'controllers/Tickets/add');
 		$this->Acl->allow($group, 'controllers/Tickets/view');
@@ -73,6 +79,7 @@ class UsersController extends AppController {
 		$this->Acl->allow($group, 'controllers/Examsessions/delete');
 		$this->Acl->allow($group, 'controllers/ExamsessionsQuestions/add_or_save');
 		$this->Acl->allow($group, 'controllers/News/index');
+		$this->Acl->allow($group, 'controllers/News/addComment');
 		echo "all done";
 		exit;
 	}
@@ -103,6 +110,15 @@ class UsersController extends AppController {
  * @param string $id
  * @return void
  */
+	public function admin_view($id = null) {
+		$this->User->id = $id;
+		if (!$this->User->exists()) {
+			throw new NotFoundException(__('Invalid user'));
+		}
+
+		$this->set('user', $this->User->read(null, $this->User->id));
+	}
+
 	public function view($id = null) {
 		$this->User->id = $id;
 		$this->_view();
@@ -311,5 +327,10 @@ class UsersController extends AppController {
 		if (isset($this->request->named['token'])) {
 			$this->request->data['Invitation']['token'] = $this->request->named['token'];
 		}
+	}
+
+	public function statistics() {
+		$user_registrations = $this->User->getRegistrationStatistics();
+		$this->set('users_registrations', $user_registrations);
 	}
 }

@@ -21,7 +21,7 @@ body {
 	top:0px;
 	left:0px;
 	right:0px;
-	height:60px;
+	height:70px;
 }
 
 #content {
@@ -31,7 +31,7 @@ body {
 }
 
 #content, #navigation {
-	top:61px;
+	top:71px;
 	overflow:auto;
 	bottom:30px;
 }
@@ -72,9 +72,24 @@ body {
 	text-shadow:0px 0px 1px black;
 }
 
-#header h1 span.description {
-	color:#990033;
+#header h1 a.description {
 	color:grey;
+	text-decoration:none;
+
+	-webkit-transition: color 0.3s linear;
+	-moz-transition: color 0.3s linear;
+	-ms-transition: color 0.3s linear;
+	-o-transition: color 0.3s linear;
+	transition: color 0.3s linear;
+}
+
+#header h1 a.description:hover {
+	color:#990033;
+	-webkit-transition: color 0.3s linear;
+	-moz-transition: color 0.3s linear;
+	-ms-transition: color 0.3s linear;
+	-o-transition: color 0.3s linear;
+	transition: color 0.3s linear;
 }
 
 #header #userdiv{
@@ -95,6 +110,19 @@ body {
 	font-weight:bold;
 	text-decoration:none;
 	color:#990000;
+}
+
+#crumbtrail {
+	padding-left:.5em;
+}
+
+.breadcrumbs a {
+	color:grey;
+	text-decoration:none;
+}
+
+.breadcrumbs a:hover {
+	color:#666;
 }
 
 /*
@@ -357,6 +385,12 @@ ul[data-role=listview] li span.ui-li-count {
 	border-radius:10px;
 	padding:.5em;
 	vertical-align:center;
+
+	-webkit-transition: background-color 0.1s linear;
+	-moz-transition: background-color 0.1s linear;
+	-ms-transition: background-color 0.1s linear;
+	-o-transition: background-color 0.1s linear;
+	transition: background-color 0.1s linear;
 }
 
 .answer input[type=radio] {
@@ -382,6 +416,12 @@ ul[data-role=listview] li span.ui-li-count {
 
 .answer label:hover {
 	background-color:lightblue;
+
+	-webkit-transition: background-color 0.1s linear;
+	-moz-transition: background-color 0.1s linear;
+	-ms-transition: background-color 0.1s linear;
+	-o-transition: background-color 0.1s linear;
+	transition: background-color 0.1s linear;
 }
 
 .answer label {
@@ -452,7 +492,7 @@ ul[data-role=listview] li span.ui-li-count {
 .question .comment {
 }
 
-.question .comment .comment-author{
+.comment .comment-author{
 	color:grey;
 }
 
@@ -502,6 +542,12 @@ ul[data-role=listview] li span.ui-li-count {
 	float:right;
 	right:2px;
 	opacity:0.3;
+
+	-webkit-transition: opacity 0.2s linear;
+	-moz-transition: opacity 0.2s linear;
+	-ms-transition: opacity 0.2s linear;
+	-o-transition: opacity 0.2s linear;
+	transition: opacity 0.2s linear;
 }
 
 .question .btn-show-solution {
@@ -515,6 +561,11 @@ ul[data-role=listview] li span.ui-li-count {
 .question .btn-edit-question:hover,
 .question .btn-comment:hover {
 	opacity:1;
+	-webkit-transition: opacity 0.2s linear;
+	-moz-transition: opacity 0.2s linear;
+	-ms-transition: opacity 0.2s linear;
+	-o-transition: opacity 0.2s linear;
+	transition: opacity 0.2s linear;
 }
 
 /*
@@ -674,6 +725,34 @@ button:active {
 	background-image:none;
 }
 
+a.button.ui-disabled,
+td.actions a.ui-disabled,
+a[data-role=button].ui-disabled,
+input[type=button][disabled=disabled],
+input[type=submit][disabled=disabled],
+input[type=reset][disabled=disabled],
+button[disabled=disabled] {
+	color:#eee;
+	background-color: whiteSmoke;
+	background-image: -moz-linear-gradient(top, #E6E6E6, #CCC);
+	background-image: -ms-linear-gradient(top, #E6E6E6, #CCC);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#E6E6E6), to(#CCC));
+	background-image: -webkit-linear-gradient(top, #E6E6E6, #CCC);
+	background-image: -o-linear-gradient(top, #E6E6E6, #CCC);
+	background-image: linear-gradient(top, #E6E6E6, #CCC);
+	background-repeat: repeat-x;
+	cursor:default;
+}
+
+a.button.ui-disabled:hover,
+td.actions a.ui-disabled:hover,
+a[data-role=button].ui-disabled:hover,
+input[type=button][disabled=disabled]:hover,
+input[type=submit][disabled=disabled]:hover,
+input[type=reset][disabled=disabled]:hover,
+button[disabled=disabled]:hover {
+	background-position: 0 0;
+}
 
 form.login {
 	text-align:center;
@@ -770,7 +849,7 @@ div#print_info {
 	color:black;
 }
 
-div.info {
+.info {
 	background-color:#F0EBE2;
 	padding:1em;
 	border: 1px dashed lightGrey;
@@ -869,6 +948,11 @@ span.keyboard {
 	text-align:center;
 }
 
+#info-area .menu.info-area-element {
+	padding:0;
+	text-align:left;
+}
+
 /* 
  * Tickets
  */
@@ -954,4 +1038,34 @@ embed.mindmap {
 
 .materials img {
 	max-width:100%;
+}
+
+/*
+ * Paging
+ */
+
+div.paging {
+}
+
+div.paging span {
+	padding:1px 4px;
+	border-left:1px solid #666;
+	font-weight:bold;
+}
+
+div.paging span:first-child {
+	border-left:none;
+}
+
+div.paging span.disabled {
+	color:#CCC;
+}
+
+div.paging span.current {
+	color:black;
+}
+
+div.paging span a {
+	text-decoration:none;
+	color:#666;
 }

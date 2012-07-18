@@ -284,4 +284,33 @@ class Question extends AppModel {
 		return true;
 	}
 
+	public function wronglyAnsweredQuestions($user_id, $subject_id, $semester, $limit, $offset) {
+		$query = "
+			SELECT
+				Question.*, Answers.*
+			FROM questions AS Question
+			JOIN answers AS Answers
+			ON Answers.question_id = Question.id
+			WHERE Question.id IN (
+				SELECT
+					Question.id
+				FROM examsessions AS Examsession
+				JOIN exams AS Exam
+					ON Examsession.exam_id = Exam.id
+				JOIN examsessions_questions AS ExamsessionsQuestion
+					ON ExamsessionsQuestion.examsession_id = Examsession.id
+				JOIN questions AS Question
+					ON ExamsessionsQuestion.question_id = Question.id
+				JOIN answers AS Answer
+					ON ExamsessionsQuestion.answer_id = Answer.id
+				WHERE Examsession.user_id = $user_id
+				AND Answer.correct = 0
+				AND Exam.subject_id = $subject_id
+				AND Exam.semester = $semester
+				LIMIT $limit OFFSET $offset
+			);
+		";
+		return $this->query($query);
+	}
+
 }

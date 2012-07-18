@@ -154,4 +154,23 @@ class User extends AppModel {
 		return array('model' => 'Group', 'foreign_key' => $user['User']['group_id']);
 	}
 
+	public function getRegistrationStatistics() {
+		$users_registrations = $this->query("
+			(SELECT COUNT( `User`.`id` ) AS `count`, DATE( `User`.`created` ) AS `date`
+			FROM users AS User
+			GROUP BY `date`
+			ORDER BY `date` ASC)
+			UNION
+			(SELECT COUNT(`User`.`id`) AS `count`, 'Gesamt' AS `date` FROM users AS User)
+		");	
+
+		$result = array();
+
+		foreach ($users_registrations as $registration) {
+			$result[] = array($registration[0]['date'], $registration[0]['count']);	
+		}
+
+		return $result;
+	}
+
 }

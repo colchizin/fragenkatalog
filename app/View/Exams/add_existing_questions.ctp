@@ -1,18 +1,38 @@
-<?php	echo $this->Form->create('Exam');?>
-<fieldset data-role='controlgroup' data-filter='true'>
 <?php
-	echo $this->Form->input(
-		'Question',
-		array(
-			'multiple'=>'checkbox'
-		));
-	
+	echo $this->Form->create('Exam');
 ?>
-</fieldset>
-	<fieldset data-role='controlgroup'>
+
+<table>
+<?php
+	foreach ($questions as $id=>$question):
+?>
+	<tr>
+		<td>
+			<input
+				type='checkbox'
+				name='data[Question][Question][]'
+				value="<?php echo $id;?>"
+				id="Question<?php echo $id;?>"
+			/>
+		</td>
+		<td>
+			<label
+				for="Question<?php echo $id;?>"
+				style="display:block; margin:0px;"
+			>
+				<?php echo $question;?>
+			</label>
+		</td>
+	</tr>
+
+<?php
+	endforeach;
+?>
+</table>
+
 <?
-	echo $this->Form->submit(__('Save'),array('data-theme'=>'b'));
-	echo $this->Html->link(__('Cancel'),array('action'=>'view',$exam['Exam']['id']), array('data-role'=>'button','data-theme'=>'b','class'=>'button'));
+	echo $this->Html->link(__('Cancel'),array('action'=>'view'));
+	echo $this->Form->end(__('Save'));
 ?>
-	</fieldset>
-<?php	echo $this->Form->end();?>
+
+<?php 
